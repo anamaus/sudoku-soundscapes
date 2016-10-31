@@ -1,0 +1,258 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a, a:hover {
+  text-decoration: none;
+  color: #ffffff; }
+
+.container, .container-wide, .row {
+  *zoom: 1;
+  clear: both; }
+  .container:before, .container-wide:before, .row:before, .container:after, .container-wide:after, .row:after {
+    content: " ";
+    display: table; }
+  .container:after, .container-wide:after, .row:after {
+    clear: both; }
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+  height: 100%; }
+
+a {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .container {
+      width: 970px;
+      margin: 0 auto; } }
+
+.container-wide {
+  width: 100%; }
+
+.row {
+  width: 100%; }
+
+@media (min-width: 768px) {
+  .col-1 {
+    width: 8.333333333333332%; } }
+
+@media (min-width: 768px) {
+  .col-2 {
+    width: 16.666666666666664%; } }
+
+@media (min-width: 768px) {
+  .col-3 {
+    width: 25%; } }
+
+@media (min-width: 768px) {
+  .col-4 {
+    width: 33.33333333333333%; } }
+
+@media (min-width: 768px) {
+  .col-5 {
+    width: 41.66666666666667%; } }
+
+@media (min-width: 768px) {
+  .col-6 {
+    width: 50%; } }
+
+@media (min-width: 768px) {
+  .col-7 {
+    width: 58.333333333333336%; } }
+
+@media (min-width: 768px) {
+  .col-8 {
+    width: 66.66666666666666%; } }
+
+@media (min-width: 768px) {
+  .col-9 {
+    width: 75%; } }
+
+@media (min-width: 768px) {
+  .col-10 {
+    width: 83.33333333333334%; } }
+
+@media (min-width: 768px) {
+  .col-11 {
+    width: 91.66666666666666%; } }
+
+@media (min-width: 768px) {
+  .col-12 {
+    width: 100%; } }
+
+body {
+  background-color: #ffffff;
+  color: #6B493D; }
+
+a {
+  color: #ffffff; }
+  a:hover {
+    color: #6B493D; }
+
+.text-center {
+  text-align: center; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  display: block; }
+
+html, body {
+  font-family: "Arimo", sans-serif; }
+
+body {
+  font-size: 13px;
+  line-height: 1.41; }
+  @media screen and (min-width: 480px) {
+    body {
+      font-size: 15px;
+      line-height: 1.5; } }
+  @media screen and (min-width: 1025px) {
+    body {
+      font-size: 16px;
+      line-height: 1.62; } }
+  @media screen and (min-width: 1300px) {
+    body {
+      font-size: 17px;
+      line-height: 1.62; } }
+
+h3 {
+  font-size: 15.6px;
+  line-height: 1.18; }
+  @media screen and (min-width: 480px) {
+    h3 {
+      font-size: 21.2px;
+      line-height: 1.06; } }
+  @media screen and (min-width: 1025px) {
+    h3 {
+      font-size: 24px;
+      line-height: 1.08; } }
+  @media screen and (min-width: 1300px) {
+    h3 {
+      font-size: 27.5px;
+      line-height: 1; } }
+
+h2 {
+  font-size: 18.7px;
+  line-height: 0.98; }
+  @media screen and (min-width: 480px) {
+    h2 {
+      font-size: 30px;
+      line-height: 0.75; } }
+  @media screen and (min-width: 1025px) {
+    h2 {
+      font-size: 36px;
+      line-height: 0.72; } }
+  @media screen and (min-width: 1300px) {
+    h2 {
+      font-size: 44.5px;
+      line-height: 1.24; } }
+
+h1 {
+  font-size: 22.5px;
+  line-height: 0.82; }
+  @media screen and (min-width: 480px) {
+    h1 {
+      font-size: 42.4px;
+      line-height: 1.06; } }
+  @media screen and (min-width: 1025px) {
+    h1 {
+      font-size: 54px;
+      line-height: 0.96; } }
+  @media screen and (min-width: 1300px) {
+    h1 {
+      font-size: 72px;
+      line-height: 1.15; } }
+
+.header__title {
+  font-size: 27px;
+  line-height: 0.68; }
+  @media screen and (min-width: 480px) {
+    .header__title {
+      font-size: 60px;
+      line-height: 1.13; } }
+  @media screen and (min-width: 1025px) {
+    .header__title {
+      font-size: 81px;
+      line-height: 0.96; } }
+  @media screen and (min-width: 1300px) {
+    .header__title {
+      font-size: 116.5px;
+      line-height: 0.94; } }
+
+h1, h2, h3,
+h4, h5, h6 {
+  margin: 20px 0 10px 0;
+  font-family: "Pacifico", cursive;
+  color: #DAAF47; }
+  @media (min-width: 500px) {
+    h1, h2, h3,
+    h4, h5, h6 {
+      margin-bottom: 20px; } }
+
+.sudoku-outer-grid {
+  display: inline-block;
+  margin: 10% 0;
+  height: 600px;
+  width: 600px;
+  background-color: rgba(255, 242, 0, 0.39);
+  border: 3px solid black; }
+
+.sudoku-grid__row {
+  height: 33.33333%; }
+
+.sudoku-inner-grid__section {
+  border: 1px solid #bfff12; }
