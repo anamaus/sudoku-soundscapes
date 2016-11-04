@@ -21,7 +21,7 @@ function SudokuField(x,y, isPartOfSolution) {
 function Game(solution){
     this.fields = [];
     this.solution= solution;
-    this.difficulty = 0.1;
+    this.difficulty = 0.5;
 
     this.generateGame = function(){
        this.fields = [];
@@ -60,7 +60,7 @@ function Game(solution){
     this.hint = function(){
         var index = Math.floor(Math.random() * 80);
         for (var i = index; i < index + 81; i++) {
-             console.log('i mod 81 = ' + i % 81);
+           //  console.log('i mod 81 = ' + i % 81);
             if (!this.fields[i % 81].isPartOfSolution) {
                 this.fields[i % 81] = this.solution.fields[i % 81];
                 break;
@@ -91,9 +91,13 @@ function Solution(){
     }
 
     this.generateSolution = function(){
+//make 1 string with 81 chars, taken from Library
+        var sudokuString = sudoku.generate(81);
+
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
-                this.fields[i*9 + j].value = Math.floor((i * 3 + i / 3 + j) % 9 + 1);
+              //   this.fields[i*9 + j].value = Math.floor((i * 3 + i / 3 + j) % 9 + 1);
+              this.fields[i * 9 + j].value = parseInt(sudokuString.charAt(i * 9 + j));
             }
         }
     };
