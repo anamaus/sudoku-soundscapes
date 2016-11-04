@@ -80,19 +80,3 @@
 
 
 //noob testing
-function debugging(){
-    console.log('solution.fields:');
-    for (var i = 0; i < 9; i++) {
-        console.log(solution.fields[i * 9].value + ' ' + solution.fields[i * 9 + 1].value + ' ' + solution.fields[i * 9 + 2].value + ' ' +
-            solution.fields[i * 9 + 3].value + ' ' + solution.fields[i * 9 + 4].value + ' ' + solution.fields[i * 9 + 5].value + ' ' +
-            solution.fields[i * 9 + 6].value + ' ' + solution.fields[i * 9 + 7].value + ' ' + solution.fields[i * 9 + 8].value + ' ');
-        //  if (i % 9 === 0) console.log('\n');
-    }
-    console.log('game.fields:');
-    for (var i = 0; i < 9; i++) {
-        console.log(game.fields[i * 9].value + ' ' + game.fields[i * 9 + 1].value + ' ' + game.fields[i * 9 + 2].value + ' ' +
-            game.fields[i * 9 + 3].value + ' ' + game.fields[i * 9 + 4].value + ' ' + game.fields[i * 9 + 5].value + ' ' +
-            game.fields[i * 9 + 6].value + ' ' + game.fields[i * 9 + 7].value + ' ' + game.fields[i * 9 + 8].value + ' ');
-        //  if (i % 9 === 0) console.log('\n');
-    }
-}

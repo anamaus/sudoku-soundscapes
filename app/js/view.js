@@ -1,5 +1,5 @@
 
-function setFieldsIds(){
+function setFieldsId(){
     var elements= document.querySelectorAll('.sudoku-col-1-9__text');
 
     for (var i = 0; i < elements.length; i++) {
