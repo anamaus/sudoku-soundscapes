@@ -4,10 +4,10 @@ body{
 }
 
 a{
-  @extend %transitions;
-  color: $color-white;
-  &:hover{
-    color: $color-grey;
-  }
+  //@extend %transitions;
+  //color: $color-white;
+  //&:hover{
+  //  color: $color-grey;
+  //}
 }
 

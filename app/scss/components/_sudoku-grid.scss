@@ -3,12 +3,30 @@
   margin: 10% 0;
   height: $sudoku-outer-height;
   width: $sudoku-outer-width;
- background-color: rgba(83, 82, 255, 0.39);
+ background-color: #BCBCFF;
   border:3px solid #7950ff;
+  //&::after{
+  //  content: url("../images/bambus.png");
+  //  height:900px;
+  //  width: 10px;
+  //  // background-color: red;
+  //  position: absolute;
+  //  right: percentage(2/3 );
+  //
+  //}
 }
 
 .sudoku-grid__row{
-  height: percentage(1/3);
+  height: percentage(1/9);
+  position: relative;
+  &:nth-of-type(3){
+    border-bottom: 1px solid black;
+
+  }
+  &:nth-of-type(6){
+    border-bottom: 1px solid black;
+  }
+
 
 }
 .sudoku-inner-grid__section{
@@ -16,20 +34,46 @@
   padding: 1px;
 }
 
-.sudoku-col-4{
+.sudoku-col-1-9{
   @extend %col-x;
-  width: 33.33333333333333%;
+  width:percentage(1/9);
   font-size: 35px;
   text-align: center;
+  &:nth-of-type(3){
+    border-right: 1px solid black;
+  }  &:nth-of-type(6){
+    border-right: 1px solid black;
+  }
 }
-.sudoku-col-4__text{
+.sudoku-col-1-9__text{
    //  display: inline-block;
      //vertical-align:middle;
   height:100%;
   margin: 1px;
+  color: #443067;
+
 }
-.sudoku-col-4__text[contentEditable] {
+.sudoku-col-1-9__text[contentEditable=true] {
+  cursor: pointer;
   background-color: white;
-  border:3px solid #b9b9b9;
-  border-style: inset;
+  border:3px inset #b9b9b9 ;
+  color: lawngreen;
+
+  &:hover{
+    background-color: rgb(235, 255, 225);
+  }
+  &:focus{
+    background-color: rgb(235, 255, 225);
+  }
+}
+
+.sudoku-col-1-9__text--success{
+  //@extend %transitions;
+  background-color: #BCBCFF;
+  color: #443067;
+  cursor: default;
+
+}
+.active{
+  background-color: greenyellow;
 }
