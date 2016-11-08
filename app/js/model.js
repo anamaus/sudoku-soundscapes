@@ -3,13 +3,16 @@ function SudokuField(x,y, isPartOfSolution) {
     this.y =y;
     this.isPartOfSolution = isPartOfSolution;
     this.value = -1;
-    this.setValue = function(value){
-        if ((value < 1) || (value>9)) {
-            return false;
-        }
-        else {
-            this.value = value;
-        }
+    this.setValue = function (value) {
+
+
+            if ((value < 1) || (value > 9)) {
+                return false;
+            }
+            else {
+                this.value = value;
+            }
+
     };
 
 }
@@ -21,7 +24,7 @@ function SudokuField(x,y, isPartOfSolution) {
 function Game(solution){
     this.fields = [];
     this.solution= solution;
-    this.difficulty = 0.5;
+    this.difficulty = 0.1;
 
     this.generateGame = function(){
        this.fields = [];

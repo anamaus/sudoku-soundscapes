@@ -14,6 +14,7 @@
   //  right: percentage(2/3 );
   //
   //}
+
 }
 
 .sudoku-grid__row{
@@ -45,15 +46,15 @@
     border-right: 1px solid black;
   }
 }
-.sudoku-col-1-9__text{
+.sudoku-col-1-9{
    //  display: inline-block;
      //vertical-align:middle;
-  height:100%;
-  margin: 1px;
-  color: #443067;
+ // height:100%;
+ // margin: 1px;
+  //color: #443067;
 
 }
-.sudoku-col-1-9__text[contentEditable=true] {
+.sudoku-emptyField {
   cursor: pointer;
   background-color: white;
   border:3px inset #b9b9b9 ;
@@ -63,7 +64,7 @@
     background-color: rgb(235, 255, 225);
   }
   &:focus{
-    background-color: rgb(235, 255, 225);
+    background-color: rgb(255, 46, 208);
   }
 }
 
@@ -75,5 +76,6 @@
 
 }
 .active{
-  background-color: greenyellow;
+  background-color: #ffffd8;
 }
+
