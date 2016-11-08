@@ -1,4 +1,5 @@
 .numbers__outer{
+
   @extend %transitions;
   width:210px;
   height:auto;
@@ -8,12 +9,25 @@
   left:0;
   top:0;
   background-color: #cbd0ff;
-  //text-align: center;
+
 }
-//.numbers{
-//  margin:2% 0;
-//
-//}
+.numbers{
+  position: relative;
+  //&::before{
+  //  text-align: center;
+  //  content: 'x';
+  //  font-size: 30px;
+  //  position: absolute;
+  //  top:-40px;
+  //  right: 0;
+  //  background-color: #7950ff;
+  //  color: #fff;
+  //  display: inline-block;
+  //  width:40px;
+  //  height:40px;
+  //  line-height:40px;
+  //}
+}
 .numbers__row{
   @extend %clearfix;
   width: 100%;
@@ -38,3 +52,4 @@
   }
 
 }
+//TODO check and fix number options div

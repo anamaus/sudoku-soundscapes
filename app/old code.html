@@ -332,3 +332,14 @@
 </div>
 </body>
 </html>
+
+
+var $body = $('body');
+var urlFlickr = "  https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=a3506587d55a2095e27653526bc980cc&tags=zen&per_page=10&page=2&format=json&nojsoncallback=1&auth_token=72157674647694012-af7be3509b6cddcb&api_sig=f249686351ed9d047ab5b4dbe25bed96";
+
+$.getJSON(urlFlickr, function (data) {
+for(var i =0;i<3;i++){
+var pic = data.photos.photo;
+var image = $("<img class='bgimg' src='https://farm" +pic.farm+ ".staticflickr.com/"+pic.server+"/"+pic.id+"_"+pic.secret+".jpg'>");
+$($body).append(image);
+}
