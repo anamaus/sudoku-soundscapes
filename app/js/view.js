@@ -47,70 +47,65 @@ function clearNumbers(){
 //flicker background image
 
 var $body = $('body');
-var urlFlickr = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=0c4522b87604077fb92c17f638de688b&tags=tranquility%2Catmosphere%2Czen&tag_mode=all&per_page=30&page=1&format=json&nojsoncallback=1&auth_token=72157674832712021-4fcf38e747c7277d&api_sig=44900c313125a1f05f76813266baaa26';
+var urlFlickr = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b215d978e92b5f13ff2ec19118359a44&tags=nature%2Catmosphere%2Catmosphere%2Czen&tag_mode=all&extras=url_original&per_page=30&page=1&format=json&nojsoncallback=1';
 var url;
 var images=[];
 var image;
-//
-// $.getJSON(urlFlickr, function (data) {
-//     for (var i = 0; i < 3; i++) {
-//         var currentImage = data.photos.photo[i];
-//         image = $("<img class='bgimg' src='https://farm" + currentImage.farm + ".staticflickr.com/" + currentImage.server + "/" + currentImage.id + "_" + currentImage.secret + ".jpg'>");
-//         images.push(image);
-//         console.log(image);
-//     }
-//
-//      $body.append(images[0]);
-// })
-//     .fail(function () {
-//         console.log('ne');
+var imageIndex= Math.floor(Math.random()*20);
+
+// $.ajax(
+//     {
+//         type: 'GET',
+//         url: urlFlickr
 //     })
-// ;
-$.ajax(
-    {
-        type:'GET',
-        url:urlFlickr})
-    .done(function(data){
-        for (var i = 0; i < 21; i++) {
-            var currentImage = data.photos.photo[i];
-            image = $("<img class='bgimg' src='https://farm" + currentImage.farm + ".staticflickr.com/" + currentImage.server + "/" + currentImage.id + "_" + currentImage.secret + ".jpg'>");
-            images.push(image);
+//     .done(function (data) {
+//         for (var i = 0; i < 21; i++) {
+//             var currentImage = data.photos.photo[i];
+//             image = $("<img class='bgimg' src='https://farm" + currentImage.farm + ".staticflickr.com/" + currentImage.server + "/" + currentImage.id + "_" + currentImage.secret + ".jpg'>");
+//             images.push(image);
+//
+//         }
+//
+//         $('.bgimg').attr('src', '');
+//         $body.append(images[imageIndex]);
+//
+//     })
+//     .fail(function () {
+//         $body.append("<img class='bgimg' src='images/zen.jpg' >");
+//         stopImages();
+//         $('#btnResumeImages').attr('disabled','disabled');
+//
+//     });
+//
+//
+//
+//
+//
+// // change bg image after time
+// var timer = setTimeout(changeImage, 3000);
+// function appendImage() {
+//     $('.bgimg').remove();
+//     imageIndex= Math.floor(Math.random()*20);
+//     images[imageIndex].hide().appendTo($body).fadeIn(1000);
+// }
+// function stopImages() {
+//     clearTimeout(timer);
+// }
+//
+//
+// $('#btnStopImages').click(function(){
+//     stopImages();
+// });
+// $('#btnResumeImages').click(function(){
+//     clearTimeout(timer);
+//     changeImage();
+// });
+//
+// function changeImage() {
+//     appendImage();
+//     timer = setTimeout(changeImage, 3000);
+// };
 
-        }
-
-        $('.bgimg').attr('src','');
-        $body.append(images[5]);
-
-    })
-    .fail(function(){
-        $body.append("<img class='bgimg' src='images/zen.jpg' >");
-    });
-// change bg image after time
-var timer = setTimeout(changeImage, 3000);
-function appendImage() {
-    $('.bgimg').remove();
-    var x =Math.floor(Math.random()*20);
-    images[x].hide().appendTo($body).fadeIn(1000);
-}
-function stopImages() {
-    clearTimeout(timer);
-}
-
-
-$('#btnStopImages').click(function(){
-    stopImages();
-});
-$('#btnResumeImages').click(function(){
-    clearTimeout(timer);
-    changeImage();
-});
-
-function changeImage() {
-    appendImage();
-    timer = setTimeout(changeImage, 3000);
-};
-
-console.log(images);
 
 // var apiKey = '9h3sd8nn7n4h9b3jbw5vk5sn';
 // $.ajax(
@@ -135,3 +130,5 @@ console.log(images);
 //     .fail(function(){
 //         $body.append("<img class='bgimg' src='images/zen.jpg' >");
 //     });
+
+

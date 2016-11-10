@@ -1,4 +1,6 @@
 body{
+  height: 100%;
+  width:100%;
   //background-color: $color-white;
   color: $color-primary-text;
 }
@@ -11,3 +13,8 @@ a{
   //}
 }
 
+//.fixed-bg{
+//  background-size: 100%;
+//  background-repeat:no-repeat;
+//  background-image: url("../images/zen.jpg");
+//}

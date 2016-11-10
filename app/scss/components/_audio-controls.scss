@@ -1,0 +1,40 @@
+
+.slider{
+
+  margin-top: 30px ;
+  background-color: grey;
+
+  width: 200px;
+ position:relative;
+  height: 5px;
+display: none;
+
+}
+.volume {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  left: 10px;
+  background: red no-repeat 0 -50px;
+  position: absolute;
+  margin-top: -5px;
+}
+.ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: purple ;
+  //font-weight: bold;
+  color: #fff200;
+  outline: none;
+  top: -7px;
+  margin-left: -12px;
+  border-radius: 50%;
+}
+
+.soundPlayer img{
+  display: block;
+  margin: 0 auto;
+}

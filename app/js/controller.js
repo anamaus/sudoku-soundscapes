@@ -14,7 +14,7 @@ $(document).ready(function () {
 
 });
 
-$body.append("<img class='bgimg' src='images/zen.jpg' >");
+//$body.append("<img class='bgimg' src='images/zen.jpg' >");
 //check if inserted value is part of solution and if so, make it look like those that are solved
 // $('.sudoku-col-1-9')
 //     .keyup(function () {
@@ -28,6 +28,10 @@ $body.append("<img class='bgimg' src='images/zen.jpg' >");
 //         drawAllFields();
 //
 //     });
+
+
+
+
 
 
 //start new game on btn click

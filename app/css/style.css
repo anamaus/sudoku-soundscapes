@@ -77,7 +77,8 @@ a, a:hover {
       margin: 0 auto; } }
 
 .container-wide {
-  width: 100%; }
+  width: 100%;
+  padding: 0 50px; }
 
 .row {
   width: 100%; }
@@ -130,7 +131,14 @@ a, a:hover {
   .col-12 {
     width: 100%; } }
 
+header {
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid antiquewhite; }
+
 body {
+  height: 100%;
+  width: 100%;
   color: #6B493D; }
 
 .btn {
@@ -161,7 +169,7 @@ img {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.5; }
+  opacity: 0.8; }
 
 html, body {
   font-family: "Arimo", sans-serif; }
@@ -332,3 +340,37 @@ h4, h5, h6 {
   margin: 5px; }
   .numbers__row__nums:hover {
     background-color: #efeeff; }
+
+.slider {
+  margin-top: 30px;
+  background-color: grey;
+  width: 200px;
+  position: relative;
+  height: 5px;
+  display: none; }
+
+.volume {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  left: 10px;
+  background: red no-repeat 0 -50px;
+  position: absolute;
+  margin-top: -5px; }
+
+.ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: purple;
+  color: #fff200;
+  outline: none;
+  top: -7px;
+  margin-left: -12px;
+  border-radius: 50%; }
+
+.soundPlayer img {
+  display: block;
+  margin: 0 auto; }
