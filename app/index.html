@@ -6,420 +6,90 @@
     <title>Zen Sudoku</title>
     <!--<link  rel="stylesheet" href="css/jquery-ui.css">-->
     <link  rel="stylesheet" href="css/style.css">
+    <script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                    t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
 
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
 </head>
 <body>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1604179943217880',
+            xfbml      : true,
+            version    : 'v2.8'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 <header>
-    <h1>Sudoku</h1>
+
+    <div class="container-wide">
+        <div class="row">
+            <div class="col-4">
+                <h3>Sudoku</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas scelerisque fringilla enim, a ultrices velit lacini. </p>
+            </div> <div class="col-8">
+                <h3>Sudoku</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas scelerisque fringilla enim, a ultrices velit lacini. </p>
+            </div>
+        </div>
+    </div>
+
 </header>
 <div class="container-wide">
     <div class="row">
-        <div class="col-8">
-            <div class="sudoku-outer-grid">
-                <div class="row sudoku-grid__row">
 
-                    <div class="sudoku-col-1-9">
-                        1
-                    </div>
-                    <div class="sudoku-col-1-9">
-                        2
-                    </div>
-                    <div class="sudoku-col-1-9">
-                        3
-                    </div>
 
-                    <div class="sudoku-col-1-9">
-                        4
-                    </div>
 
-                    <div class="sudoku-col-1-9">
-                        5
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        6
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        7
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        8
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        9
-                    </div>
-
-
-                </div>
-                <div class="row sudoku-grid__row">
-
-                    <div class="sudoku-col-1-9">
-                        1
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        2
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        3
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        4
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        5
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        6
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        7
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        8
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        9
-                    </div>
-
-
-                </div>
-                <div class="row sudoku-grid__row">
-
-                    <div class="sudoku-col-1-9">
-                        1
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        2
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        3
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        4
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        5
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        6
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        7
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        8
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        9
-                    </div>
-
-
-                </div>
-                <div class="row sudoku-grid__row">
-
-                    <div class="sudoku-col-1-9">
-                        1
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        2
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        3
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        4
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        5
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        6
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        7
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        8
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        9
-                    </div>
-
-
-                </div>
-                <div class="row sudoku-grid__row">
-
-                    <div class="sudoku-col-1-9">
-                        1
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        2
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        3
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        4
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        5
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        6
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        7
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        8
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        9
-                    </div>
-
-
-                </div>
-                <div class="row sudoku-grid__row">
-
-                    <div class="sudoku-col-1-9">
-                        1
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        2
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        3
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        4
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        5
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        6
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        7
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        8
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        9
-                    </div>
-
-
-                </div>
-                <div class="row sudoku-grid__row">
-
-                    <div class="sudoku-col-1-9">
-                        1
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        2
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        3
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        4
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        5
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        6
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        7
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        8
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        9
-                    </div>
-
-
-                </div>
-                <div class="row sudoku-grid__row">
-
-                    <div class="sudoku-col-1-9">
-                        1
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        2
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        3
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        4
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        5
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        6
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        7
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        8
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        9
-                    </div>
-
-
-                </div>
-                <div class="row sudoku-grid__row">
-
-                    <div class="sudoku-col-1-9">
-                        1
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        2
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        3
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        4
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        5
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        6
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        7
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        8
-                    </div>
-
-                    <div class="sudoku-col-1-9">
-                        9
-                    </div>
-
-
-                </div>
-
-
-            </div>
-            <div class="row">
-                <button class="btn" id="btnNewGame">New Game</button>
-                <button class="btn" id="btnHint">Hint</button>
-
-                <div class="setDifficultyLevel">
-                    <a href="#" class="btn" id="btnEasy">Easy</a>
-                    <a href="#" class="btn" id="btnNormal">Normal</a>
-                    <a href="#" class="btn" id="btnHard">Hard</a>
-                </div>
-                <!--<button class="btn" id="btnStopImages">stop images</button>-->
-                <!--<button class="btn" id="btnResumeImages">resume images</button>-->
-
-
-            </div>
-
-        </div>
-
-
-        <div class="col-4 text-center soundPlayer">
+        <div class="col-4 soundPlayer">
 
             <div class="row ">
-
-                <img src="images/rain.png" id="btnPlay1" alt="">
+                <img src="images/playerImg/rain.png" id="btnPlay1" alt="">
                 <!--<button id="btnPlay" class="btn">play</button>-->
                 <!--<span class="tooltip"></span>-->
                     <div class="slider" id="slider1"></div>
                     <audio id="audio1">
-                        <source src="sounds/rain.mp3" type="audio/wav">
+                        <source src="sounds/ogg/rain.ogg" type="audio/ogg">
+                        <source src="sounds/mp3/rain.mp3" type="audio/mp3">
                         Your browser does not support the audio element.
                     </audio>
                     <!--<span class="volume"></span>-->
                 </div>
-
             <div class="row ">
 
-                <img src="images/rain.png" id="btnPlay2" alt="">
+                <img src="images/playerImg/thunder.png" id="btnPlay2" alt="">
                 <!--<button id="btnPlay" class="btn">play</button>-->
 
 
                     <!--<span class="tooltip"></span>-->
                     <div class="slider" id="slider2"></div>
                     <audio id="audio2">
-                        <source src="sounds/birds.wav" type="audio/wav">
+                        <source src="sounds/ogg/thunder.ogg" type="audio/ogg">
+                        <source src="sounds/mp3/thunder.mp3" type="audio/mp3">
                         Your browser does not support the audio element.
                     </audio>
                     <!--<span class="volume"></span>-->
@@ -427,14 +97,15 @@
             </div>
             <div class="row ">
 
-                <img src="images/rain.png" id="btnPlay3" alt="">
+                <img src="images/playerImg/birds.png" id="btnPlay3" alt="">
                 <!--<button id="btnPlay" class="btn">play</button>-->
 
 
                     <!--<span class="tooltip"></span>-->
                     <div class="slider" id="slider3"></div>
                     <audio id="audio3">
-                        <source src="sounds/Cricket-noises.mp3" type="audio/wav">
+                        <source src="sounds/ogg/birds.ogg" type="audio/ogg">
+                        <source src="sounds/mp3/birds.mp3" type="audio/mp3">
                         Your browser does not support the audio element.
                     </audio>
                     <!--<span class="volume"></span>-->
@@ -442,14 +113,108 @@
             </div>
             <div class="row ">
 
-                <img src="images/rain.png" id="btnPlay4" alt="">
+                <img src="images/playerImg/river.png" id="btnPlay4" alt="">
                 <!--<button id="btnPlay" class="btn">play</button>-->
 
 
                     <!--<span class="tooltip"></span>-->
                     <div class="slider" id="slider4"></div>
                     <audio id="audio4">
-                        <source src="sounds/Thunder-and-rain.mp3" type="audio/wav">
+                        <source src="sounds/ogg/river.ogg" type="audio/ogg">
+                        <source src="sounds/mp3/river.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <!--<span class="volume"></span>-->
+
+            </div>
+            <div class="row ">
+
+                <img src="images/playerImg/beach.png" id="btnPlay5" alt="">
+                <!--<button id="btnPlay" class="btn">play</button>-->
+                <!--<span class="tooltip"></span>-->
+                    <div class="slider" id="slider5"></div>
+                    <audio id="audio5">
+                        <source src="sounds/ogg/beach.ogg" type="audio/ogg">
+                        <source src="sounds/mp3/beach.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <!--<span class="volume"></span>-->
+                </div>
+            <div class="row ">
+
+                <img src="images/playerImg/fire.png" id="btnPlay6" alt="">
+                <!--<button id="btnPlay" class="btn">play</button>-->
+
+
+                    <!--<span class="tooltip"></span>-->
+                    <div class="slider" id="slider6"></div>
+                    <audio id="audio6">
+                        <source src="sounds/ogg/fire.ogg" type="audio/ogg">
+                        <source src="sounds/mp3/fire.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <!--<span class="volume"></span>-->
+
+            </div>
+            <div class="row ">
+
+                <img src="images/playerImg/moon.png" id="btnPlay7" alt="">
+                <!--<button id="btnPlay" class="btn">play</button>-->
+
+
+                    <!--<span class="tooltip"></span>-->
+                    <div class="slider" id="slider7"></div>
+                    <audio id="audio7">
+                        <source src="sounds/ogg/night.ogg" type="audio/ogg">
+                        <source src="sounds/mp3/night.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <!--<span class="volume"></span>-->
+
+            </div>
+            <div class="row ">
+
+                <img src="images/playerImg/white.png" id="btnPlay8" alt="">
+                <!--<button id="btnPlay" class="btn">play</button>-->
+
+
+                    <!--<span class="tooltip"></span>-->
+                    <div class="slider" id="slider8"></div>
+                    <audio id="audio8">
+                        <source src="sounds/ogg/white.ogg" type="audio/ogg">
+                        <source src="sounds/mp3/white.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <!--<span class="volume"></span>-->
+
+            </div>
+            <div class="row ">
+
+                <img src="images/playerImg/train.png" id="btnPlay9" alt="">
+                <!--<button id="btnPlay" class="btn">play</button>-->
+
+
+                    <!--<span class="tooltip"></span>-->
+                    <div class="slider" id="slider9"></div>
+                    <audio id="audio9">
+                        <source src="sounds/ogg/train.ogg" type="audio/ogg">
+                        <source src="sounds/mp3/train.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <!--<span class="volume"></span>-->
+
+            </div>
+            <div class="row ">
+
+                <img src="images/playerImg/chimes.png" id="btnPlay10" alt="">
+                <!--<button id="btnPlay" class="btn">play</button>-->
+
+
+                    <!--<span class="tooltip"></span>-->
+                    <div class="slider" id="slider10"></div>
+                    <audio id="audio10">
+                        <source src="sounds/ogg/chimes.ogg" type="audio/ogg">
+                        <source src="sounds/mp3/chimes.mp3" type="audio/mp3">
                         Your browser does not support the audio element.
                     </audio>
                     <!--<span class="volume"></span>-->
@@ -458,9 +223,405 @@
 
 
         </div>
+
+
+        <div class="col-8">
+            <div class="col-8">
+                <div class="sudoku-outer-grid ">
+                    <div class="row sudoku-grid__row">
+
+                        <div class="sudoku-col-1-9">
+                            1
+                        </div>
+                        <div class="sudoku-col-1-9">
+                            2
+                        </div>
+                        <div class="sudoku-col-1-9">
+                            3
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            4
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            5
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            6
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            7
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            8
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            9
+                        </div>
+
+
+                    </div>
+                    <div class="row sudoku-grid__row">
+
+                        <div class="sudoku-col-1-9">
+                            1
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            2
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            3
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            4
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            5
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            6
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            7
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            8
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            9
+                        </div>
+
+
+                    </div>
+                    <div class="row sudoku-grid__row">
+
+                        <div class="sudoku-col-1-9">
+                            1
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            2
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            3
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            4
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            5
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            6
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            7
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            8
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            9
+                        </div>
+
+
+                    </div>
+                    <div class="row sudoku-grid__row">
+
+                        <div class="sudoku-col-1-9">
+                            1
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            2
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            3
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            4
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            5
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            6
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            7
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            8
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            9
+                        </div>
+
+
+                    </div>
+                    <div class="row sudoku-grid__row">
+
+                        <div class="sudoku-col-1-9">
+                            1
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            2
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            3
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            4
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            5
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            6
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            7
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            8
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            9
+                        </div>
+
+
+                    </div>
+                    <div class="row sudoku-grid__row">
+
+                        <div class="sudoku-col-1-9">
+                            1
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            2
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            3
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            4
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            5
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            6
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            7
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            8
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            9
+                        </div>
+
+
+                    </div>
+                    <div class="row sudoku-grid__row">
+
+                        <div class="sudoku-col-1-9">
+                            1
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            2
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            3
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            4
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            5
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            6
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            7
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            8
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            9
+                        </div>
+
+
+                    </div>
+                    <div class="row sudoku-grid__row">
+
+                        <div class="sudoku-col-1-9">
+                            1
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            2
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            3
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            4
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            5
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            6
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            7
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            8
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            9
+                        </div>
+
+
+                    </div>
+                    <div class="row sudoku-grid__row">
+
+                        <div class="sudoku-col-1-9">
+                            1
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            2
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            3
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            4
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            5
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            6
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            7
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            8
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            9
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="gameOptions">
+                    <button class="btn" id="btnNewGame">New Game</button>
+                    <button class="btn" id="btnHint">Hint</button>
+
+                    <div class="setDifficultyLevel">
+                        <h3>Difficulty</h3>
+                        <button class="btn" id="btnEasy">Easy</button>
+                        <button class="btn" id="btnNormal">Normal</button>
+                        <button class="btn" id="btnHard">Hard</button>
+                    </div>
+                    <!--<button class="btn" id="btnStopImages">stop images</button>-->
+                    <!--<button class="btn" id="btnResumeImages">resume images</button>-->
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
-<div class="img"></div>
+<!--<div class="row text-center">-->
+    <!--<div class="socialBtns">-->
+        <!--<button class="btn">-->
+            <!--<a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"-->
+               <!--href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button&via=twitterdev&related=twitterapi%2Ctwitter&hashtags=example%2Cdemo&text=cool%20sudoku">-->
+                <!--Tweet-->
+            <!--</a>-->
+        <!--</button>-->
+        <!--<button id="shareBtn" class="btn">FB Share</button>-->
+
+    <!--</div>-->
+<!--</div>-->
+
 <div id="numbers" class="numbers__outer">
     <div class="numbers">
         <div class="numbers__row">
@@ -480,6 +641,12 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.1/howler.core.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/sudokuGenerator.js"></script>
@@ -488,6 +655,20 @@
 <script src="js/view.js"></script>
 <script src="js/controller.js"></script>
 <script src="js/audioController.js"></script>
+<!--<script src="js/seamlessLoop.js"></script>-->
+<script>
+    document.getElementById('shareBtn').onclick = function() {
+        FB.ui({
+            method: 'share',
+            display: 'popup',
+            href: 'https://developers.facebook.com/docs/',
+            link: "The link you want to share",
+            name: "zen sudoku",
+            description: "The description who will be displayed"
+        }, function(response){});
+    }
+</script>
+
 
 </body>
 </html>

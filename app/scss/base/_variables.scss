@@ -1,7 +1,7 @@
 //colors
 $color-white: #5b6b5f;
 $color-vanilla: #FAE9D5;
-$color-grey:#6B493D;
+$color-grey: rgb(32, 27, 41);
 $color-green:#978E4D;
 $color-orange:#DAAF47;
 $color-lavander:#DCB7BF;
@@ -9,7 +9,7 @@ $color-lavander:#DCB7BF;
 //colors use
 $color-primary-text:$color-grey;
 $color-light: $color-vanilla;
-$color-accent-text:$color-orange;
+$color-accent-text:$color-grey;
 $color-logo-text:$color-white;
 $color-footer:$color-green;
 $color-separator:$color-green;
@@ -24,8 +24,8 @@ $font-weight-normal: 400;
 $font-weight-light: 300;
 $font-weight-bold: 700;
 
-$font-sans: "Arimo", sans-serif;
-$font-cursive:'Pacifico', cursive;
+$font-sans: sans-serif;
+$font-cursive:cursive;
 
 
 //grid

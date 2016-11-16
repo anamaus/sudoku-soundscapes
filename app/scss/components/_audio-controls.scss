@@ -34,7 +34,12 @@ display: none;
   border-radius: 50%;
 }
 
-.soundPlayer img{
-  display: block;
-  margin: 0 auto;
+//.soundPlayer img{
+//  display: block;
+//  margin: 0 auto;
+//}
+
+
+.soundPlayer>.row{
+  margin-bottom: 30px;
 }

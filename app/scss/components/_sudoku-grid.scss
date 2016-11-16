@@ -1,19 +1,11 @@
 .sudoku-outer-grid{
   display: inline-block;
-  margin: 10% 0;
+  //margin: 10% 0;
   height: $sudoku-outer-height;
   width: $sudoku-outer-width;
- background-color: #BCBCFF;
-  border:3px solid #7950ff;
-  //&::after{
-  //  content: url("../images/bambus.png");
-  //  height:900px;
-  //  width: 10px;
-  //  // background-color: red;
-  //  position: absolute;
-  //  right: percentage(2/3 );
-  //
-  //}
+ background-color: #6a6873;
+  border:3px solid #5b5a63;
+
 
 }
 
@@ -79,3 +71,13 @@
   background-color: #ffffd8;
 }
 
+//.gameOptions{
+//  background-color: rgba(43, 43, 43, 0.66);
+//  display: inline-block;
+//  padding: 30px ;
+//}
+
+//.soundPlayer{
+//  background-color: #2a2536;
+//
+//}
