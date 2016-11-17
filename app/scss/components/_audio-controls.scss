@@ -1,45 +1,54 @@
 
-.slider{
+.slider {
 
-  margin-top: 30px ;
   background-color: grey;
-
-  width: 200px;
- position:relative;
-  height: 5px;
-display: none;
-
+  width: 150px;
+  position: relative;
+  height: 4px;
+  opacity: 0;
+  margin: 0 auto;
 }
-.volume {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  left: 10px;
-  background: red no-repeat 0 -50px;
-  position: absolute;
-  margin-top: -5px;
-}
+//.volume {
+//  display: inline-block;
+//  width: 25px;
+//  height: 25px;
+//  left: 10px;
+//  background: red no-repeat 0 -50px;
+//  position: absolute;
+//  margin-top: -5px;
+//}
 .ui-slider-handle {
+ // background-image: url(../images/sound.png);
   position: absolute;
+ // background-position: center center;
+ // -webkit-background-size:100%;
+ // background-size:100%;
+  //background-repeat:no-repeat;
   z-index: 2;
   width: 20px;
   height: 20px;
   cursor: pointer;
-  background-color: purple ;
+  background-color: #2a2536;
   //font-weight: bold;
-  color: #fff200;
   outline: none;
-  top: -7px;
+  top: -9px;
   margin-left: -12px;
   border-radius: 50%;
 }
 
-//.soundPlayer img{
-//  display: block;
-//  margin: 0 auto;
-//}
-
-
-.soundPlayer>.row{
+.soundPlayer img{
+  display: block;
+  margin: 0 auto;
   margin-bottom: 30px;
+  cursor: pointer;
+}
+
+
+.soundPlayer .col-6{
+  //border-bottom:1px solid purple;
+  margin-bottom: 50px;
+
+}
+.soundPlayer{
+  border-left:1px solid purple;
 }

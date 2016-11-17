@@ -1,18 +1,19 @@
 .btn{
-  float: left;
-  clear:left;
+  //float: left;
+  //clear:left;
   display: inline-block;
   min-height: 3em;
   min-width: 8em;
 //  padding: 5px 28px;
 //  border:3px solid #7950ff;
   text-align: center;
-  font-size:1em;
+  font-size:0.9em;
   font-weight:bold;
   background-color: rgba(41, 29, 62, 0.67);
  // border-radius:25px;
-  margin-bottom:20px;
+ // margin-bottom:20px;
   cursor: pointer;
+  font-family: $font-sans;
 a{
   padding: 5px 35px;
   color: white;
@@ -27,7 +28,11 @@ color: white;
 
 }
 .setDifficultyLevel{
- @extend %clearfix;
+ //@extend %clearfix;
+  .btn{
+transform: scale(0.9);
+    }
+
 }
 .socialBtns{
   margin-top:100px;

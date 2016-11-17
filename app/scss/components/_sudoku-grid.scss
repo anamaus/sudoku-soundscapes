@@ -1,6 +1,6 @@
 .sudoku-outer-grid{
-  display: inline-block;
-  //margin: 10% 0;
+
+  margin: 0 auto;
   height: $sudoku-outer-height;
   width: $sudoku-outer-width;
  background-color: #6a6873;
@@ -71,13 +71,27 @@
   background-color: #ffffd8;
 }
 
-//.gameOptions{
-//  background-color: rgba(43, 43, 43, 0.66);
-//  display: inline-block;
-//  padding: 30px ;
-//}
+.gameOptions
+{ margin-top: 30px;
+  display: inline-block;
+// margin: 0 auto;
+
+}
 
 //.soundPlayer{
 //  background-color: #2a2536;
 //
 //}
+
+
+.setDifficultyLevel{
+  display: inline-block;
+  margin-top: 30px;
+
+}.gameOptionsOuter{
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+   width:600px;
+
+ }

@@ -90,7 +90,7 @@ h1 {
 
 @include headings {
  margin: 20px 0 10px 0;
-  font-family: $font-cursive;
+ // font-family: $font-cursive;
   color: $color-accent-text;
   @include media("(min-width:500px)") {
     margin-bottom: 20px;

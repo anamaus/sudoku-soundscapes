@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zen Sudoku</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet">
+
     <!--<link  rel="stylesheet" href="css/jquery-ui.css">-->
     <link  rel="stylesheet" href="css/style.css">
     <script>
@@ -45,103 +47,24 @@
 </script>
 <header>
 
-    <div class="container-wide">
-        <div class="row">
-            <div class="col-4">
-                <h3>Sudoku</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas scelerisque fringilla enim, a ultrices velit lacini. </p>
-            </div> <div class="col-8">
-                <h3>Sudoku</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas scelerisque fringilla enim, a ultrices velit lacini. </p>
-            </div>
+    <div class="container-wide text-center">
+        <div class="row ">
+            <div class="col-8"><h3>Sudoku</h3></div>
+            <div class="col-4 " style="border-left:1px solid purple;padding: 0 100px ">
+                <p>Enjoy relaxing sounds of nature. Click on one or more icons to create your perfect ambient mix.</p></div>
+
+
+
         </div>
     </div>
 
 </header>
 <div class="container-wide">
     <div class="row">
-
-
-        <div class="col-4 soundPlayer">
-
-            <div class="row ">
-                <img src="images/playerImg/rain.png" id="btnPlay1" alt="">
-
-                <div class="slider" id="slider1"></div>
-
-                <!--<span class="volume"></span>-->
-            </div>
-            <div class="row ">
-
-                <img src="images/playerImg/thunder.png" id="btnPlay2" alt="">
-
-                <div class="slider" id="slider2"></div>
-            </div>
-            <div class="row ">
-
-                <img src="images/playerImg/birds.png" id="btnPlay3" alt="">
-
-                <div class="slider" id="slider3"></div>
-            </div>
-            <div class="row ">
-
-                <img src="images/playerImg/river.png" id="btnPlay4" alt="">
-
-                <div class="slider" id="slider4"></div>
-            </div>
-            <div class="row ">
-
-                <img src="images/playerImg/beach.png" id="btnPlay5" alt="">
-
-                <div class="slider" id="slider5"></div>
-
-            </div>
-            <div class="row ">
-
-                <img src="images/playerImg/fire.png" id="btnPlay6" alt="">
-
-                <div class="slider" id="slider6"></div>
-
-            </div>
-            <div class="row ">
-
-                <img src="images/playerImg/moon.png" id="btnPlay7" alt="">
-
-                <div class="slider" id="slider7"></div>
-
-            </div>
-            <div class="row ">
-
-                <img src="images/playerImg/white.png" id="btnPlay8" alt="">
-
-                <div class="slider" id="slider8"></div>
-
-            </div>
-            <div class="row ">
-
-                <img src="images/playerImg/train.png" id="btnPlay9" alt="">
-
-                <div class="slider" id="slider9"></div>
-
-            </div>
-            <div class="row ">
-
-                <img src="images/playerImg/chimes.png" id="btnPlay10" alt="">
-
-                <div class="slider" id="slider10"></div>
-
-
-            </div>
-
-
-        </div>
-
-
         <div class="col-8">
-            <div class="col-8">
-                <div class="sudoku-outer-grid ">
+            <div class="row">
+
+                <div class="sudoku-outer-grid">
                     <div class="row sudoku-grid__row">
 
                         <div class="sudoku-col-1-9">
@@ -503,24 +426,109 @@
 
 
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="gameOptions">
-                    <button class="btn" id="btnNewGame">New Game</button>
-                    <button class="btn" id="btnHint">Hint</button>
 
+            </div>
+            <div class="row">
+                <div class="gameOptionsOuter">
+                    <div class="gameOptions">
+                        <!--<h3>Game Options</h3>-->
+                        <button class="btn" id="btnNewGame">New Game</button>
+                        <button class="btn" id="btnHint">Hint</button>
+                        <button class="btn" id="myBtn">How to play</button>
+                    </div>
                     <div class="setDifficultyLevel">
-                        <h3>Difficulty</h3>
+                        <!--<h3>Difficulty</h3>-->
                         <button class="btn" id="btnEasy">Easy</button>
                         <button class="btn" id="btnNormal">Normal</button>
                         <button class="btn" id="btnHard">Hard</button>
                     </div>
                     <!--<button class="btn" id="btnStopImages">stop images</button>-->
                     <!--<button class="btn" id="btnResumeImages">resume images</button>-->
+
                 </div>
             </div>
+        </div>
+
+        <div class="col-4 soundPlayer text-center">
+
+            <div class="row ">
+                <div class="col-6">
+                    <img src="images/playerImg/rain.png" id="btnPlay1" alt="">
+                    <div class="slider" id="slider1"></div>
+
+                    <!--<span class="volume"></span>-->
+                </div>
+                <div class="col-6">
+                    <img src="images/playerImg/thunder.png" id="btnPlay2" alt="">
+
+                    <div class="slider" id="slider2"></div>
+                </div>
+
+            </div>
+
+            <div class="row ">
+                <div class="col-6">
+                    <img src="images/playerImg/birds.png" id="btnPlay3" alt="">
+
+                    <div class="slider" id="slider3"></div>
+                </div>
+                <div class="col-6">
+                    <img src="images/playerImg/river.png" id="btnPlay4" alt="">
+
+                    <div class="slider" id="slider4"></div>
+                </div>
+
+            </div>
+
+            <div class="row ">
+                <div class="col-6">
+                    <img src="images/playerImg/beach.png" id="btnPlay5" alt="">
+
+                    <div class="slider" id="slider5"></div>
+                </div>
+                <div class="col-6">
+                    <img src="images/playerImg/fire.png" id="btnPlay6" alt="">
+
+                    <div class="slider" id="slider6"></div>
+                </div>
+
+
+            </div>
+
+            <div class="row ">
+                <div class="col-6">
+                    <img src="images/playerImg/moon.png" id="btnPlay7" alt="">
+
+                    <div class="slider" id="slider7"></div>
+                </div>
+                <div class="col-6">
+                    <img src="images/playerImg/white.png" id="btnPlay8" alt="">
+
+                    <div class="slider" id="slider8"></div>
+                </div>
+
+
+            </div>
+
+            <div class="row ">
+
+                <div class="col-6">
+                    <img src="images/playerImg/train.png" id="btnPlay9" alt="">
+
+                    <div class="slider" id="slider9"></div>
+                </div>
+                <div class="col-6"><img src="images/playerImg/chimes.png" id="btnPlay10" alt="">
+
+                    <div class="slider" id="slider10"></div>
+                </div>
+
+
+            </div>
+
 
         </div>
+
+
     </div>
 </div>
 <!--<div class="row text-center">-->
@@ -557,7 +565,38 @@
 </div>
 
 
+<!-- Trigger/Open The Modal -->
 
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">x</span>
+        <div class="modal-header">
+
+            <h3>How to play Sudoku?</h3>
+        </div>
+        <div class="modal-body">
+
+            <p>Lorem ipsum dolor sit amet, per ea aeque audiam, nam ei solum oporteat hendrerit. Cu mei brute illum
+                consulatu. Adhuc mediocritatem ut eum, quo an dolorem fabellas splendide. Consul possim accusata ex has,
+                his
+                ei homero pertinacia. Ut has enim platonem. An iusto probatus voluptatum mei, ei eam eruditi intellegat.
+
+                Mea ea paulo scripta, esse iracundia liberavisse cum cu. An sit elit bonorum honestatis, est purto
+                theophrastus et, purto nemore duo ut. Te nominavi molestie pro, ea error decore alienum mea. Prodesset
+                definiebas ad his.</p>
+        </div>
+
+
+            <button class="btn " >Close</button>
+
+
+    </div>
+
+</div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.1/howler.core.min.js"></script>
@@ -565,7 +604,6 @@
 <script src="js/jquery-ui.js"></script>
 <script src="js/sudokuGenerator.js"></script>
 <script src="js/model.js"></script>
-<script src="js/gameLogic.js"></script>
 <script src="js/view.js"></script>
 <script src="js/controller.js"></script>
 <script src="js/audioController.js"></script>
