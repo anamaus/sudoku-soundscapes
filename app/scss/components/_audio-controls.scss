@@ -50,5 +50,63 @@
 
 }
 .soundPlayer{
+  position: relative;
   border-left:1px solid purple;
+// visibility: visible;
+//  opacity: 1;
+  transition: all 0.8s ;
+  left:0;
+  width:100%;
+  background-color:white;
+
+
+
+}
+.soundPlayer-closed{
+  //visibility: hidden;
+  left:100%;
+ // opacity: 0;
+
+
+}
+//.btnPlayer{
+//  transition:left 0.8s ;
+//  position: fixed;
+//  top:50%;
+//    z-index: 1600;
+//}
+
+.btnPlayer{
+  transition: left 0.8s ;
+  width:80px;
+  height:60px;
+  background-color: #5b6b5f;
+  position: absolute;
+  top:0;
+  left:0;
+z-index: 1700;
+  opacity: 1;
+  visibility: visible;
+}
+//
+//.btnPlayerOpen{
+//
+//  display: inline-block;
+//  transition: left 0.8s ;
+//  width:80px;
+//  height:60px;
+//  background-color: red;
+//  position: absolute;
+//  top:0;
+//  right:0;
+//  z-index: 1600;
+//  opacity: 1;
+//  visibility: visible;
+//}
+.playerHeading{
+  padding: 100px;
+}
+.btnPlayerClosed{
+
+  left: -80px;
 }

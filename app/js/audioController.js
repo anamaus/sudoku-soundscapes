@@ -59,7 +59,8 @@ var channel10 = new AudioChannel('sounds/ogg/chimes.ogg', 'sounds/mp3/chimes.mp3
 
 
 
-
+var allChannels = [];
+allChannels.push(channel1,channel2,channel3,channel4,channel5,channel6,channel7,channel8,channel9,channel10);
 
 
 

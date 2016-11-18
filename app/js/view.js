@@ -150,7 +150,7 @@ btn.onclick = function() {
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    modal.style.display = "none";
+    modal.style.opacity = "0"; modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -159,3 +159,33 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+
+
+
+
+//CLOSE PLAYER ON CLICK
+
+var $player = $('.soundPlayer');
+
+
+var $btnPlayer = $('#btnPlayer');
+$btnPlayer.click(function(){
+    $('.sudokuGrid').toggleClass('sudokuGrid-toRight');
+    $player.toggleClass('soundPlayer-closed');
+    $btnPlayer.toggleClass('btnPlayerClosed');
+    $btnPlayer.text() === ("close") ? $btnPlayer.text("open") : $btnPlayer.text("close");
+    return false;
+});
+
+
+$('#btnMuteAll').click(function () {
+    for (var i = 0; i < allChannels.length; i++) {
+        if (allChannels[i].channel.playing()) {
+            allChannels[i].channel.playAudio();
+        }
+    }
+})
+;
+

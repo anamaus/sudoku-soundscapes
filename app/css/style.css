@@ -48,11 +48,11 @@ a, a:hover {
     clear: both; }
 
 .page-wrap, .page-content {
-  -webkit-transition: left 0.3s ease;
-  -moz-transition: left 0.3s ease;
-  -ms-transition: left 0.3s ease;
-  -o-transition: left 0.3s ease;
-  transition: left 0.3s ease; }
+  -webkit-transition: right 5.3s ease;
+  -moz-transition: right 5.3s ease;
+  -ms-transition: right 5.3s ease;
+  -o-transition: right 5.3s ease;
+  transition: right 5.3s ease; }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .sudoku-col-1-9 {
   position: relative;
@@ -62,12 +62,12 @@ a, a:hover {
   vertical-align: top;
   height: 100%; }
 
-.numbers__outer, .numbers__row__nums, .menu__side, .nav__link {
+.numbers__outer, .numbers__row__nums, .menu__side {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -ms-transition: all .3s;
   -o-transition: all .3s;
-  transition: all .3s; }
+  transition: all 1.3s; }
 
 *,
 *:before,
@@ -139,13 +139,14 @@ a, a:hover {
 
 header {
   width: 100%;
-  padding: 70px 0; }
+  background-color: #a9ffe9; }
 
 body {
   height: 100%;
   width: 100%;
   color: #201b29;
-  font-family: "Muli", sans-serif; }
+  font-family: "Muli", sans-serif;
+  overflow-x: hidden; }
 
 .btn {
   display: inline-block;
@@ -331,7 +332,7 @@ h4, h5, h6 {
   cursor: default; }
 
 .active {
-  background-color: #ffffd8; }
+  border: 3px solid #ef51ff; }
 
 .gameOptions {
   margin-top: 30px;
@@ -346,6 +347,13 @@ h4, h5, h6 {
   margin: 0 auto;
   text-align: center;
   width: 600px; }
+
+.sudokuGrid {
+  right: 0;
+  transition: right 0.8s; }
+
+.sudokuGrid-toRight {
+  right: -16.666666666666664%; }
 
 .numbers__outer {
   width: 210px;
@@ -407,7 +415,33 @@ h4, h5, h6 {
   margin-bottom: 50px; }
 
 .soundPlayer {
-  border-left: 1px solid purple; }
+  position: relative;
+  border-left: 1px solid purple;
+  transition: all 0.8s;
+  left: 0;
+  width: 100%;
+  background-color: white; }
+
+.soundPlayer-closed {
+  left: 100%; }
+
+.btnPlayer {
+  transition: left 0.8s;
+  width: 80px;
+  height: 60px;
+  background-color: #5b6b5f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1700;
+  opacity: 1;
+  visibility: visible; }
+
+.playerHeading {
+  padding: 100px; }
+
+.btnPlayerClosed {
+  left: -80px; }
 
 /* The Modal (background) */
 .modal {
@@ -489,34 +523,34 @@ h4, h5, h6 {
 .page-wrap {
   overflow-x: hidden;
   position: absolute;
-  left: 0;
+  right: 0;
   width: 100%; }
 
 .page-content {
   position: relative;
   min-height: 100%;
-  left: 0; }
+  right: 200px; }
 
 .menu--open .page-content {
-  left: 210px; }
+  right: 0; }
 
 .menu--open .menu__side {
-  left: 0; }
+  right: -600px; }
 
 .menu--open .menu__toggle {
   color: #978E4D;
   position: fixed;
-  left: 210px;
+  right: 0;
   top: 0; }
 
 .menu__side {
-  background-color: #978E4D;
+  background-color: white;
   border-right: 1px solid #201b29;
   color: #fff;
   position: fixed;
   top: 0;
-  left: -210px;
-  width: 210px;
+  right: 0;
+  width: 600px;
   height: 100%;
   z-index: 1000;
   overflow-y: auto; }
@@ -524,35 +558,11 @@ h4, h5, h6 {
 .menu__toggle {
   font-size: 36px;
   position: fixed;
-  left: 0;
+  right: 600px;
   top: 0;
   padding: 0;
   background-color: transparent;
   color: #DAAF47;
-  z-index: 1500; }
+  z-index: 1600; }
   .menu__toggle:hover {
     color: #978E4D; }
-
-.nav__item {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  /* Will lighten any background colour you set. */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  /* Will darken any background colour you set. */ }
-  .nav__item:first-child {
-    border-top: none;
-    padding: 30px 10px; }
-    .nav__item:first-child h3 {
-      color: #201b29;
-      margin-bottom: 0; }
-
-.nav__link {
-  color: inherit;
-  font-weight: 700;
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 15px;
-  width: 100%;
-  border-left: 3px solid transparent; }
-  .nav__link:hover {
-    border-left-color: #201b29;
-    color: #201b29; }

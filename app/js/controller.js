@@ -4,6 +4,7 @@ function newGame() {
     drawAllFields();
     clearNumbers();
     debugging();
+    console.log(game.difficulty);
 }
 
 
@@ -11,7 +12,7 @@ $(document).ready(function () {
 
     newGame();
     setFieldsId();
-
+    makeDifficultyButtonActive('#btnNormal')
 });
 
 //$body.append("<img class='bgimg' src='images/zen.jpg' >");
@@ -53,6 +54,7 @@ $(".setDifficultyLevel").on("click", '.btn', function (event) {
         game.setDifficulty(0.6);
     }
     makeDifficultyButtonActive(this);
+    newGame();
 });
 
 

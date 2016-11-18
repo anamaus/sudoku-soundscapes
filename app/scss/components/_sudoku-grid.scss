@@ -68,7 +68,7 @@
 
 }
 .active{
-  background-color: #ffffd8;
+  border:3px solid #ef51ff;
 }
 
 .gameOptions
@@ -78,10 +78,6 @@
 
 }
 
-//.soundPlayer{
-//  background-color: #2a2536;
-//
-//}
 
 
 .setDifficultyLevel{
@@ -93,5 +89,14 @@
    margin: 0 auto;
    text-align: center;
    width:600px;
+
+ }
+.sudokuGrid{
+  right: 0;
+  transition: right 0.8s ;
+
+}
+ .sudokuGrid-toRight{
+   right: -16.666666666666664%;
 
  }

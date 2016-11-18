@@ -18,11 +18,11 @@
 
 
 %menu-slide-transition{
-  -webkit-transition: left 0.3s ease;
-  -moz-transition: left 0.3s ease;
-  -ms-transition: left 0.3s ease;
-  -o-transition: left 0.3s ease;
-  transition: left 0.3s ease;
+  -webkit-transition: right 5.3s ease;
+  -moz-transition: right 5.3s ease;
+  -ms-transition: right 5.3s ease;
+  -o-transition: right 5.3s ease;
+  transition: right 5.3s ease;
 }
 
 %col-x{
@@ -46,5 +46,5 @@
   -moz-transition: all .3s ;
   -ms-transition: all .3s ;
   -o-transition: all .3s ;
-  transition: all .3s;
+  transition: all 1.3s;
 }

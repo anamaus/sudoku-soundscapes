@@ -24,7 +24,7 @@ function SudokuField(x,y, isPartOfSolution) {
 function Game(solution){
     this.fields = [];
     this.solution= solution;
-    this.difficulty = 0.1;
+    this.difficulty = 0.5;
 
     this.generateGame = function(){
        this.fields = [];
