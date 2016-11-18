@@ -4,7 +4,7 @@ function newGame() {
     drawAllFields();
     clearNumbers();
     debugging();
-    console.log(game.difficulty);
+
 }
 
 

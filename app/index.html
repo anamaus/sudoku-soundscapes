@@ -67,6 +67,14 @@
 <div class="container-wide">
     <div class="row">
         <div class="col-8 sudokuGrid">
+            <div class="text-center">
+                <h2 > Sudoku</h2>
+                <p style="padding:20px">Enjoy relaxing sounds of nature. Click on one or
+                    more icons to create your perfect ambient
+                    mix.</p>
+            </div>
+
+
             <div class="row">
 
                 <div class="sudoku-outer-grid">
@@ -459,8 +467,8 @@
 
 
             <div class="soundPlayer">
-                <button id="btnPlayer" class="btnPlayer">close</button>
-                <button id="btnMuteAll" class="btnMuteAll btn">mute all</button>
+                <button id="btnPlayer" class="btnPlayer">❯</button>
+                <!--<button id="btnMuteAll" class="btnMuteAll btn">mute all</button>-->
                 <div class="row playerHeading">
                     <p>Enjoy relaxing sounds of nature. Click on one or
                         more icons to create your perfect ambient
@@ -614,13 +622,37 @@
 
 </div>
 
+<div id="modalGameWon" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">x</span>
+        <div class="modal-header">
+
+            <h3>Sudoku Solved Successfully</h3>
+        </div>
+        <div class="modal-body">
+
+            <p>What Would You Like To Do Next?</p>
+            <button class="btn" id="modalPlayNewGame">Play New Sudoku</button>
+            <button class="btn" id="modalShowPlayer" >Enjoy the ambient sounds</button>
+        </div>
+
+
+            <!--<button class="btn " >Close</button>-->
+
+
+    </div>
+
+</div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.1/howler.core.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/sudokuGenerator.js"></script>
 <script src="js/model.js"></script>
-<script src="js/view.js"></script>
+<script src="js/view.js" ></script>
 <script src="js/controller.js"></script>
 <script src="js/audioController.js"></script>
 <!--<script src="js/seamlessLoop.js"></script>-->

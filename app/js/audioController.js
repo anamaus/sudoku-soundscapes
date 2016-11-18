@@ -27,19 +27,29 @@ function AudioChannel(channelSrc1,channelSrc2, sliderId, btnId) {
 
     this.channel.volume(0.5);
 
+    //kad je kanal ukljucen i pritisnuto dugme muteAll, kanal je vidljiv ali bez zvuka
+    this.isMuted =false;
+    var muted = this.isMuted;
     this.channel.playAudio = function () {
+
         if (!thisChannel.playing()) {
             thatSlider.fadeIn(1000).css('opacity', '1');
-            thisChannel.play();
 
-        } else {
+
+                thisChannel.play();
+
+        }
+        else {
             thisChannel.stop();
             thatSlider.css('opacity', '0');
         }
     };
 
     this.btnId.click(function () {
+        if(!button.isMuted) {
             thisChannel.playAudio();
+        }
+
     });
 }
 

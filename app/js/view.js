@@ -150,7 +150,7 @@ btn.onclick = function() {
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    modal.style.opacity = "0"; modal.style.display = "none";
+     modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -168,24 +168,100 @@ window.onclick = function(event) {
 //CLOSE PLAYER ON CLICK
 
 var $player = $('.soundPlayer');
-
-
 var $btnPlayer = $('#btnPlayer');
+var $sudokuGrid =  $('.sudokuGrid');
+
 $btnPlayer.click(function(){
-    $('.sudokuGrid').toggleClass('sudokuGrid-toRight');
+    $sudokuGrid.toggleClass('sudokuGrid-toRight');
     $player.toggleClass('soundPlayer-closed');
     $btnPlayer.toggleClass('btnPlayerClosed');
-    $btnPlayer.text() === ("close") ? $btnPlayer.text("open") : $btnPlayer.text("close");
+    $btnPlayer.text() === ("❯") ? $btnPlayer.text("❮") : $btnPlayer.text("❯");
     return false;
 });
 
 
-$('#btnMuteAll').click(function () {
-    for (var i = 0; i < allChannels.length; i++) {
-        if (allChannels[i].channel.playing()) {
-            allChannels[i].channel.playAudio();
+
+
+
+
+
+
+
+
+
+
+
+// $('#btnMuteAll').click(function () {
+//     for (var i = 0; i < allChannels.length; i++) {
+//         if (allChannels[i].channel.playing()) {
+//             allChannels[i].channel.playAudio();
+//         }
+//     }
+// })
+// ;
+
+var button = {
+    isMuted: false,
+    onClick: function(){
+        this.isMuted = !this.isMuted;
+        for (var i = 0; i < allChannels.length; i++) {
+
+            if (allChannels[i].channel.playing()) {
+                allChannels[i].channel.pause();
+                allChannels[i].isMuted = true;
+
+            }
+            else if ( !allChannels[i].channel.playing()){
+                if(allChannels[i].isMuted){
+                    allChannels[i].channel.play();
+                    allChannels[i].isMuted = false;
+                }
+            }
         }
     }
+}
+
+$('#btnMuteAll').click(function () {
+
+    button.onClick();
 })
 ;
 
+var modalGameWon = document.getElementById('modalGameWon');
+//
+// // Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+//
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[1];
+
+// When the user clicks on the button, open the modal
+// btn.onclick = function() {
+//     modalGameWon.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modalGameWon.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target ==modalGameWon) {
+        modalGameWon.style.display = "none";
+    }
+};
+
+
+$('#modalPlayNewGame').click(function(){
+    modalGameWon.style.display = "none";
+    newGame();
+});
+
+$('#modalShowPlayer').click(function(){
+    modalGameWon.style.display = "none";
+    $sudokuGrid.removeClass('sudokuGrid-toRight');
+    $player.removeClass('soundPlayer-closed');
+    $btnPlayer.removeClass('btnPlayerClosed');
+    $btnPlayer.text("❯");
+});
