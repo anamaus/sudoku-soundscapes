@@ -3,29 +3,31 @@
   margin: 0 auto;
   height: $sudoku-outer-height;
   width: $sudoku-outer-width;
- background-color: #6a6873;
-  border:3px solid #5b5a63;
+ background-color: white;
+  border:3px solid darken($color-background-dark,3%);
   margin-top:100px;
+//  box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2),0 6px 20px 0 rgba(43, 43, 43, 0.19);
 
+ color: $color-grey;
 }
 
 .sudoku-grid__row{
   height: percentage(1/9);
   position: relative;
   &:nth-of-type(3){
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $color-background-dark;
 
   }
   &:nth-of-type(6){
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $color-background-dark;
   }
 
 
 }
-.sudoku-inner-grid__section{
- border: 1px solid #bfff12;
-  padding: 1px;
-}
+//.sudoku-inner-grid__section{
+// border: 1px solid #bfff12;
+//  padding: 1px;
+//}
 
 .sudoku-col-1-9{
   @extend %col-x;
@@ -33,27 +35,29 @@
   font-size: 35px;
   text-align: center;
   &:nth-of-type(3){
-    border-right: 1px solid black;
+    border-right: 1px solid $color-background-dark;
   }  &:nth-of-type(6){
-    border-right: 1px solid black;
+    border-right: 1px solid $color-background-dark;
   }
 }
-.sudoku-col-1-9{
-   //  display: inline-block;
-     //vertical-align:middle;
- // height:100%;
- // margin: 1px;
-  //color: #443067;
-
-}
+//.sudoku-col-1-9{
+//   //  display: inline-block;
+//     //vertical-align:middle;
+// // height:100%;
+// // margin: 1px;
+//  //color: #443067;
+//
+//}
 .sudoku-emptyField {
-  cursor: pointer;
-  background-color: white;
-  border:3px inset #b9b9b9 ;
-  color: lawngreen;
+  @extend %transitions;
 
+  cursor: pointer;
+ // background-color: white;
+  border:1px solid white;
+  color: white;
+  background-color: $color-background-light;
   &:hover{
-    background-color: rgb(235, 255, 225);
+    background-color: darken($color-background-darker,3%);
   }
   &:focus{
     background-color: rgb(255, 46, 208);
@@ -68,7 +72,8 @@
 
 }
 .active{
-  border:3px solid #ef51ff;
+  background-color: darken($color-background-darker,3%);
+ // border-bottom: 1px solid white;
 }
 
 .gameOptions

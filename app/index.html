@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet">
 
     <!--<link  rel="stylesheet" href="css/jquery-ui.css">-->
+
+    <link  rel="stylesheet" href="css/fontello.css">
     <link  rel="stylesheet" href="css/style.css">
     <script>
         window.twttr = (function(d, s, id) {
@@ -477,14 +479,15 @@
                 </div>
                 <div class="row ">
                     <div class="col-6">
-                        <img src="images/playerImg/rain.png" id="btnPlay1" alt="">
+                        <div class="icon-rainc" id="btnPlay1"></div>
+                        <!--<img src="images/playerImg/rain.png" id="btnPlay1" alt="">-->
                         <div class="slider" id="slider1"></div>
 
                         <!--<span class="volume"></span>-->
                     </div>
                     <div class="col-6">
-                        <img src="images/playerImg/thunder.png" id="btnPlay2" alt="">
-
+                        <!--<img src="images/playerImg/thunder.png" id="btnPlay2" alt="">-->
+                        <div class="icon-thunderc" id="btnPlay2"></div>
                         <div class="slider" id="slider2"></div>
                     </div>
 
@@ -492,13 +495,13 @@
 
                 <div class="row ">
                     <div class="col-6">
-                        <img src="images/playerImg/birds.png" id="btnPlay3" alt="">
-
+                        <!--<img src="images/playerImg/birds.png" id="btnPlay3" alt="">-->
+                        <div class="icon-birds3" id="btnPlay3"></div>
                         <div class="slider" id="slider3"></div>
                     </div>
                     <div class="col-6">
-                        <img src="images/playerImg/river.png" id="btnPlay4" alt="">
-
+                        <!--<img src="images/playerImg/river.png" id="btnPlay4" alt="">-->
+                        <div class="icon-riverc-1" id="btnPlay4"></div>
                         <div class="slider" id="slider4"></div>
                     </div>
 
@@ -506,44 +509,46 @@
 
                 <div class="row ">
                     <div class="col-6">
-                        <img src="images/playerImg/beach.png" id="btnPlay5" alt="">
-
+                        <!--<img src="images/playerImg/beach.png" id="btnPlay5" alt="">-->
+                        <div class="icon-beachc" id="btnPlay5"></div>
                         <div class="slider" id="slider5"></div>
                     </div>
+
                     <div class="col-6">
-                        <img src="images/playerImg/fire.png" id="btnPlay6" alt="">
-
-                        <div class="slider" id="slider6"></div>
-                    </div>
-
-
-                </div>
-
-                <div class="row ">
-                    <div class="col-6">
-                        <img src="images/playerImg/moon.png" id="btnPlay7" alt="">
-
+                        <!--<img src="images/playerImg/moon.png" id="btnPlay7" alt="">-->
+                        <div class="icon-moonc2-1" id="btnPlay7"></div>
                         <div class="slider" id="slider7"></div>
                     </div>
-                    <div class="col-6">
-                        <img src="images/playerImg/white.png" id="btnPlay8" alt="">
-
-                        <div class="slider" id="slider8"></div>
-                    </div>
-
 
                 </div>
 
                 <div class="row ">
 
                     <div class="col-6">
-                        <img src="images/playerImg/train.png" id="btnPlay9" alt="">
+                        <!--<img src="images/playerImg/fire.png" id="btnPlay6" alt="">-->
+                        <div class="icon-firec2-1" id="btnPlay6"></div>
+                        <div class="slider" id="slider6"></div>
+                    </div>
+                    <div class="col-6">
+                        <!--<img src="images/playerImg/chimes.png" id="btnPlay10" alt="">-->
+                        <div class="icon-chimesc" id="btnPlay10"></div>
+                        <div class="slider" id="slider10"></div>
+                    </div>
 
+                </div>
+
+                <div class="row ">
+
+                    <div class="col-6">
+                        <!--<img src="images/playerImg/train.png" id="btnPlay9" alt="">-->
+                        <div class="icon-railsc" id="btnPlay9"></div>
                         <div class="slider" id="slider9"></div>
                     </div>
-                    <div class="col-6"><img src="images/playerImg/chimes.png" id="btnPlay10" alt="">
 
-                        <div class="slider" id="slider10"></div>
+                    <div class="col-6">
+                        <!--<img src="images/playerImg/white.png" id="btnPlay8" alt="">-->
+                        <div class="icon-whitec" id="btnPlay8"></div>
+                        <div class="slider" id="slider8"></div>
                     </div>
 
 
@@ -597,7 +602,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-        <span class="close">x</span>
+        <span class="close"><span class="icon-closec"></span></span>
         <div class="modal-header">
 
             <h3>How to play Sudoku?</h3>
@@ -626,7 +631,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-        <span class="close">x</span>
+        <span class="close"><span class="icon-closec"></span></span>
         <div class="modal-header">
 
             <h3>Sudoku Solved Successfully</h3>
@@ -635,7 +640,7 @@
 
             <p>What Would You Like To Do Next?</p>
             <button class="btn" id="modalPlayNewGame">Play New Sudoku</button>
-            <button class="btn" id="modalShowPlayer" >Enjoy the ambient sounds</button>
+            <button class="btn" id="modalShowPlayer" >Enjoy ambient sounds</button>
         </div>
 
 

@@ -17,10 +17,10 @@
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: $color-background-light;
   margin: auto;
   //padding: 100px;
-  border: 1px solid #888;
+  //border: 1px solid #888;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatebottom;
@@ -42,25 +42,26 @@
 
 /* The Close Button */
 .close {
+  @extend %transitions;
   position: absolute;
-  top:0;
-  right:20px;
-  color: #ff6486;
+  top:10px;
+  right:10px;
+  color: $color-primary-text;
   //float: right;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: darken($color-background-darker,3%);
   text-decoration: none;
   cursor: pointer;
 }
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #2a2536;
+  background-color: $color-background-dark;
   h3{ color: white;}
 
 }

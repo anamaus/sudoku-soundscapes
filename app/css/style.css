@@ -62,12 +62,12 @@ a, a:hover {
   vertical-align: top;
   height: 100%; }
 
-.numbers__outer, .numbers__row__nums, .menu__side {
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all 1.3s; }
+.btn, .sudoku-emptyField, .numbers__outer, .numbers__row__nums, .close, .menu__side {
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s; }
 
 *,
 *:before,
@@ -144,9 +144,10 @@ header {
 body {
   height: 100%;
   width: 100%;
-  color: #201b29;
+  color: #fff;
   font-family: "Muli", sans-serif;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-color: #2eb7c1; }
 
 .btn {
   display: inline-block;
@@ -155,12 +156,16 @@ body {
   text-align: center;
   font-size: 0.9em;
   font-weight: bold;
-  background-color: rgba(41, 29, 62, 0.67);
+  background-color: #29a3ac;
   cursor: pointer;
-  font-family: "Muli", sans-serif; }
+  font-family: "Muli", sans-serif;
+  border-bottom: 1px solid transparent; }
   .btn a {
     padding: 5px 35px;
     color: white; }
+  .btn:hover {
+    background-color: #25949c;
+    border-bottom: 1px solid white; }
 
 button {
   outline: none;
@@ -176,6 +181,25 @@ button {
 
 .socialBtns .btn {
   float: none; }
+
+button.active::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: white;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+  button.active::before:hover {
+    left: 0;
+    right: 0; }
 
 .text-center {
   text-align: center; }
@@ -282,7 +306,7 @@ h1 {
 h1, h2, h3,
 h4, h5, h6 {
   margin: 20px 0 10px 0;
-  color: #201b29; }
+  color: #fff; }
   @media (min-width: 500px) {
     h1, h2, h3,
     h4, h5, h6 {
@@ -292,38 +316,35 @@ h4, h5, h6 {
   margin: 0 auto;
   height: 600px;
   width: 600px;
-  background-color: #6a6873;
-  border: 3px solid #5b5a63;
-  margin-top: 100px; }
+  background-color: white;
+  border: 3px solid #29a3ac;
+  margin-top: 100px;
+  color: #828F97; }
 
 .sudoku-grid__row {
   height: 11.11111%;
   position: relative; }
   .sudoku-grid__row:nth-of-type(3) {
-    border-bottom: 1px solid black; }
+    border-bottom: 1px solid #2cafb9; }
   .sudoku-grid__row:nth-of-type(6) {
-    border-bottom: 1px solid black; }
-
-.sudoku-inner-grid__section {
-  border: 1px solid #bfff12;
-  padding: 1px; }
+    border-bottom: 1px solid #2cafb9; }
 
 .sudoku-col-1-9 {
   width: 11.11111%;
   font-size: 35px;
   text-align: center; }
   .sudoku-col-1-9:nth-of-type(3) {
-    border-right: 1px solid black; }
+    border-right: 1px solid #2cafb9; }
   .sudoku-col-1-9:nth-of-type(6) {
-    border-right: 1px solid black; }
+    border-right: 1px solid #2cafb9; }
 
 .sudoku-emptyField {
   cursor: pointer;
-  background-color: white;
-  border: 3px inset #b9b9b9;
-  color: lawngreen; }
+  border: 1px solid white;
+  color: white;
+  background-color: #2eb7c1; }
   .sudoku-emptyField:hover {
-    background-color: #ebffe1; }
+    background-color: #2698a0; }
   .sudoku-emptyField:focus {
     background-color: #ff2ed0; }
 
@@ -333,7 +354,7 @@ h4, h5, h6 {
   cursor: default; }
 
 .active {
-  border: 3px solid #ef51ff; }
+  background-color: #2698a0; }
 
 .gameOptions {
   margin-top: 30px;
@@ -357,14 +378,16 @@ h4, h5, h6 {
   right: -16.666666666666664%; }
 
 .numbers__outer {
-  width: 210px;
+  width: auto;
   height: auto;
   margin: 0 auto;
   display: none;
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #cbd0ff; }
+  background-color: #2eb7c1;
+  color: #fff;
+  border: 3px solid #29a3ac; }
 
 .numbers {
   position: relative; }
@@ -380,19 +403,19 @@ h4, h5, h6 {
   height: 60px;
   line-height: 60px;
   font-size: 30px;
-  background-color: #ffffd8;
-  cursor: pointer;
-  margin: 5px; }
+  background-color: #2eb7c1;
+  cursor: pointer; }
   .numbers__row__nums:hover {
-    background-color: #efeeff; }
+    background-color: #25949c; }
 
 .slider {
-  background-color: grey;
+  background-color: white;
   width: 150px;
   position: relative;
   height: 4px;
   opacity: 0;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-top: 20px; }
 
 .ui-slider-handle {
   position: absolute;
@@ -400,17 +423,10 @@ h4, h5, h6 {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  background-color: #2a2536;
+  background-color: white;
   outline: none;
   top: -9px;
-  margin-left: -12px;
-  border-radius: 50%; }
-
-.soundPlayer img {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  cursor: pointer; }
+  margin-left: -10px; }
 
 .soundPlayer .col-6 {
   margin-bottom: 50px; }
@@ -420,10 +436,12 @@ h4, h5, h6 {
   transition: all 0.8s;
   left: 0;
   width: 100%;
-  background-color: white;
-  -webkit-box-shadow: -3px 0px 13px 0px #e2dfe2;
-  -moz-box-shadow: -3px 0px 13px 0px #e2dfe2;
-  box-shadow: -3px 0px 13px 0px #e2dfe2; }
+  background-color: #2cafb9;
+  box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19); }
+  .soundPlayer [class^="icon-"]:before {
+    font-size: 120px;
+    cursor: pointer;
+    color: #fff; }
 
 .soundPlayer-closed {
   left: 100%; }
@@ -432,7 +450,7 @@ h4, h5, h6 {
   transition: all 0.8s;
   width: 80px;
   height: 60px;
-  background-color: #5b6b5f;
+  background-color: #29a3ac;
   position: absolute;
   top: 0;
   left: 0;
@@ -474,9 +492,8 @@ h4, h5, h6 {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: #2eb7c1;
   margin: auto;
-  border: 1px solid #888;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatebottom;
@@ -504,21 +521,21 @@ h4, h5, h6 {
 /* The Close Button */
 .close {
   position: absolute;
-  top: 0;
-  right: 20px;
-  color: #ff6486;
-  font-size: 32px;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 28px;
   font-weight: bold; }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #2698a0;
   text-decoration: none;
   cursor: pointer; }
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #2a2536; }
+  background-color: #2cafb9; }
   .modal-header h3 {
     color: white; }
 
@@ -550,7 +567,7 @@ h4, h5, h6 {
 
 .menu__side {
   background-color: white;
-  border-right: 1px solid #201b29;
+  border-right: 1px solid #828F97;
   color: #fff;
   position: fixed;
   top: 0;

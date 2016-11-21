@@ -53,9 +53,9 @@ gulp.task('useref', function(){
 
 //font transfer to dist
 
-gulp.task('fonts', function() {
-    return gulp.src('app/fonts/**/*')
-        .pipe(gulp.dest('dist/fonts'))
+gulp.task('font', function() {
+    return gulp.src('app/font/**/*')
+        .pipe(gulp.dest('dist/font'))
 });
 
 //cleaning up generated files
@@ -66,7 +66,7 @@ gulp.task('clean:dist', function() {
 //build task 1 and then task/tasks 2, then task3
 gulp.task('build', function (callback) {
     runSequence('clean:dist',
-        ['sass', 'useref', 'images', 'fonts'],
+        ['sass', 'useref', 'images', 'font'],
         callback
     )
 });

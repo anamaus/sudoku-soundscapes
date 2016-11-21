@@ -80,21 +80,22 @@ var y;
 //upon clicking to an empty field, number options div appears right where it was clicked.
 $('.sudoku-outer-grid')
     .on("click", '.sudoku-col-1-9', function (event) {
- //set position of number options div based on mouse click position
+
         x = event.pageX;
         y = event.pageY;
-        $numsOuter.css(
-            {
-                'left': (x - 105)+ 'px',
-                'top': (y -105)+ 'px'
-            }
-        );
-//if it's an empty field, show number options div for players to choose value from, set it as active field, until clicked on next one
+
+//if it's an empty field, show number options div for players to choose value from
         if ($(this).hasClass('sudoku-emptyField')) {
             clickedField = $(this);
-            clickedField.addClass('active').siblings().removeClass('active').parent().siblings().children().removeClass('active');
 
-            $numsOuter.css('display', 'inline-block');
+//set position of number options div based on mouse click position
+            $numsOuter.css({
+                'display': 'inline-block',
+                'left': (x - 105) + 'px',
+                'top': (y - 105) + 'px'
+            });
+// set it as active field, until clicked on next one
+            clickedField.addClass('active').siblings().removeClass('active').parent().siblings().children().removeClass('active');
         }
         else {
             clearNumbers();

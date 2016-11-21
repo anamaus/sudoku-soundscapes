@@ -1,0 +1,66 @@
+.page-wrap {
+  @extend %menu-slide-transition;
+  overflow-x: hidden;
+  position: absolute;
+  right: 0;
+  width: 100%;
+
+}
+.page-content{
+  @extend %menu-slide-transition;
+  position: relative;
+  min-height: 100%;
+  right: 200px;
+}
+.menu--open{
+  .page-content{
+    right: 0;
+  }
+
+
+
+  .menu__side{
+   right:-600px;
+
+     }
+  .menu__toggle{
+    color: $color-green;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+
+}
+
+.menu__side{
+  @extend %transitions;
+  background-color: white;
+  border-right: 1px solid $color-grey ;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 600px;
+  height: 100%;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.menu__toggle{
+//  @extend %transitions;
+  font-size: 36px;
+  position: fixed;
+right: 600px;
+  top: 0;
+  padding: 0;
+  background-color:transparent;
+  color: $color-orange;
+  z-index: 1600;
+
+  &:hover{
+    color: $color-green;
+  }
+
+}
+
+
