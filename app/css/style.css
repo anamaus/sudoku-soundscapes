@@ -47,13 +47,6 @@ a, a:hover {
   .container:after, .container-wide:after, .row:after, .numbers__row:after {
     clear: both; }
 
-.page-wrap, .page-content {
-  -webkit-transition: right 5.3s ease;
-  -moz-transition: right 5.3s ease;
-  -ms-transition: right 5.3s ease;
-  -o-transition: right 5.3s ease;
-  transition: right 5.3s ease; }
-
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .sudoku-col-1-9 {
   position: relative;
   width: 100%;
@@ -62,7 +55,7 @@ a, a:hover {
   vertical-align: top;
   height: 100%; }
 
-.btn, .sudoku-emptyField, .numbers__outer, .numbers__row__nums, .close, .menu__side {
+.btn, .sudoku-emptyField, .numbers__outer, .numbers__row__nums, .slider, .soundPlayer [class^="icon-"], .btnPlayer, .btnMuteAll, .close, .social-buttons button {
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   -ms-transition: all .5s;
@@ -141,13 +134,34 @@ header {
   width: 100%;
   background-color: #a9ffe9; }
 
+.footerInner {
+  position: relative;
+  padding-top: 50px;
+  margin-top: 100px; }
+  .footerInner::before {
+    content: '';
+    height: 2px;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    background: -moz-linear-gradient(left, white 0%, #2eb5c1 50%, white 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, white), color-stop(50%, #2eb5c1), color-stop(100%, white));
+    background: -webkit-linear-gradient(left, white 0%, #2eb5c1 50%, white 100%);
+    background: -o-linear-gradient(left, white 0%, #2eb5c1 50%, white 100%);
+    background: -ms-linear-gradient(left, white 0%, #2eb5c1 50%, white 100%);
+    background: linear-gradient(to right, transparent 0%, #2cacb9 50%, transparent 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 ); }
+
 body {
   height: 100%;
   width: 100%;
   color: #fff;
   font-family: "Muli", sans-serif;
   overflow-x: hidden;
-  background-color: #2eb7c1; }
+  background-color: #2EB4C1; }
 
 .btn {
   display: inline-block;
@@ -155,51 +169,35 @@ body {
   min-width: 8em;
   text-align: center;
   font-size: 0.9em;
-  font-weight: bold;
-  background-color: #29a3ac;
+  background-color: #29a1ac;
   cursor: pointer;
   font-family: "Muli", sans-serif;
-  border-bottom: 1px solid transparent; }
-  .btn a {
-    padding: 5px 35px;
-    color: white; }
+  border-bottom: 3px solid transparent;
+  text-transform: capitalize; }
   .btn:hover {
-    background-color: #25949c;
-    border-bottom: 1px solid white; }
+    background-color: #248e98; }
+  .btn a {
+    color: white; }
 
 button {
+  padding: 0;
   outline: none;
   box-shadow: none;
   border: none;
-  color: white; }
+  color: white;
+  position: relative;
+  overflow: hidden; }
 
 .setDifficultyLevel .btn {
-  transform: scale(0.9); }
+  transform: scale(0.8); }
 
-.socialBtns {
-  margin-top: 100px; }
+.modalGameWon .modal-body button {
+  margin-top: 70px;
+  padding: 0.5em 1.1em; }
 
-.socialBtns .btn {
-  float: none; }
-
-button.active::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: white;
-  height: 4px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out; }
-  button.active::before:hover {
-    left: 0;
-    right: 0; }
+.btn.active {
+  background-color: #248e98;
+  border-bottom: 3px solid white; }
 
 .text-center {
   text-align: center; }
@@ -316,45 +314,41 @@ h4, h5, h6 {
   margin: 0 auto;
   height: 600px;
   width: 600px;
-  background-color: white;
-  border: 3px solid #29a3ac;
-  margin-top: 100px;
-  color: #828F97; }
+  background-color: #2cacb9;
+  border: 1px solid #29a1ac;
+  color: white; }
 
 .sudoku-grid__row {
   height: 11.11111%;
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid #29a1ac; }
   .sudoku-grid__row:nth-of-type(3) {
-    border-bottom: 1px solid #2cafb9; }
+    border-bottom: 5px solid #29a1ac; }
   .sudoku-grid__row:nth-of-type(6) {
-    border-bottom: 1px solid #2cafb9; }
+    border-bottom: 5px solid #29a1ac; }
+  .sudoku-grid__row:last-of-type {
+    border-bottom: none; }
 
 .sudoku-col-1-9 {
   width: 11.11111%;
   font-size: 35px;
-  text-align: center; }
+  text-align: center;
+  border-right: 1px solid #29a1ac; }
   .sudoku-col-1-9:nth-of-type(3) {
-    border-right: 1px solid #2cafb9; }
+    border-right: 5px solid #29a1ac; }
   .sudoku-col-1-9:nth-of-type(6) {
-    border-right: 1px solid #2cafb9; }
+    border-right: 5px solid #29a1ac; }
+  .sudoku-col-1-9:last-of-type {
+    border-right: none; }
 
 .sudoku-emptyField {
   cursor: pointer;
-  border: 1px solid white;
-  color: white;
-  background-color: #2eb7c1; }
+  color: #828F97;
+  background-color: white; }
   .sudoku-emptyField:hover {
-    background-color: #2698a0; }
+    background-color: #2695a0; }
   .sudoku-emptyField:focus {
     background-color: #ff2ed0; }
-
-.sudoku-col-1-9__text--success {
-  background-color: #BCBCFF;
-  color: #443067;
-  cursor: default; }
-
-.active {
-  background-color: #2698a0; }
 
 .gameOptions {
   margin-top: 30px;
@@ -377,6 +371,17 @@ h4, h5, h6 {
 .sudokuGrid-toRight {
   right: -16.666666666666664%; }
 
+.sectionHeading {
+  padding-top: 30px; }
+  .sectionHeading p {
+    padding: 30px 50px 70px 50px; }
+
+.sectionHeadingSudoku {
+  margin-left: 25%; }
+
+.sectionHeadingPlayer {
+  margin-left: 8.333333333333332%; }
+
 .numbers__outer {
   width: auto;
   height: auto;
@@ -385,9 +390,9 @@ h4, h5, h6 {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #2eb7c1;
+  background-color: #2EB4C1;
   color: #fff;
-  border: 3px solid #29a3ac; }
+  border: 3px solid #29a1ac; }
 
 .numbers {
   position: relative; }
@@ -403,10 +408,10 @@ h4, h5, h6 {
   height: 60px;
   line-height: 60px;
   font-size: 30px;
-  background-color: #2eb7c1;
+  background-color: #2EB4C1;
   cursor: pointer; }
   .numbers__row__nums:hover {
-    background-color: #25949c; }
+    background-color: #25919c; }
 
 .slider {
   background-color: white;
@@ -415,7 +420,7 @@ h4, h5, h6 {
   height: 4px;
   opacity: 0;
   margin: 0 auto;
-  margin-top: 20px; }
+  margin-top: -10px; }
 
 .ui-slider-handle {
   position: absolute;
@@ -429,42 +434,60 @@ h4, h5, h6 {
   margin-left: -10px; }
 
 .soundPlayer .col-6 {
-  margin-bottom: 50px; }
+  margin-bottom: 30px; }
 
 .soundPlayer {
   position: relative;
   transition: all 0.8s;
   left: 0;
   width: 100%;
-  background-color: #2cafb9;
+  background-color: #2cacb9;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19); }
-  .soundPlayer [class^="icon-"]:before {
-    font-size: 120px;
+  .soundPlayer [class^="icon-"] {
+    font-size: 100px;
     cursor: pointer;
     color: #fff; }
+    .soundPlayer [class^="icon-"]:hover {
+      color: #77d5de; }
 
 .soundPlayer-closed {
   left: 100%; }
 
 .btnPlayer {
-  transition: all 0.8s;
-  width: 80px;
-  height: 60px;
-  background-color: #29a3ac;
+  width: 50px;
+  height: 80px;
+  background-color: transparent;
   position: absolute;
-  top: 0;
+  top: calc(50vh - 40px);
   left: 0;
   z-index: 1700;
   opacity: 1;
   visibility: visible;
-  font-size: 32px;
-  line-height: 60px; }
-
-.playerHeading {
-  padding: 100px; }
+  font-size: 50px;
+  line-height: 60px;
+  cursor: pointer; }
+  .btnPlayer:hover {
+    color: #77d5de; }
 
 .btnPlayerClosed {
-  left: -80px; }
+  left: -50px; }
+
+.btnMuteAll {
+  background-color: transparent;
+  color: white;
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: calc(100% - 50px);
+  font-size: 32px;
+  line-height: 60px;
+  cursor: pointer; }
+  .btnMuteAll:hover {
+    color: #77d5de; }
+
+.btnMuteAllClosed {
+  left: -50px; }
 
 /* The Modal (background) */
 .modal {
@@ -472,7 +495,7 @@ h4, h5, h6 {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 2000;
   /* Sit on top */
   padding-top: 100px;
   /* Location of the box */
@@ -492,9 +515,9 @@ h4, h5, h6 {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #2eb7c1;
+  background-color: #2EB4C1;
   margin: auto;
-  width: 50%;
+  width: 40%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 0.4s;
@@ -529,62 +552,47 @@ h4, h5, h6 {
 
 .close:hover,
 .close:focus {
-  color: #2698a0;
+  color: #2695a0;
   text-decoration: none;
   cursor: pointer; }
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #2cafb9; }
+  background-color: #2cacb9; }
   .modal-header h3 {
     color: white; }
 
 .modal-body {
   padding: 50px 16px; }
 
-.page-wrap {
-  overflow-x: hidden;
-  position: absolute;
-  right: 0;
-  width: 100%; }
+.social-buttons {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%); }
 
-.page-content {
-  position: relative;
+.social-buttons button {
+  display: block;
+  float: left;
+  clear: both;
+  margin-bottom: 10px;
   min-height: 100%;
-  right: 200px; }
+  border-bottom: none;
+  width: 150px;
+  height: 50px;
+  left: -100px; }
+  .social-buttons button:hover {
+    left: 0;
+    background-color: #29a1ac; }
 
-.menu--open .page-content {
-  right: 0; }
+.social-button__icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  float: right;
+  color: white;
+  background-color: #248e98;
+  font-size: 20px;
+  line-height: 50px; }
 
-.menu--open .menu__side {
-  right: -600px; }
-
-.menu--open .menu__toggle {
-  color: #978E4D;
-  position: fixed;
-  right: 0;
-  top: 0; }
-
-.menu__side {
-  background-color: white;
-  border-right: 1px solid #828F97;
-  color: #fff;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 600px;
-  height: 100%;
-  z-index: 1000;
-  overflow-y: auto; }
-
-.menu__toggle {
-  font-size: 36px;
-  position: fixed;
-  right: 600px;
-  top: 0;
-  padding: 0;
-  background-color: transparent;
-  color: #DAAF47;
-  z-index: 1600; }
-  .menu__toggle:hover {
-    color: #978E4D; }
+.social-button__text {
+  line-height: 50px; }

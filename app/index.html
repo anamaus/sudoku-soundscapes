@@ -47,36 +47,19 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
-<!--<span id="btnPlayerOpen" class="btnPlayerOpen"></span>-->
-
-<!--<header>-->
-
-
-    <!--<div class="container-wide text-center">-->
-        <!--<div class="row ">-->
-            <!--<div class="col-8"><h3>Sudoku</h3></div>-->
-            <!--<div class="col-4 " style="border-left:1px solid purple;padding: 0 100px ">-->
-                <!--&lt;!&ndash;<p>Enjoy relaxing sounds of nature. Click on one or more icons to create your perfect ambient mix.</p>&ndash;&gt;-->
-                <!--</div>-->
-
-
-
-        <!--</div>-->
-    <!--</div>-->
-
-<!--</header>-->
 
 <div class="container-wide">
     <div class="row">
+
         <div class="col-8 sudokuGrid">
-            <div class="text-center">
-                <h2 > Sudoku</h2>
-                <p style="padding:20px">Enjoy relaxing sounds of nature. Click on one or
-                    more icons to create your perfect ambient
-                    mix.</p>
+            <div class="row  text-center">
+                <div class="sectionHeading sectionHeadingSudoku col-6">
+                    <!--<h2> Sudoku</h2>-->
+                    <p>Play Sudoku and blablabla.Enjoy relaxing sounds of nature. Click on one or
+                        more icons to create your perfect ambient
+                        mix.</p>
+                </div>
             </div>
-
-
             <div class="row">
 
                 <div class="sudoku-outer-grid">
@@ -462,21 +445,29 @@
 
                 </div>
             </div>
+
+
+
+
+                    <!--<p>made by maus</p>-->
+
         </div>
 
         <div class="col-4 text-center">
-
-
-
             <div class="soundPlayer">
                 <button id="btnPlayer" class="btnPlayer">❯</button>
-                <!--<button id="btnMuteAll" class="btnMuteAll btn">mute all</button>-->
-                <div class="row playerHeading">
-                    <p>Enjoy relaxing sounds of nature. Click on one or
-                        more icons to create your perfect ambient
-                        mix.
-                    </p>
+                <button id="btnMuteAll" class="btnMuteAll ">♫</button>
+
+                <div class="row sectionHeading">
+                    <div class="col-10 sectionHeadingPlayer">
+                        <!--<h2>Ambient sounds</h2>-->
+                        <p>Enjoy relaxing sounds of nature. Click on one or
+                            more icons to create your perfect ambient
+                            mix.
+                        </p>
+                    </div>
                 </div>
+
                 <div class="row ">
                     <div class="col-6">
                         <div class="icon-rainc" id="btnPlay1"></div>
@@ -557,21 +548,29 @@
             </div>
         </div>
 
-
     </div>
-</div>
-<!--<div class="row text-center">-->
-    <!--<div class="socialBtns">-->
-        <!--<button class="btn">-->
-            <!--<a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"-->
-               <!--href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button&via=twitterdev&related=twitterapi%2Ctwitter&hashtags=example%2Cdemo&text=cool%20sudoku">-->
-                <!--Tweet-->
-            <!--</a>-->
-        <!--</button>-->
-        <!--<button id="shareBtn" class="btn">FB Share</button>-->
 
-    <!--</div>-->
-<!--</div>-->
+</div>
+
+
+
+<div class="social-buttons">
+    <button class="btn">
+        <a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"
+           href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button&via=twitterdev&related=twitterapi%2Ctwitter&hashtags=example%2Cdemo&text=cool%20sudoku">
+            <span class="icon-twitter social-button__icon"></span>
+
+            <span class="social-button__text"> Tweet</span>
+        </a>
+    </button>
+    <button class="btn" id="shareBtn">
+        <span class="icon-facebook social-button__icon"></span> <span class="social-button__text"> Share</span>
+    </button>
+    <button class="btn">
+        <span class="icon-facebook social-button__icon"></span> <span class="social-button__text"> Contact me </span>
+    </button>
+
+</div>
 
 <div id="numbers" class="numbers__outer">
     <div class="numbers">
@@ -592,7 +591,6 @@
         </div>
     </div>
 </div>
-
 
 <!-- Trigger/Open The Modal -->
 
@@ -627,7 +625,7 @@
 
 </div>
 
-<div id="modalGameWon" class="modal">
+<div id="modalGameWon" class="modal modalGameWon">
 
     <!-- Modal content -->
     <div class="modal-content">
@@ -640,7 +638,7 @@
 
             <p>What Would You Like To Do Next?</p>
             <button class="btn" id="modalPlayNewGame">Play New Sudoku</button>
-            <button class="btn" id="modalShowPlayer" >Enjoy ambient sounds</button>
+            <button class="btn" id="modalShowPlayer" >Enjoy Ambient Sounds</button>
         </div>
 
 

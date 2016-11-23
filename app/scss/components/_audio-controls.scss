@@ -1,13 +1,13 @@
 
 .slider {
-
+  @extend %transitions;
   background-color: white;
   width: 150px;
   position: relative;
   height: 4px;
   opacity: 0;
   margin: 0 auto;
-  margin-top:20px;
+  margin-top:-10px;
 }
 
 .ui-slider-handle {
@@ -27,79 +27,84 @@
 
 .soundPlayer .col-6{
   //border-bottom:1px solid purple;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
 }
-.soundPlayer{
+
+.soundPlayer {
   position: relative;
- // border-left:1px solid purple;
-// visibility: visible;
-//  opacity: 1;
-  transition: all 0.8s ;
-  left:0;
-  width:100%;
+  transition: all 0.8s;
+  left: 0;
+  width: 100%;
   background-color: $color-background-dark;
-  //-webkit-box-shadow: -3px 0px 13px 0px rgb(226, 223, 226);
-  //-moz-box-shadow: -3px 0px 13px 0px rgb(226, 223, 226);
-  //box-shadow: -3px 0px 13px 0px rgb(226, 223, 226);
- // background-color: #8b778b;
-  box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2),0 6px 20px 0 rgba(43, 43, 43, 0.19);
-  [class^="icon-"]:before{
-    font-size: 120px;
+  box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19);
+  [class^="icon-"] {
+    @extend %transitions;
+    font-size: 100px;
     cursor: pointer;
     color: #fff;
+    &:hover {
+      color: lighten($color-background-light, 20%);
+    }
   }
 
 }
+
+//added with JS when clicked on close button
 .soundPlayer-closed{
-  //visibility: hidden;
   left:100%;
- // opacity: 0;
-
-
 }
-//.btnPlayer{
-//  transition:left 0.8s ;
-//  position: fixed;
-//  top:50%;
-//    z-index: 1600;
-//}
+
 
 .btnPlayer{
-  transition: all 0.8s ;
-  width:80px;
-  height:60px;
-  background-color: $color-background-darker;
+  @extend %transitions;
+  width:50px;
+  height:80px;
+  background-color: transparent;
   position: absolute;
-  top:0;
+  top:calc(50vh - 40px);
   left:0;
-z-index: 1700;
+  z-index: 1700;
   opacity: 1;
   visibility: visible;
-  font-size: 32px;
+  font-size: 50px;
   line-height:60px;
+  cursor: pointer;
+  &:hover{
+   color: lighten($color-background-light,20%);
+
+  }
 
 }
-//
-//.btnPlayerOpen{
-//
-//  display: inline-block;
-//  transition: left 0.8s ;
-//  width:80px;
-//  height:60px;
-//  background-color: red;
-//  position: absolute;
-//  top:0;
-//  right:0;
-//  z-index: 1600;
-//  opacity: 1;
-//  visibility: visible;
+
+//.playerHeading{
+//  padding: 100px;
 //}
-.playerHeading{
-  padding: 100px;
-}
 .btnPlayerClosed{
 
-  left: -80px;
+  left: -50px;
 }
 
+
+
+.btnMuteAll{
+  @extend %transitions;
+  background-color: transparent;
+//  background-color: $color-background-darker;
+  color: white;
+  width:50px;
+  height:60px;
+  position: absolute;
+  top:0;
+  left:calc(100% - 50px);
+  font-size: 32px;
+  line-height:60px;
+  cursor: pointer;
+  &:hover{
+    color: lighten($color-background-light,20%);
+
+  }
+}
+.btnMuteAllClosed{
+  left: -50px;
+}

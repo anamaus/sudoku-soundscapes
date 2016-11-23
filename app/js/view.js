@@ -176,6 +176,8 @@ $btnPlayer.click(function(){
     $player.toggleClass('soundPlayer-closed');
     $btnPlayer.toggleClass('btnPlayerClosed');
     $btnPlayer.text() === ("❯") ? $btnPlayer.text("❮") : $btnPlayer.text("❯");
+
+    $('.btnMuteAll').toggleClass('btnMuteAllClosed');
     return false;
 });
 

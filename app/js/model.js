@@ -76,6 +76,7 @@ function Game(solution){
 
     this.setValue = function(index, value){
        this.fields[index].value = value;
+        //TODO promeniti logiku da ne iscrtava resene odmah po unosenju, vec kad popuni ceo sudoku
         if (value === this.solution.fields[index].value) {
             this.fields[index] = this.solution.fields[index];
         }

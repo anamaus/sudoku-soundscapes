@@ -4,21 +4,21 @@ $color-vanilla: #FAE9D5;
 $color-grey: #828F97;
 $color-green:#978E4D;
 $color-orange:#DAAF47;
-$color-purple: #2eb7c1;
+$color-main: #2EB4C1;
 $color-purple-dark:#6468FC;
 $color-purple-light:#B1B3FE;
 
 
 
 //colors use
-$color-background-light:$color-purple;
+$color-background-light:$color-main;
 $color-background-dark:darken($color-background-light,2%);
 $color-background-darker:darken($color-background-dark,3%);
 $color-primary-text:$color-white;
 $color-light: $color-vanilla;
 $color-accent-text:$color-white;
 $color-logo-text:$color-white;
-$color-footer:$color-green;
+$color-footer:darken($color-background-dark,3%);
 
 $color-button-bg:$color-grey;
 $menu-slide-bg:$color-green;

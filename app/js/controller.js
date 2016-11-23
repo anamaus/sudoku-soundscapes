@@ -91,8 +91,8 @@ $('.sudoku-outer-grid')
 //set position of number options div based on mouse click position
             $numsOuter.css({
                 'display': 'inline-block',
-                'left': (x - 105) + 'px',
-                'top': (y - 105) + 'px'
+                'left': (x - 92) + 'px',
+                'top': (y -92) + 'px'
             });
 // set it as active field, until clicked on next one
             clickedField.addClass('active').siblings().removeClass('active').parent().siblings().children().removeClass('active');

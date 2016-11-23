@@ -1,0 +1,50 @@
+.social-buttons{
+  position: fixed;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+.social-buttons button{
+
+  @extend %transitions;
+  display: block;
+  float: left;
+  clear: both;
+  margin-bottom: 10px;
+  min-height:100%;
+  border-bottom: none;
+  width:150px;
+  height:50px;
+  //transform: scale(0.8);
+  left:-100px;
+
+  &:hover{
+    left:0;
+    background-color: $color-background-darker;
+  }
+}
+
+
+.social-button__icon {
+  width:50px;
+  height:50px;
+  display: inline-block;
+  float: right;
+ // padding: 10px;
+  //border-left: 2px solid darken($color-background-darker,5%);
+  color: white;
+  background-color: darken($color-background-darker,5%);
+  font-size: 20px;
+  line-height:50px;
+
+}
+
+.social-button__text {
+
+  //display: inline-block;
+  line-height:50px;
+
+}
