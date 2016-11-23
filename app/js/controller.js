@@ -82,7 +82,7 @@ $('.sudoku-outer-grid')
     .on("click", '.sudoku-col-1-9', function (event) {
 
         x = event.pageX;
-        y = event.pageY;
+        y = event.clientY;
 
 //if it's an empty field, show number options div for players to choose value from
         if ($(this).hasClass('sudoku-emptyField')) {

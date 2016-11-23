@@ -130,9 +130,12 @@ a, a:hover {
   .col-12 {
     width: 100%; } }
 
-header {
-  width: 100%;
-  background-color: #a9ffe9; }
+.logo {
+  position: fixed;
+  top: 5px;
+  left: 5px; }
+  .logo h3 {
+    margin: 0; }
 
 .footerInner {
   position: relative;
@@ -181,18 +184,17 @@ body {
 
 button {
   padding: 0;
-  outline: none;
-  box-shadow: none;
   border: none;
   color: white;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  outline: none; }
 
 .setDifficultyLevel .btn {
   transform: scale(0.8); }
 
 .modalGameWon .modal-body button {
-  margin-top: 70px;
+  margin-top: 50px;
   padding: 0.5em 1.1em; }
 
 .btn.active {
@@ -310,13 +312,21 @@ h4, h5, h6 {
     h4, h5, h6 {
       margin-bottom: 20px; } }
 
+.sudokuGrid {
+  padding-bottom: 20px; }
+
 .sudoku-outer-grid {
   margin: 0 auto;
   height: 600px;
   width: 600px;
+  color: white;
   background-color: #2cacb9;
   border: 1px solid #29a1ac;
-  color: white; }
+  box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19); }
+  @media (max-width: 400px) {
+    .sudoku-outer-grid {
+      height: 300px;
+      width: 300px; } }
 
 .sudoku-grid__row {
   height: 11.11111%;
@@ -331,7 +341,7 @@ h4, h5, h6 {
 
 .sudoku-col-1-9 {
   width: 11.11111%;
-  font-size: 35px;
+  font-size: 2em;
   text-align: center;
   border-right: 1px solid #29a1ac; }
   .sudoku-col-1-9:nth-of-type(3) {
@@ -346,23 +356,31 @@ h4, h5, h6 {
   color: #828F97;
   background-color: white; }
   .sudoku-emptyField:hover {
-    background-color: #2695a0; }
-  .sudoku-emptyField:focus {
-    background-color: #ff2ed0; }
+    background-color: #2695a0;
+    color: #fff; }
 
 .gameOptions {
   margin-top: 30px;
-  display: inline-block; }
+  display: block; }
+  @media (min-width: 768px) {
+    .gameOptions {
+      display: inline-block; } }
 
 .setDifficultyLevel {
-  display: inline-block;
+  display: block;
   margin-top: 30px; }
+  @media (min-width: 768px) {
+    .setDifficultyLevel {
+      display: inline-block; } }
 
 .gameOptionsOuter {
   display: block;
   margin: 0 auto;
   text-align: center;
-  width: 600px; }
+  width: 300px; }
+  @media (min-width: 768px) {
+    .gameOptionsOuter {
+      width: 600px; } }
 
 .sudokuGrid {
   right: 0;
@@ -376,11 +394,15 @@ h4, h5, h6 {
   .sectionHeading p {
     padding: 30px 50px 70px 50px; }
 
-.sectionHeadingSudoku {
-  margin-left: 25%; }
+@media (min-width: 768px) {
+  .sectionHeadingSudoku {
+    margin-left: 25%; } }
 
 .sectionHeadingPlayer {
   margin-left: 8.333333333333332%; }
+  @media (max-width: 768px) {
+    .sectionHeadingPlayer {
+      margin-left: 0; } }
 
 .numbers__outer {
   width: auto;
@@ -441,6 +463,8 @@ h4, h5, h6 {
   transition: all 0.8s;
   left: 0;
   width: 100%;
+  min-height: 100vh;
+  bottom: 0;
   background-color: #2cacb9;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19); }
   .soundPlayer [class^="icon-"] {
@@ -468,6 +492,9 @@ h4, h5, h6 {
   cursor: pointer; }
   .btnPlayer:hover {
     color: #77d5de; }
+  @media (max-width: 768px) {
+    .btnPlayer {
+      display: none; } }
 
 .btnPlayerClosed {
   left: -50px; }
@@ -523,6 +550,10 @@ h4, h5, h6 {
   -webkit-animation-duration: 0.4s;
   animation-name: animatebottom;
   animation-duration: 0.4s; }
+  .modal-content p {
+    margin-top: 30px; }
+    .modal-content p:first-of-type {
+      margin-top: 0; }
 
 /* Add Animation */
 @-webkit-keyframes animatebottom {
@@ -567,8 +598,11 @@ h4, h5, h6 {
 
 .social-buttons {
   position: fixed;
-  top: 50%;
-  transform: translateY(-50%); }
+  top: 0; }
+  @media (min-width: 768px) {
+    .social-buttons {
+      top: 50%;
+      transform: translateY(-50%); } }
 
 .social-buttons button {
   display: block;
@@ -583,6 +617,11 @@ h4, h5, h6 {
   .social-buttons button:hover {
     left: 0;
     background-color: #29a1ac; }
+  @media (max-width: 768px) {
+    .social-buttons button {
+      display: inline-block;
+      float: none;
+      clear: none; } }
 
 .social-button__icon {
   width: 50px;

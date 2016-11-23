@@ -1,7 +1,11 @@
 .social-buttons{
   position: fixed;
-  top:50%;
-  transform: translateY(-50%);
+  top: 0;
+  @include media("(min-width:768px)") {
+
+    top:50%;
+    transform: translateY(-50%);
+  }
 }
 
 
@@ -24,6 +28,12 @@
   &:hover{
     left:0;
     background-color: $color-background-darker;
+  }
+  @include media("(max-width:768px)") {
+
+    display: inline-block;
+    float: none;
+    clear: none;
   }
 }
 

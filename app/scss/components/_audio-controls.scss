@@ -36,6 +36,8 @@
   transition: all 0.8s;
   left: 0;
   width: 100%;
+  min-height:100vh;
+  bottom:0;
   background-color: $color-background-dark;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19);
   [class^="icon-"] {
@@ -74,7 +76,9 @@
    color: lighten($color-background-light,20%);
 
   }
-
+  @include media("(max-width:768px)") {
+    display: none;
+  }
 }
 
 //.playerHeading{
@@ -104,6 +108,7 @@
     color: lighten($color-background-light,20%);
 
   }
+
 }
 .btnMuteAllClosed{
   left: -50px;

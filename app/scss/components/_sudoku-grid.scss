@@ -1,9 +1,6 @@
-//.sudokuGrid{
-//  position: fixed;
-//  top:0;
-//  left:0;
-//  width:70%;
-//}
+.sudokuGrid{
+  padding-bottom:20px;
+ }
 
 
 
@@ -12,26 +9,29 @@
   margin: 0 auto;
   height: $sudoku-outer-height;
   width: $sudoku-outer-width;
- background-color:$color-background-dark;
+  color: white;
+  background-color:$color-background-dark;
   border:1px solid darken($color-background-dark,3%);
-  //margin-top:100px;
-//  box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2),0 6px 20px 0 rgba(43, 43, 43, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2),0 6px 20px 0 rgba(43, 43, 43, 0.19);
+  @include media("(max-width:400px)") {
+    height: $sudoku-size-xs;
+    width:$sudoku-size-xs;
+  }
 
- color: white;
 }
 
 .sudoku-grid__row{
   height: percentage(1/9);
   position: relative;
-  border-bottom: 1px solid $color-background-darker;
+  border-bottom: 1px solid darken($color-background-dark,3%);
 
   &:nth-of-type(3){
-    border-bottom: 5px solid $color-background-darker;
+    border-bottom: 5px solid darken($color-background-dark,3%);
 
   }
 
   &:nth-of-type(6){
-    border-bottom:5px solid $color-background-darker;
+    border-bottom:5px solid darken($color-background-dark,3%);
   }
   &:last-of-type{
     border-bottom:none;
@@ -47,14 +47,14 @@
 .sudoku-col-1-9{
   @extend %col-x;
   width:percentage(1/9);
-  font-size: 35px;
+  font-size: 2em;
   text-align: center;
-  border-right: 1px solid $color-background-darker;
+  border-right: 1px solid darken($color-background-dark,3%);
  &:nth-of-type(3){
-    border-right: 5px solid $color-background-darker;
+    border-right: 5px solid darken($color-background-dark,3%);
   }
   &:nth-of-type(6){
-    border-right: 5px solid $color-background-darker;
+    border-right: 5px solid darken($color-background-dark,3%);
   }
   &:last-of-type{
     border-right:none;
@@ -71,10 +71,9 @@
   background-color: white;
   &:hover{
     background-color: darken($color-background-darker,3%);
+    color: #fff;
   }
-  &:focus{
-    background-color: rgb(255, 46, 208);
-  }
+
 }
 
 
@@ -85,23 +84,30 @@
 
 .gameOptions {
   margin-top: 30px;
-  display: inline-block;
+  display: block;
   // margin: 0 auto;
-
+  @include media("(min-width:768px)") {
+    display: inline-block;
+  }
 }
 
 
 
 .setDifficultyLevel{
-  display: inline-block;
+  display: block;
   margin-top: 30px;
-
+  @include media("(min-width:768px)") {
+    display: inline-block;
+  }
 }
 .gameOptionsOuter{
    display: block;
    margin: 0 auto;
    text-align: center;
-   width:600px;
+   width:300px;
+  @include media("(min-width:768px)") {
+    width:600px;
+  }
 
  }
 .sudokuGrid{
@@ -123,11 +129,14 @@
 
  }
  .sectionHeadingSudoku{
-   margin-left:25%;
+   @include media("(min-width:768px)") {
+     margin-left:25%;
+   }
+
  }
  .sectionHeadingPlayer{
    margin-left: 8.333333333333332%;
-   //h2{
-   //  opacity: 0;
-   //}
+   @include media("(max-width:768px)") {
+     margin-left: 0;
+   }
  }

@@ -26,7 +26,13 @@
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 0.4s;
   animation-name: animatebottom;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
+  p{
+    margin-top:30px;
+    &:first-of-type{
+      margin-top:0;
+    }
+  }
 }
 
 /* Add Animation */

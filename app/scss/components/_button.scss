@@ -28,12 +28,11 @@ a{
 
 button {
   padding:0;
-  outline: none;
-  box-shadow: none;
   border: none;
   color: white;
   position: relative;
   overflow: hidden;
+  outline: none;
  // transform: scale(0.9);
   //&::before {
   //  position: absolute;
@@ -71,7 +70,7 @@ transform: scale(0.8);
 
 
 .modalGameWon .modal-body button{
-  margin-top: 70px;
+  margin-top: 50px;
   padding:0.5em 1.1em;
  // margin-right: 10px;
 }
