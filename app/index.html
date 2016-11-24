@@ -5,13 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zen Sudoku</title>
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet">
-
-    <!--<link  rel="stylesheet" href="css/jquery-ui.css">-->
-
     <link  rel="stylesheet" href="css/fontello.css">
-    <!--<link  rel="stylesheet" href="css/style.css"> -->
     <link id="mainStylesheet"  rel="stylesheet" href="css/style.css">
-    <!--<link id="newCss" rel="stylesheet" href="css/test.css">-->
+
     <script>
         window.twttr = (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0],
@@ -554,11 +550,23 @@
 </div>
 
 
-<button class="btn" onclick="changeCss('css/themes/grey.css')">change css</button>
-<!--<button class="btn" onclick="changeCss('css/test.css')">change css</button>-->
+
+<!--colors palette-->
+<div class="color-picker">
+    <div id="color-picker__color__blue" class="colors"></div>
+    <div id="color-picker__color__purple" class="colors"></div>
+    <div id="color-picker__color__turquoise" class="colors"></div>
+    <div id="color-picker__color__lavender" class="colors"></div>
+    <div id="color-picker__color__green" class="colors"></div>
+    <div id="color-picker__color__red" class="colors"></div>
+    <div id="color-picker__color__peach" class="colors"></div>
+    <div id="color-picker__color__dust-rose" class="colors"></div>
+    <div id="color-picker__color__grey" class="colors"></div>
+    <div id="color-picker__icon" class="colors"><span class="icon-moonc"></span></div>
+</div>
 
 
-
+<!--social buttons-->
 <div class="social-buttons">
     <button class="btn">
         <a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"
@@ -577,8 +585,6 @@
     </button>
 
 </div>
-
-
 <div class="social-buttons__small">
     <button class="">
         <a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"
@@ -599,6 +605,8 @@
 
 </div>
 
+
+<!--number pick div-->
 <div id="numbers" class="numbers__outer">
     <div class="numbers">
         <div class="numbers__row">
@@ -619,10 +627,8 @@
     </div>
 </div>
 
-<!-- Trigger/Open The Modal -->
 
-
-<!-- The Modal -->
+<!--  Modals -->
 <div id="myModal" class="modal">
 
     <!-- Modal content -->
@@ -685,6 +691,9 @@
 </div>
 
 
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.1/howler.core.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
@@ -693,7 +702,6 @@
 <script src="js/view.js" ></script>
 <script src="js/controller.js"></script>
 <script src="js/audioController.js"></script>
-<!--<script src="js/seamlessLoop.js"></script>-->
 <script>
     document.getElementById('shareBtn').onclick = function() {
         FB.ui({

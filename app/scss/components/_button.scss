@@ -52,6 +52,6 @@ transform: scale(0.8);
 }
 
 .btn.active{
-  background-color: $color-background-darkest;
+  background-color: darken($color-background-darker,5%);
   border-bottom: 3px solid white;
 }

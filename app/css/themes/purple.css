@@ -55,7 +55,7 @@ a, a:hover {
   vertical-align: top;
   height: 100%; }
 
-.btn, .sudoku-emptyField, .numbers__outer, .numbers__row__nums, .slider, .soundPlayer .row [class^="icon-"], .btnPlayer, .btnMuteAll, .close, .social-buttons button {
+.btn, .sudoku-emptyField, .numbers__outer, .numbers__row__nums, .slider, .soundPlayer .row [class^="icon-"], .btnPlayer, .btnMuteAll, .close, .social-buttons button, .color-picker {
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   -ms-transition: all .5s;
@@ -332,7 +332,7 @@ h4, h5, h6 {
 
 .sudoku-emptyField {
   cursor: pointer;
-  color: #828F97;
+  color: #746E72;
   background-color: white; }
   .sudoku-emptyField:hover {
     background-color: #565aff;
@@ -482,11 +482,11 @@ h4, h5, h6 {
   background-color: transparent;
   color: white;
   width: 50px;
-  height: 60px;
+  height: 50px;
   position: absolute;
   top: 0;
   left: calc(100% - 50px);
-  line-height: 60px;
+  line-height: 50px;
   cursor: pointer; }
   .btnMuteAll [class^="icon-"] {
     font-size: 25px; }
@@ -632,3 +632,57 @@ h4, h5, h6 {
   @media (min-width: 767px) {
     .social-buttons__small {
       display: none; } }
+
+.color-picker {
+  display: inline-block;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: -450px; }
+  .color-picker:hover {
+    left: 0; }
+  .color-picker .colors {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-left: 0;
+    cursor: pointer; }
+
+.color-picker--isOpen {
+  left: 0; }
+
+#color-picker__color__blue {
+  background-color: #2EB4C1; }
+
+#color-picker__color__purple {
+  background-color: #898CFF; }
+
+#color-picker__color__red {
+  background-color: #ED6D79; }
+
+#color-picker__color__green {
+  background-color: #71E096; }
+
+#color-picker__color__dust-rose {
+  background-color: #C8627A; }
+
+#color-picker__color__peach {
+  background-color: #FFA79B; }
+
+#color-picker__color__lavender {
+  background-color: #B3A6DD; }
+
+#color-picker__color__turquoise {
+  background-color: #01CED1; }
+
+#color-picker__color__grey {
+  background-color: #746E72; }
+
+#color-picker__icon {
+  background-color: transparent;
+  color: white;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  border: none; }

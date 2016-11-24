@@ -177,9 +177,7 @@ $btnPlayer.click(function(){
     $player.toggleClass('soundPlayer-closed');
     $btnPlayer.toggleClass('btnPlayerClosed');
     $btnPlayer.text() === ("❯") ? $btnPlayer.text("❮") : $btnPlayer.text("❯");
-
     $muteBtn.toggleClass('btnMuteAllClosed');
-
     return false;
 });
 
@@ -192,22 +190,10 @@ $muteBtn.click(function(){
 
 
 
-function changeCss(css){
-    var newCss = $('#mainStylesheet');
-    newCss.attr('href',css);
-}
 
 
 
 
-// $('#btnMuteAll').click(function () {
-//     for (var i = 0; i < allChannels.length; i++) {
-//         if (allChannels[i].channel.playing()) {
-//             allChannels[i].channel.playAudio();
-//         }
-//     }
-// })
-// ;
 
 var button = {
     isMuted: false,
@@ -237,22 +223,15 @@ $('#btnMuteAll').click(function () {
 ;
 
 var modalGameWon = document.getElementById('modalGameWon');
-//
-// // Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
-//
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[1];
 
-// When the user clicks on the button, open the modal
-// btn.onclick = function() {
-//     modalGameWon.style.display = "block";
-// }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modalGameWon.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -261,12 +240,13 @@ window.onclick = function(event) {
     }
 };
 
-
+//when clicked, modal closes and new game starts
 $('#modalPlayNewGame').click(function(){
     modalGameWon.style.display = "none";
     newGame();
 });
 
+//when clicked on modal button close modal and show player
 $('#modalShowPlayer').click(function(){
     modalGameWon.style.display = "none";
     $sudokuGrid.removeClass('sudokuGrid-toRight');
@@ -274,3 +254,54 @@ $('#modalShowPlayer').click(function(){
     $btnPlayer.removeClass('btnPlayerClosed');
     $btnPlayer.text("❯");
 });
+
+
+//Handles color picker
+
+var $colorPicker = $('.color-picker');
+
+function changeCss(css){
+    var newCss = $('#mainStylesheet');
+    newCss.attr('href',css);
+    //$colorPicker.removeClass('color-picker--isOpen');
+}
+
+
+$colorPicker.on("click", '.colors', function (event) {
+    event.preventDefault();
+    if (this.id === 'color-picker__color__blue') {
+        changeCss('css/style.css');
+    }
+    else if (this.id === 'color-picker__color__dust-rose') {
+        changeCss('css/themes/dust-rose.css')
+    }
+    else if (this.id === 'color-picker__color__green') {
+        changeCss('css/themes/green.css')
+    }
+    else if (this.id === 'color-picker__color__grey') {
+        changeCss('css/themes/grey.css')
+    }
+    else if (this.id === 'color-picker__color__lavender') {
+        changeCss('css/themes/lavender.css')
+    }
+    else if (this.id === 'color-picker__color__peach') {
+        changeCss('css/themes/peach.css')
+    }
+    else if (this.id === 'color-picker__color__purple') {
+        changeCss('css/themes/purple.css')
+    }
+    else if (this.id === 'color-picker__color__red') {
+        changeCss('css/themes/red.css')
+    }
+    else if (this.id === 'color-picker__color__turquoise') {
+        changeCss('css/themes/turquoise.css')
+    }
+    // else if (this.id === 'color-picker__icon') {
+    //     $colorPicker.toggleClass('color-picker--isOpen');
+    // }
+
+});
+
+
+
+

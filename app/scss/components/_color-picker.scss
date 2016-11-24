@@ -1,0 +1,59 @@
+.color-picker{
+  @extend %transitions;
+  display: inline-block;
+  height:50px;
+  position: fixed;
+  top: 0;
+  left: -450px;
+  &:hover{
+    left: 0;
+  }
+  .colors {
+    float: left;
+    width:50px;
+    height: 50px;
+    border: 1px solid white;
+    border-left: 0;
+    cursor: pointer;
+  }
+}
+
+.color-picker--isOpen{
+  left: 0;
+}
+#color-picker__color__blue{
+  background-color: $color-blue;
+}
+#color-picker__color__purple{
+  background-color: $color-purple;
+}
+#color-picker__color__red{
+  background-color: $color-red;
+}
+#color-picker__color__green{
+  background-color: $color-green;
+}
+#color-picker__color__dust-rose{
+  background-color: $color-dust-rose;
+}
+#color-picker__color__peach{
+  background-color: $color-peach;
+}
+#color-picker__color__lavender{
+  background-color: $color-lavender;
+}
+#color-picker__color__turquoise{
+  background-color: $color-turquoise;
+}
+#color-picker__color__grey{
+  background-color: $color-grey;
+}
+#color-picker__icon{
+   background-color: transparent;
+  color: white;
+  font-size:40px;
+  line-height:50px;
+  text-align: center;
+  border: none;
+
+ }
