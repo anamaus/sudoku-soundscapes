@@ -1,29 +1,25 @@
-.btn{
+.btn {
   @extend %transitions;
   display: inline-block;
   min-height: 3em;
   min-width: 8em;
   text-align: center;
-  font-size:0.9em;
-  //font-weight:bold;
-  background-color:$color-background-darker;
+  font-size: 0.9em;
+  background-color: $color-background-darker;
   cursor: pointer;
   font-family: $font-sans;
-border-bottom: 3px solid transparent;
+  border-bottom: 3px solid transparent;
   text-transform: capitalize;
-  &:hover{
-    background-color: darken($color-background-darker,5%);
+  &:hover {
+    background-color: $color-background-darkest;
 
   }
 
-a{
-  //padding: 5px 35px;
-  color: white;
-}
-  //&:hover{
-  //  background-color: darken($color-background-darker,4%);
-  //
-  //}
+  a {
+
+    color: white;
+  }
+
 }
 
 button {
@@ -33,27 +29,7 @@ button {
   position: relative;
   overflow: hidden;
   outline: none;
- // transform: scale(0.9);
-  //&::before {
-  //  position: absolute;
-  //  bottom:0;
-  //  right:0;
-  //  left:0;
-  //  content: '';
-  //  display: block;
-  //  margin: auto;
-  //  height: 3px;
-  //  width: 0;
-  //  background: transparent;
-  //  transition: width .5s ease, background-color .5s ease;
-  //
-  //}
-  //&:hover::before {
-  //  width: 100%;
-  //  background:white;
-  //
-  //}
-}
+ }
 
 
 
@@ -76,6 +52,6 @@ transform: scale(0.8);
 }
 
 .btn.active{
-  background-color: darken($color-background-darker,5%);
+  background-color: $color-background-darkest;
   border-bottom: 3px solid white;
 }

@@ -9,7 +9,9 @@
     <!--<link  rel="stylesheet" href="css/jquery-ui.css">-->
 
     <link  rel="stylesheet" href="css/fontello.css">
-    <link  rel="stylesheet" href="css/style.css">
+    <!--<link  rel="stylesheet" href="css/style.css"> -->
+    <link id="mainStylesheet"  rel="stylesheet" href="css/style.css">
+    <!--<link id="newCss" rel="stylesheet" href="css/test.css">-->
     <script>
         window.twttr = (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0],
@@ -455,7 +457,7 @@
         <div class="col-4 text-center">
             <div class="soundPlayer">
                 <button id="btnPlayer" class="btnPlayer">❯</button>
-                <button id="btnMuteAll" class="btnMuteAll ">♫</button>
+                <button id="btnMuteAll" class="btnMuteAll "><span class="icon-music"></span></button>
 
                 <div class="row sectionHeading">
                     <div class="col-10 sectionHeadingPlayer">
@@ -552,6 +554,10 @@
 </div>
 
 
+<button class="btn" onclick="changeCss('css/themes/grey.css')">change css</button>
+<!--<button class="btn" onclick="changeCss('css/test.css')">change css</button>-->
+
+
 
 <div class="social-buttons">
     <button class="btn">
@@ -566,8 +572,29 @@
         <span class="icon-facebook social-button__icon"></span> <span class="social-button__text"> Share</span>
     </button>
     <button class="btn">
-        <a href="mailto:anamil2112@google.com">  <span class="icon-facebook social-button__icon"></span> <span class="social-button__text"> Contact me </span></a>
+        <a href="mailto:anamil2112@google.com">  <span class="icon-mail social-button__icon"></span> <span class="social-button__text"> Contact me </span></a>
 
+    </button>
+
+</div>
+
+
+<div class="social-buttons__small">
+    <button class="">
+        <a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"
+           href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button&via=twitterdev&related=twitterapi%2Ctwitter&hashtags=example%2Cdemo&text=cool%20sudoku">
+            <span class="icon-twitter social-button__icon"></span>
+
+
+        </a>
+    </button>
+    <button class="" id="shareBtn">
+        <span class="icon-facebook social-button__icon"></span>
+    </button>
+    <button class="">
+        <a href="mailto:anamil2112@google.com">
+            <span class="icon-mail social-button__icon"></span>
+        </a>
     </button>
 
 </div>

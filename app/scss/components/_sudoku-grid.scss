@@ -11,7 +11,7 @@
   width: $sudoku-outer-width;
   color: white;
   background-color:$color-background-dark;
-  border:1px solid darken($color-background-dark,3%);
+  border:1px solid $color-background-darker;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2),0 6px 20px 0 rgba(43, 43, 43, 0.19);
   @include media("(max-width:400px)") {
     height: $sudoku-size-xs;
@@ -23,15 +23,15 @@
 .sudoku-grid__row{
   height: percentage(1/9);
   position: relative;
-  border-bottom: 1px solid darken($color-background-dark,3%);
+  border-bottom: 1px solid $color-background-darker;
 
   &:nth-of-type(3){
-    border-bottom: 5px solid darken($color-background-dark,3%);
+    border-bottom: 5px solid $color-background-darker;
 
   }
 
   &:nth-of-type(6){
-    border-bottom:5px solid darken($color-background-dark,3%);
+    border-bottom:5px solid $color-background-darker;
   }
   &:last-of-type{
     border-bottom:none;
@@ -49,12 +49,12 @@
   width:percentage(1/9);
   font-size: 2em;
   text-align: center;
-  border-right: 1px solid darken($color-background-dark,3%);
+  border-right: 1px solid $color-background-darker;
  &:nth-of-type(3){
-    border-right: 5px solid darken($color-background-dark,3%);
+    border-right: 5px solid $color-background-darker;
   }
   &:nth-of-type(6){
-    border-right: 5px solid darken($color-background-dark,3%);
+    border-right: 5px solid $color-background-darker;
   }
   &:last-of-type{
     border-right:none;
@@ -70,7 +70,7 @@
   color: $color-grey;
   background-color: white;
   &:hover{
-    background-color: darken($color-background-darker,3%);
+    background-color: $color-background-darkest;
     color: #fff;
   }
 

@@ -20,15 +20,11 @@
   outline: none;
   top: -9px;
   margin-left: -10px;
-  //border-radius: 50%;
-
 }
 
 
 .soundPlayer .col-6{
-  //border-bottom:1px solid purple;
-  margin-bottom: 30px;
-
+   margin-bottom: 30px;
 }
 
 .soundPlayer {
@@ -40,13 +36,13 @@
   bottom:0;
   background-color: $color-background-dark;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19);
-  [class^="icon-"] {
+  .row [class^="icon-"] {
     @extend %transitions;
     font-size: 100px;
     cursor: pointer;
     color: #fff;
     &:hover {
-      color: lighten($color-background-light, 20%);
+      color: $color-background-lighter;
     }
   }
 
@@ -73,7 +69,7 @@
   line-height:60px;
   cursor: pointer;
   &:hover{
-   color: lighten($color-background-light,20%);
+   color: $color-background-lighter;
 
   }
   @include media("(max-width:768px)") {
@@ -81,11 +77,8 @@
   }
 }
 
-//.playerHeading{
-//  padding: 100px;
-//}
-.btnPlayerClosed{
 
+.btnPlayerClosed{
   left: -50px;
 }
 
@@ -94,18 +87,19 @@
 .btnMuteAll{
   @extend %transitions;
   background-color: transparent;
-//  background-color: $color-background-darker;
   color: white;
   width:50px;
   height:60px;
   position: absolute;
   top:0;
   left:calc(100% - 50px);
-  font-size: 32px;
   line-height:60px;
   cursor: pointer;
+  [class^="icon-"]{
+    font-size:25px;
+  }
   &:hover{
-    color: lighten($color-background-light,20%);
+    color: $color-background-lighter;
 
   }
 

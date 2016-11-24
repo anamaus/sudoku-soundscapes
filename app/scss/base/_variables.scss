@@ -1,28 +1,35 @@
 //colors
 $color-white: #fff;
-$color-vanilla: #FAE9D5;
+
 $color-grey: #828F97;
-$color-green:#978E4D;
-$color-orange:#DAAF47;
-$color-main: #2EB4C1;
-$color-purple-dark:#6468FC;
-$color-purple-light:#B1B3FE;
+
+$color-blue: #2EB4C1;
+$color-purple:#898CFF;
+$color-red: #ED6D79;
+$color-green:#71E096;
+$color-dust-rose:#C8627A;
+$color-peach:#FFA79B;
+$color-lavender:#B3A6DD;
+$color-turquoise:#01CED1;
 
 
 
 //colors use
-$color-background-light:$color-main;
-$color-background-dark:darken($color-background-light,2%);
-$color-background-darker:darken($color-background-dark,3%);
-$color-primary-text:$color-white;
-$color-light: $color-vanilla;
-$color-accent-text:$color-white;
-$color-logo-text:$color-white;
-$color-footer:darken($color-background-dark,3%);
 
-$color-button-bg:$color-grey;
-$menu-slide-bg:$color-green;
-$menu-slide-accent:$color-grey;
+$color-background-light:$color-blue !default;
+$color-background-lighter:lighten($color-background-light, 20%)!default;
+$color-background-dark:darken($color-background-light,2%) !default;
+$color-background-darker:darken($color-background-dark,3%) !default;
+$color-background-darkest:darken($color-background-darker,5%) !default;
+$color-primary-text:$color-white;
+
+$color-accent-text:$color-white!default;
+
+$color-footer:darken($color-background-dark,3%)!default;
+
+//$color-logo-text:$color-white;
+//$color-button-bg:$color-grey;
+//$menu-slide-accent:$color-grey;
 
 
 //font-weight

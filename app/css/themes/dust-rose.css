@@ -143,7 +143,7 @@ body {
   color: #fff;
   font-family: "Muli", sans-serif;
   overflow-x: hidden;
-  background-color: #2EB4C1; }
+  background-color: #C8627A; }
 
 .btn {
   display: inline-block;
@@ -151,13 +151,13 @@ body {
   min-width: 8em;
   text-align: center;
   font-size: 0.9em;
-  background-color: #29a1ac;
+  background-color: #c14f6a;
   cursor: pointer;
   font-family: "Muli", sans-serif;
   border-bottom: 3px solid transparent;
   text-transform: capitalize; }
   .btn:hover {
-    background-color: #248e98; }
+    background-color: #bd4460; }
   .btn a {
     color: white; }
 
@@ -177,7 +177,7 @@ button {
   padding: 0.5em 1.1em; }
 
 .btn.active {
-  background-color: #248e98;
+  background-color: #bd4460;
   border-bottom: 3px solid white; }
 
 .text-center {
@@ -299,8 +299,8 @@ h4, h5, h6 {
   height: 600px;
   width: 600px;
   color: white;
-  background-color: #2cacb9;
-  border: 1px solid #29a1ac;
+  background-color: #c55a74;
+  border: 1px solid #c14f6a;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19); }
   @media (max-width: 400px) {
     .sudoku-outer-grid {
@@ -310,11 +310,11 @@ h4, h5, h6 {
 .sudoku-grid__row {
   height: 11.11111%;
   position: relative;
-  border-bottom: 1px solid #29a1ac; }
+  border-bottom: 1px solid #c14f6a; }
   .sudoku-grid__row:nth-of-type(3) {
-    border-bottom: 5px solid #29a1ac; }
+    border-bottom: 5px solid #c14f6a; }
   .sudoku-grid__row:nth-of-type(6) {
-    border-bottom: 5px solid #29a1ac; }
+    border-bottom: 5px solid #c14f6a; }
   .sudoku-grid__row:last-of-type {
     border-bottom: none; }
 
@@ -322,11 +322,11 @@ h4, h5, h6 {
   width: 11.11111%;
   font-size: 2em;
   text-align: center;
-  border-right: 1px solid #29a1ac; }
+  border-right: 1px solid #c14f6a; }
   .sudoku-col-1-9:nth-of-type(3) {
-    border-right: 5px solid #29a1ac; }
+    border-right: 5px solid #c14f6a; }
   .sudoku-col-1-9:nth-of-type(6) {
-    border-right: 5px solid #29a1ac; }
+    border-right: 5px solid #c14f6a; }
   .sudoku-col-1-9:last-of-type {
     border-right: none; }
 
@@ -335,7 +335,7 @@ h4, h5, h6 {
   color: #828F97;
   background-color: white; }
   .sudoku-emptyField:hover {
-    background-color: #248e98;
+    background-color: #bd4460;
     color: #fff; }
 
 .gameOptions {
@@ -391,9 +391,9 @@ h4, h5, h6 {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #2EB4C1;
+  background-color: #C8627A;
   color: #fff;
-  border: 3px solid #29a1ac; }
+  border: 3px solid #c14f6a; }
 
 .numbers {
   position: relative; }
@@ -409,10 +409,10 @@ h4, h5, h6 {
   height: 60px;
   line-height: 60px;
   font-size: 30px;
-  background-color: #2EB4C1;
+  background-color: #C8627A;
   cursor: pointer; }
   .numbers__row__nums:hover {
-    background-color: #248e98; }
+    background-color: #bd4460; }
 
 .slider {
   background-color: white;
@@ -444,14 +444,14 @@ h4, h5, h6 {
   width: 100%;
   min-height: 100vh;
   bottom: 0;
-  background-color: #2cacb9;
+  background-color: #c55a74;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19); }
   .soundPlayer .row [class^="icon-"] {
     font-size: 100px;
     cursor: pointer;
     color: #fff; }
     .soundPlayer .row [class^="icon-"]:hover {
-      color: #77d5de; }
+      color: #e2aeba; }
 
 .soundPlayer-closed {
   left: 100%; }
@@ -470,7 +470,7 @@ h4, h5, h6 {
   line-height: 60px;
   cursor: pointer; }
   .btnPlayer:hover {
-    color: #77d5de; }
+    color: #e2aeba; }
   @media (max-width: 768px) {
     .btnPlayer {
       display: none; } }
@@ -491,7 +491,7 @@ h4, h5, h6 {
   .btnMuteAll [class^="icon-"] {
     font-size: 25px; }
   .btnMuteAll:hover {
-    color: #77d5de; }
+    color: #e2aeba; }
 
 .btnMuteAllClosed {
   left: -50px; }
@@ -522,7 +522,7 @@ h4, h5, h6 {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #2EB4C1;
+  background-color: #C8627A;
   margin: auto;
   width: 40%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -563,13 +563,13 @@ h4, h5, h6 {
 
 .close:hover,
 .close:focus {
-  color: #248e98;
+  color: #bd4460;
   text-decoration: none;
   cursor: pointer; }
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #2cacb9; }
+  background-color: #c55a74; }
   .modal-header h3 {
     color: white; }
 
@@ -598,7 +598,7 @@ h4, h5, h6 {
   left: -100px; }
   .social-buttons button:hover {
     left: 0;
-    background-color: #29a1ac; }
+    background-color: #c14f6a; }
 
 .social-button__icon {
   width: 50px;
@@ -606,7 +606,7 @@ h4, h5, h6 {
   display: inline-block;
   float: right;
   color: white;
-  background-color: #248e98;
+  background-color: #bd4460;
   font-size: 20px;
   line-height: 50px; }
 
@@ -626,7 +626,7 @@ h4, h5, h6 {
     height: 50px;
     display: inline-block;
     color: white;
-    background-color: #248e98;
+    background-color: #bd4460;
     font-size: 20px;
     line-height: 50px; }
   @media (min-width: 767px) {

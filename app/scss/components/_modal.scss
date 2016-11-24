@@ -19,8 +19,6 @@
   position: relative;
   background-color: $color-background-light;
   margin: auto;
-  //padding: 100px;
-  //border: 1px solid #888;
   width: 40%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatebottom;
@@ -53,14 +51,13 @@
   top:10px;
   right:10px;
   color: $color-primary-text;
-  //float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: darken($color-background-darker,3%);
+  color: $color-background-darkest;
   text-decoration: none;
   cursor: pointer;
 }

@@ -170,6 +170,7 @@ window.onclick = function(event) {
 var $player = $('.soundPlayer');
 var $btnPlayer = $('#btnPlayer');
 var $sudokuGrid =  $('.sudokuGrid');
+var $muteBtn =  $('.btnMuteAll');
 
 $btnPlayer.click(function(){
     $sudokuGrid.toggleClass('sudokuGrid-toRight');
@@ -177,18 +178,24 @@ $btnPlayer.click(function(){
     $btnPlayer.toggleClass('btnPlayerClosed');
     $btnPlayer.text() === ("❯") ? $btnPlayer.text("❮") : $btnPlayer.text("❯");
 
-    $('.btnMuteAll').toggleClass('btnMuteAllClosed');
+    $muteBtn.toggleClass('btnMuteAllClosed');
+
     return false;
 });
 
 
 
 
+$muteBtn.click(function(){
+    $('.btnMuteAll span').attr('class') === ("icon-music") ? $('.btnMuteAll span').attr('class','icon-crossmusic2') : $('.btnMuteAll span').attr('class', 'icon-music');
+})
 
 
 
-
-
+function changeCss(css){
+    var newCss = $('#mainStylesheet');
+    newCss.attr('href',css);
+}
 
 
 
