@@ -49,9 +49,9 @@
       color: $color-background-lighter;
     }
   }
-  //@include media("(max-width:768px)") {
-  //  padding-bottom:50px;
-  //}
+  @include media("(max-width:768px)") {
+    box-shadow:none;
+  }
 }
 
 //added with JS when clicked on close button
@@ -78,7 +78,7 @@
    color: $color-background-lighter;
 
   }
-  @include media("(max-width:768px)") {
+  @include media("(max-width:1023px)") {
     display: none;
   }
 }
@@ -101,6 +101,7 @@
   left:calc(100% - 50px);
   line-height:50px;
   cursor: pointer;
+  z-index: 3000;
   [class^="icon-"]{
     font-size:25px;
   }
@@ -108,7 +109,7 @@
     color: $color-background-lighter;
 
   }
-  @include media("(max-width:768px)") {
+  @include media("(max-width:1023px)") {
     position: fixed;
     top: 0;
     right: 0;

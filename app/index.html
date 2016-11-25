@@ -45,7 +45,7 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
-<!--<div class="logo"><h3>Sudoku</h3></div>-->
+<div class="logo"><h1>Sudoku</h1></div>
 <div class="container-wide">
     <div class="row">
         <div class="col-8 sudokuGrid">
@@ -426,13 +426,13 @@
             <div class="row">
                 <div class="gameOptionsOuter">
                     <div class="gameOptions">
-                        <!--<h3>Game Options</h3>-->
+
                         <button class="btn" id="btnNewGame">New Game</button>
                         <button class="btn" id="btnHint">Hint</button>
-                        <button class="btn" id="myBtn">How to play</button>
+                        <button class="btn" id="instructionsBtn">How to play</button>
                     </div>
                     <div class="setDifficultyLevel">
-                        <!--<h3>Difficulty</h3>-->
+
                         <button class="btn" id="btnEasy">Easy</button>
                         <button class="btn" id="btnNormal">Normal</button>
                         <button class="btn" id="btnHard">Hard</button>
@@ -543,12 +543,13 @@
 
 
     </div>
-    <div class="footer"><p>2016 Ⓒ
-        <!--Designed & Developed by-->
-        <a href="http://www.mauswebdesign.com/" target="_blank">Maus Design</a></p></div>
+
 </div>
 
-
+<div class="footer"><p>2016 Ⓒ
+    <!--Designed & Developed by-->
+    <a href="http://www.mauswebdesign.com/" target="_blank">Maus Design</a></p>
+</div>
 
 <!--colors palette-->
 <div class="color-picker">
@@ -593,7 +594,7 @@
 
         </a>
     </button>
-    <button class="" id="shareBtn">
+    <button class="" id="shareBtn2">
         <span class="icon-facebook social-button__icon"></span>
     </button>
     <button class="">
@@ -603,6 +604,7 @@
     </button>
 
 </div>
+
 
 
 <!--number pick div-->
@@ -628,11 +630,11 @@
 
 
 <!--  Modals -->
-<div id="myModal" class="modal">
+<div id="howToPlayModal" class="modal">
 
     <!-- Modal content -->
     <div class="modal-content">
-        <span class="close"><span class="icon-closec"></span></span>
+        <span  id="close1" class="close"><span class="icon-closec"></span></span>
         <div class="modal-header">
 
             <h3>How to play Sudoku?</h3>
@@ -669,7 +671,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-        <span class="close"><span class="icon-closec"></span></span>
+        <span class="close" id="close2"><span class="icon-closec"></span></span>
         <div class="modal-header">
 
             <h3>Sudoku Solved Successfully</h3>
@@ -690,7 +692,17 @@
 </div>
 
 
+<!--preloader-->
+<!--<div class="Preloader-page" id="preloader">-->
+    <!--<div class="innerPreloader">-->
+    <!--<div class="circle">-->
+        <!--<div class="outer-circle">-->
+            <!--<div class="inner-circle"></div>-->
 
+        <!--</div>-->
+    <!--</div>&lt;!&ndash;end of circle&ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.1/howler.core.min.js"></script>
@@ -703,6 +715,16 @@
 <script src="js/audioController.js"></script>
 <script>
     document.getElementById('shareBtn').onclick = function() {
+        FB.ui({
+            method: 'share',
+            display: 'popup',
+            href: 'https://developers.facebook.com/docs/',
+            link: "The link you want to share",
+            name: "zen sudoku",
+            description: "The description who will be displayed"
+        }, function(response){});
+    };
+    document.getElementById('shareBtn2').onclick = function() {
         FB.ui({
             method: 'share',
             display: 'popup',

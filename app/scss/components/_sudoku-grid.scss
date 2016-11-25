@@ -27,6 +27,8 @@
   @include media("(max-width:1023px)") {
     height: $sudoku-size-l;
     width:$sudoku-size-l;
+    box-shadow:none;
+
   }
   @include media("(max-width:550px)") {
     height: $sudoku-size-m;
@@ -187,3 +189,10 @@
        margin-left: 0;
      }
 }
+ 
+ 
+ 
+ .edited-field{
+   background-color: white;
+   color: $color-grey;
+ }

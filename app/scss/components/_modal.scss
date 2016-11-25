@@ -3,7 +3,7 @@
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 2000; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding: 10% 0; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -30,6 +30,16 @@
     &:first-of-type{
       margin-top:0;
     }
+  }
+
+  @include media("(max-width:1500px)") {
+    width: 60%;
+  }
+  @include media("(max-width:1000px)") {
+    width: 80%;
+  }
+  @include media("(max-width:800px)") {
+    width: 95%;
   }
 }
 

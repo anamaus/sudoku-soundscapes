@@ -148,20 +148,25 @@ a, a:hover {
   right: 0;
   text-align: center;
   font-size: 0.8em;
-  background-color: #ad9fda;
-  padding: 10px 0; }
+  background-color: #ad9fda; }
+  .footer p {
+    padding: 10px 0; }
   .footer a {
     color: #fff; }
     .footer a:hover {
-      color: #f2f0f9; }
+      color: #d3cbeb; }
 
 body {
+  position: relative;
   height: 100%;
   width: 100%;
   color: #fff;
   font-family: "Muli", sans-serif;
   overflow-x: hidden;
   background-color: #B3A6DD; }
+
+.logo {
+  left: -9999px; }
 
 .btn {
   display: inline-block;
@@ -335,7 +340,8 @@ h4, h5, h6 {
   @media (max-width: 1023px) {
     .sudoku-outer-grid {
       height: 500px;
-      width: 500px; } }
+      width: 500px;
+      box-shadow: none; } }
   @media (max-width: 550px) {
     .sudoku-outer-grid {
       height: 400px;
@@ -445,6 +451,10 @@ h4, h5, h6 {
     .sectionHeadingPlayer {
       margin-left: 0; } }
 
+.edited-field {
+  background-color: white;
+  color: #746E72; }
+
 .numbers__outer {
   width: auto;
   height: auto;
@@ -516,7 +526,10 @@ h4, h5, h6 {
     cursor: pointer;
     color: #fff; }
     .soundPlayer .row [class^="icon-"]:hover {
-      color: #f2f0f9; }
+      color: #d3cbeb; }
+  @media (max-width: 768px) {
+    .soundPlayer {
+      box-shadow: none; } }
 
 .soundPlayer-closed {
   left: 100%; }
@@ -535,8 +548,8 @@ h4, h5, h6 {
   line-height: 60px;
   cursor: pointer; }
   .btnPlayer:hover {
-    color: #f2f0f9; }
-  @media (max-width: 768px) {
+    color: #d3cbeb; }
+  @media (max-width: 1023px) {
     .btnPlayer {
       display: none; } }
 
@@ -552,12 +565,13 @@ h4, h5, h6 {
   top: 0;
   left: calc(100% - 50px);
   line-height: 50px;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 3000; }
   .btnMuteAll [class^="icon-"] {
     font-size: 25px; }
   .btnMuteAll:hover {
-    color: #f2f0f9; }
-  @media (max-width: 768px) {
+    color: #d3cbeb; }
+  @media (max-width: 1023px) {
     .btnMuteAll {
       position: fixed;
       top: 0;
@@ -574,7 +588,7 @@ h4, h5, h6 {
   /* Stay in place */
   z-index: 2000;
   /* Sit on top */
-  padding-top: 100px;
+  padding: 10% 0;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -604,6 +618,15 @@ h4, h5, h6 {
     margin-top: 30px; }
     .modal-content p:first-of-type {
       margin-top: 0; }
+  @media (max-width: 1500px) {
+    .modal-content {
+      width: 60%; } }
+  @media (max-width: 1000px) {
+    .modal-content {
+      width: 80%; } }
+  @media (max-width: 800px) {
+    .modal-content {
+      width: 95%; } }
 
 /* Add Animation */
 @-webkit-keyframes animatebottom {
@@ -648,13 +671,12 @@ h4, h5, h6 {
 
 .social-buttons {
   position: fixed;
-  top: 0;
-  display: none; }
-  @media (min-width: 768px) {
+  display: block;
+  top: 50vh;
+  transform: translateY(-50%); }
+  @media (max-width: 767px) {
     .social-buttons {
-      display: block;
-      top: 50%;
-      transform: translateY(-50%); } }
+      display: none; } }
 
 .social-buttons button {
   display: block;
@@ -691,16 +713,20 @@ h4, h5, h6 {
   right: 0;
   text-align: center;
   margin: 0 auto; }
+  .social-buttons__small button {
+    width: 33.33333%;
+    float: left;
+    height: 40px;
+    border-right: 1px solid white; }
+    .social-buttons__small button:last-of-type {
+      border-right: none; }
   .social-buttons__small .social-button__icon {
-    min-height: 100%;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
+    height: 100%;
+    width: 100%;
     color: white;
-    background-color: #9381cf;
     font-size: 20px;
-    line-height: 50px; }
-  @media (min-width: 767px) {
+    line-height: 40px; }
+  @media (min-width: 768px) {
     .social-buttons__small {
       display: none; } }
 
@@ -709,9 +735,8 @@ h4, h5, h6 {
   height: 50px;
   position: fixed;
   top: 0;
-  left: -450px; }
-  .color-picker:hover {
-    left: 0; }
+  left: -450px;
+  z-index: 3001; }
   .color-picker .colors {
     float: left;
     width: 50px;
@@ -719,6 +744,10 @@ h4, h5, h6 {
     border: 1px solid white;
     border-left: 0;
     cursor: pointer; }
+
+@media (min-width: 1024px) {
+  .color-picker:hover {
+    left: 0; } }
 
 .color-picker--isOpen {
   left: 0; }

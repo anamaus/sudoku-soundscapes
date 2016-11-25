@@ -5,9 +5,8 @@
   position: fixed;
   top: 0;
   left: -450px;
-  &:hover{
-    left: 0;
-  }
+  z-index:3001;
+
   .colors {
     float: left;
     width:50px;
@@ -16,8 +15,13 @@
     border-left: 0;
     cursor: pointer;
   }
-}
 
+}
+@include media("(min-width:1024px)") {
+  .color-picker:hover{
+    left: 0;
+  }
+}
 .color-picker--isOpen{
   left: 0;
 }

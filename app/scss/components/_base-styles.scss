@@ -1,4 +1,5 @@
 body{
+  position: relative;
   height: 100%;
   width:100%;
 //  background-color: #352c44;
@@ -21,3 +22,7 @@ a{
 //  background-repeat:no-repeat;
 //  background-image: url("../images/zen.jpg");
 //}
+
+.logo{
+ left: -9999px;
+}

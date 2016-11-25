@@ -78,6 +78,7 @@ var clickedField;
 var x;
 var y;
 //upon clicking to an empty field, number options div appears right where it was clicked.
+
 $('.sudoku-outer-grid')
     .on("click", '.sudoku-col-1-9', function (event) {
 
@@ -85,7 +86,7 @@ $('.sudoku-outer-grid')
         y = event.clientY;
 
 //if it's an empty field, show number options div for players to choose value from
-        if ($(this).hasClass('sudoku-emptyField')) {
+        if ($(this).hasClass('sudoku-emptyField') ) {
             clickedField = $(this);
 
 //set position of number options div based on mouse click position
@@ -95,27 +96,37 @@ $('.sudoku-outer-grid')
                 'top': (y -92) + 'px'
             });
 // set it as active field, until clicked on next one
-            clickedField.addClass('active').siblings().removeClass('active').parent().siblings().children().removeClass('active');
+            // clickedField.addClass('active').siblings().removeClass('active').parent().siblings().children().removeClass('active');
         }
-        else {
-            clearNumbers();
-        }
+        // else {
+        //     clearNumbers();
+        // }
 
     });
+
 //choose a value from number options div
 $numsOuter.on("click", $numSingle, function (event) {
     event.preventDefault();
     insValue = $(event.target).text();
 
   //get index from id
-    elId = $(clickedField).attr('id');
+    elId = clickedField.attr('id');
     var index = elId.slice(5);
 
     //check if entered value in the field matches to solution
     game.setValue(index, parseInt(insValue));
 
+   // clickedField.text(parseInt(insValue)).addClass('edited-field').removeClass('sudoku-emptyField');
     drawAllFields();
     clearNumbers();
 
 });
 
+
+// function hide_preloader() {
+//     // To stop the preloader
+//     rotate = 0;
+//     // To apply Fade Out Effect to the Preloader
+//     $("#preloader").hide();
+// }
+//
