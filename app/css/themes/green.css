@@ -47,7 +47,7 @@ a, a:hover {
   .container:after, .container-wide:after, .row:after, .numbers__row:after {
     clear: both; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .sudoku-col-1-9 {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-6-wide, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .sudoku-col-1-9 {
   position: relative;
   width: 100%;
   display: inline-block;
@@ -55,7 +55,7 @@ a, a:hover {
   vertical-align: top;
   height: 100%; }
 
-.btn, .sudoku-emptyField, .numbers__outer, .numbers__row__nums, .slider, .soundPlayer .row [class^="icon-"], .btnPlayer, .btnMuteAll, .close, .social-buttons button, .color-picker {
+.footer a, .btn, .sudoku-emptyField, .numbers__outer, .numbers__row__nums, .slider, .soundPlayer .row [class^="icon-"], .btnPlayer, .btnMuteAll, .close, .social-buttons button, .color-picker {
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   -ms-transition: all .5s;
@@ -94,7 +94,7 @@ a, a:hover {
   .col-3 {
     width: 25%; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .col-4 {
     width: 33.33333333333333%; } }
 
@@ -102,15 +102,19 @@ a, a:hover {
   .col-5 {
     width: 41.66666666666667%; } }
 
-@media (min-width: 768px) {
+@media (min-width: 400px) {
   .col-6 {
+    width: 50%; } }
+
+@media (min-width: 768px) {
+  .col-6-wide {
     width: 50%; } }
 
 @media (min-width: 768px) {
   .col-7 {
     width: 58.333333333333336%; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .col-8 {
     width: 66.66666666666666%; } }
 
@@ -137,6 +141,20 @@ a, a:hover {
   .logo h3 {
     margin: 0; }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.8em;
+  background-color: #69de90;
+  padding: 10px 0; }
+  .footer a {
+    color: #fff; }
+    .footer a:hover {
+      color: #c5f2d4; }
+
 body {
   height: 100%;
   width: 100%;
@@ -150,11 +168,12 @@ body {
   min-height: 3em;
   min-width: 8em;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
   background-color: #5cdb87;
   cursor: pointer;
   font-family: "Muli", sans-serif;
   border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
   text-transform: capitalize; }
   .btn:hover {
     background-color: #47d777; }
@@ -293,16 +312,39 @@ h4, h5, h6 {
 
 .sudokuGrid {
   padding-bottom: 20px; }
+  @media (max-width: 768px) {
+    .sudokuGrid {
+      padding-top: 30px; } }
 
 .sudoku-outer-grid {
   margin: 0 auto;
-  height: 600px;
-  width: 600px;
+  height: 550px;
+  width: 550px;
   color: white;
   background-color: #69de90;
   border: 1px solid #5cdb87;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19); }
-  @media (max-width: 400px) {
+  @media (max-width: 1500px) {
+    .sudoku-outer-grid {
+      height: 500px;
+      width: 500px; } }
+  @media (max-width: 1280px) {
+    .sudoku-outer-grid {
+      height: 400px;
+      width: 400px; } }
+  @media (max-width: 1023px) {
+    .sudoku-outer-grid {
+      height: 500px;
+      width: 500px; } }
+  @media (max-width: 550px) {
+    .sudoku-outer-grid {
+      height: 400px;
+      width: 400px; } }
+  @media (max-width: 460px) {
+    .sudoku-outer-grid {
+      height: 350px;
+      width: 350px; } }
+  @media (max-width: 380px) {
     .sudoku-outer-grid {
       height: 300px;
       width: 300px; } }
@@ -329,6 +371,10 @@ h4, h5, h6 {
     border-right: 5px solid #5cdb87; }
   .sudoku-col-1-9:last-of-type {
     border-right: none; }
+  @media (max-width: 460px) {
+    .sudoku-col-1-9 {
+      font-size: 1.5em;
+      line-height: 1.6em; } }
 
 .sudoku-emptyField {
   cursor: pointer;
@@ -337,20 +383,6 @@ h4, h5, h6 {
   .sudoku-emptyField:hover {
     background-color: #47d777;
     color: #fff; }
-
-.gameOptions {
-  margin-top: 30px;
-  display: block; }
-  @media (min-width: 768px) {
-    .gameOptions {
-      display: inline-block; } }
-
-.setDifficultyLevel {
-  display: block;
-  margin-top: 30px; }
-  @media (min-width: 768px) {
-    .setDifficultyLevel {
-      display: inline-block; } }
 
 .gameOptionsOuter {
   display: block;
@@ -361,6 +393,17 @@ h4, h5, h6 {
     .gameOptionsOuter {
       width: 600px; } }
 
+.gameOptions {
+  margin-top: 30px;
+  display: block; }
+
+.setDifficultyLevel {
+  display: block;
+  margin-top: 30px; }
+  @media (min-width: 768px) {
+    .setDifficultyLevel {
+      display: inline-block; } }
+
 .sudokuGrid {
   right: 0;
   transition: right 0.8s; }
@@ -368,18 +411,37 @@ h4, h5, h6 {
 .sudokuGrid-toRight {
   right: -16.666666666666664%; }
 
-.sectionHeading {
-  padding-top: 30px; }
-  .sectionHeading p {
-    padding: 30px 50px 70px 50px; }
+.sectionHeadingSudoku p {
+  padding: 60px 50px 70px 50px; }
+  @media (min-width: 768px) and (max-width: 1500px) {
+    .sectionHeadingSudoku p {
+      padding: 60px 0 70px 0; } }
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .sectionHeadingSudoku {
+    padding: 20px 90px 20px 90px; } }
 
 @media (min-width: 768px) {
   .sectionHeadingSudoku {
     margin-left: 25%; } }
 
 .sectionHeadingPlayer {
-  margin-left: 8.333333333333332%; }
-  @media (max-width: 768px) {
+  margin-left: 16.666666666666664%; }
+  .sectionHeadingPlayer p {
+    padding: 60px 50px 70px 50px; }
+    @media (min-width: 750px) {
+      .sectionHeadingPlayer p {
+        padding: 60px 0 70px 0; } }
+    @media (min-width: 800px) and (max-width: 1023px) {
+      .sectionHeadingPlayer p {
+        padding: 60px 250px 70px 250px; } }
+    @media (min-width: 650px) and (max-width: 799px) {
+      .sectionHeadingPlayer p {
+        padding: 60px 200px 70px 200px; } }
+    @media (min-width: 600px) and (max-width: 659px) {
+      .sectionHeadingPlayer p {
+        padding: 60px 150px 70px 150px; } }
+  @media (max-width: 1023px) {
     .sectionHeadingPlayer {
       margin-left: 0; } }
 
@@ -422,6 +484,9 @@ h4, h5, h6 {
   opacity: 0;
   margin: 0 auto;
   margin-top: -10px; }
+  @media (max-width: 768px) {
+    .slider {
+      margin-top: 0; } }
 
 .ui-slider-handle {
   position: absolute;
@@ -435,7 +500,7 @@ h4, h5, h6 {
   margin-left: -10px; }
 
 .soundPlayer .col-6 {
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
 
 .soundPlayer {
   position: relative;
@@ -443,9 +508,9 @@ h4, h5, h6 {
   left: 0;
   width: 100%;
   min-height: 100vh;
-  bottom: 0;
   background-color: #69de90;
-  box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19); }
+  box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19);
+  padding-bottom: 100px; }
   .soundPlayer .row [class^="icon-"] {
     font-size: 100px;
     cursor: pointer;
@@ -492,6 +557,11 @@ h4, h5, h6 {
     font-size: 25px; }
   .btnMuteAll:hover {
     color: #c5f2d4; }
+  @media (max-width: 768px) {
+    .btnMuteAll {
+      position: fixed;
+      top: 0;
+      right: 0; } }
 
 .btnMuteAllClosed {
   left: -50px; }
@@ -595,6 +665,7 @@ h4, h5, h6 {
   border-bottom: none;
   width: 150px;
   height: 50px;
+  border-top: none;
   left: -100px; }
   .social-buttons button:hover {
     left: 0;

@@ -1,0 +1,18 @@
+.footer{
+  position: fixed;
+  bottom:0;
+  left: 0;
+  right: 0;
+ // margin-top:80px;
+  text-align: center;
+  font-size:0.8em;
+  background-color: $color-background-dark;
+  padding:10px 0;
+  a{
+    @extend %transitions;
+    color: $color-primary-text;
+    &:hover{
+      color: $color-background-lighter;
+    }
+  }
+}

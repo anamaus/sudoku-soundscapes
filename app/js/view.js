@@ -1,3 +1,4 @@
+//dynamically sets ID's on fields depending on their position in array
 
 function setFieldsId(){
     var elements= document.querySelectorAll('.sudoku-col-1-9');
@@ -13,9 +14,15 @@ function makeDifficultyButtonActive(difficultyBtn){
     $(difficultyBtn).addClass('active').siblings().removeClass('active');
 }
 
-// $("body").click(function(){
-//     clearNumbers();
-// });
+//when clicked anywhere but on empty field, number options div closes
+$('body  *').on("click", function (event) {
+    var target = $(event.target);
+    if (target.hasClass('sudoku-emptyField') === false) {
+        if ($("#numbers").css('display') !== 'none') {
+            clearNumbers();
+        }
+    }
+});
 
 // show fields in html
 function drawAllFields() {
@@ -263,7 +270,7 @@ var $colorPicker = $('.color-picker');
 function changeCss(css){
     var newCss = $('#mainStylesheet');
     newCss.attr('href',css);
-    //$colorPicker.removeClass('color-picker--isOpen');
+    $colorPicker.removeClass('color-picker--isOpen');
 }
 
 
@@ -296,9 +303,9 @@ $colorPicker.on("click", '.colors', function (event) {
     else if (this.id === 'color-picker__color__turquoise') {
         changeCss('css/themes/turquoise.css')
     }
-    // else if (this.id === 'color-picker__icon') {
-    //     $colorPicker.toggleClass('color-picker--isOpen');
-    // }
+    else if (this.id === 'color-picker__icon') {
+        $colorPicker.toggleClass('color-picker--isOpen');
+    }
 
 });
 

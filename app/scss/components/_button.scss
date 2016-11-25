@@ -4,11 +4,11 @@
   min-height: 3em;
   min-width: 8em;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
   background-color: $color-background-darker;
   cursor: pointer;
   font-family: $font-sans;
-  border-bottom: 3px solid transparent;
+  border-bottom: 3px solid transparent;  border-top: 3px solid transparent;
   text-transform: capitalize;
   &:hover {
     background-color: $color-background-darkest;

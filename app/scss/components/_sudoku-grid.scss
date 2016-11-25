@@ -1,5 +1,8 @@
 .sudokuGrid{
   padding-bottom:20px;
+  @include media("(max-width:768px)") {
+    padding-top:30px;
+  }
  }
 
 
@@ -7,17 +10,37 @@
 .sudoku-outer-grid{
 
   margin: 0 auto;
-  height: $sudoku-outer-height;
-  width: $sudoku-outer-width;
+  height: $sudoku-size-xl;
+  width: $sudoku-size-xl;
   color: white;
   background-color:$color-background-dark;
   border:1px solid $color-background-darker;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2),0 6px 20px 0 rgba(43, 43, 43, 0.19);
-  @include media("(max-width:400px)") {
+  @include media("(max-width:1500px)") {
+    height: $sudoku-size-l;
+    width:$sudoku-size-l;
+  }
+  @include media("(max-width:1280px)") {
+    height: $sudoku-size-m;
+    width:$sudoku-size-m;
+  }
+  @include media("(max-width:1023px)") {
+    height: $sudoku-size-l;
+    width:$sudoku-size-l;
+  }
+  @include media("(max-width:550px)") {
+    height: $sudoku-size-m;
+    width:$sudoku-size-m;
+  }
+  @include media("(max-width:460px)") {
+     height: $sudoku-size-s;
+     width:$sudoku-size-s;
+   }
+
+  @include media("(max-width:380px)") {
     height: $sudoku-size-xs;
     width:$sudoku-size-xs;
   }
-
 }
 
 .sudoku-grid__row{
@@ -49,6 +72,7 @@
   width:percentage(1/9);
   font-size: 2em;
   text-align: center;
+
   border-right: 1px solid $color-background-darker;
  &:nth-of-type(3){
     border-right: 5px solid $color-background-darker;
@@ -59,39 +83,40 @@
   &:last-of-type{
     border-right:none;
   }
+  @include media("(max-width:460px)") {
+    font-size:1.5em;
+    line-height:1.6em;
+  }
 }
-
 
 .sudoku-emptyField {
   @extend %transitions;
   cursor: pointer;
- // background-color: white;
-//  border:1px solid white;
   color: $color-grey;
   background-color: white;
-  &:hover{
+  &:hover {
     background-color: $color-background-darkest;
     color: #fff;
   }
-
 }
 
+.gameOptionsOuter{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width:300px;
+  @include media("(min-width:768px)") {
+    width:600px;
+  }
 
-.active{
-//  background-color: darken($color-background-darker,5%);
- //border-bottom: 3px solid white;
 }
 
 .gameOptions {
   margin-top: 30px;
   display: block;
-  // margin: 0 auto;
-  @include media("(min-width:768px)") {
-    display: inline-block;
-  }
+
+
 }
-
-
 
 .setDifficultyLevel{
   display: block;
@@ -100,16 +125,7 @@
     display: inline-block;
   }
 }
-.gameOptionsOuter{
-   display: block;
-   margin: 0 auto;
-   text-align: center;
-   width:300px;
-  @include media("(min-width:768px)") {
-    width:600px;
-  }
 
- }
 .sudokuGrid{
   right: 0;
   transition: right 0.8s ;
@@ -120,23 +136,54 @@
 
  }
 
- .sectionHeading {
-   padding-top: 30px;
-   p {
-    // padding: 100px;
-     padding: 30px 50px 70px 50px;
-   }
+ //.sectionHeading {
+ //  padding-top: 30px;
+ //  p {
+ //   // padding: 100px;
+ //    padding: 30px 50px 70px 50px;
+ //    @include media("(min-width:600px)") {
+ //      padding: 30px 0 70px 0;
+ //    }
+ //  }
 
- }
- .sectionHeadingSudoku{
-   @include media("(min-width:768px)") {
-     margin-left:25%;
-   }
+ //}
+.sectionHeadingSudoku {
+  p {
+    padding: 60px 50px 70px 50px;
+    @include media("(min-width:768px) and (max-width:1500px)") {
+      padding: 60px 0 70px 0;
+    }
+  }
 
- }
+  @include media("(min-width:600px) and (max-width:767px)") {
+    padding: 20px 90px 20px 90px;
+  }
+
+  @include media("(min-width:768px)") {
+    margin-left: 25%;
+  }
+}
+
+
+
+
  .sectionHeadingPlayer{
-   margin-left: 8.333333333333332%;
-   @include media("(max-width:768px)") {
-     margin-left: 0;
+   p {
+
+     padding: 60px 50px 70px 50px;
+     @include media("(min-width:750px)") {
+       padding: 60px 0 70px 0;
+     }
+     @include media("(min-width:800px) and (max-width:1023px)" ) {
+       padding: 60px 250px 70px 250px;
+     } @include media("(min-width:650px) and (max-width:799px)" ) {
+       padding: 60px 200px 70px 200px;
+     } @include media("(min-width:600px) and (max-width:659px)" ) {
+       padding: 60px 150px 70px 150px;
+     }
    }
- }
+   margin-left:16.666666666666664%;
+   @include media("(max-width:1023px)") {
+       margin-left: 0;
+     }
+}
