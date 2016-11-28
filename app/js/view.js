@@ -47,14 +47,14 @@ function clearNumbers(){
 }
 
 //when clicked anywhere but on empty field, number options div closes
-// $('body  *').on("click", function (event) {
-//     var target = $(event.target);
-//     if (target.hasClass('sudoku-emptyField') === false) {
-//         if ($("#numbers").css('display') !== 'none') {
-//             clearNumbers();
-//         }
-//     }
-// });
+$('body  *').on("click", function (event) {
+    var target = $(event.target);
+    if (target.hasClass('sudoku-emptyField') === false) {
+        if ($("#numbers").css('display') !== 'none') {
+            clearNumbers();
+        }
+    }
+});
 //CLOSE PLAYER ON CLICK
 
 var $player = $('.soundPlayer');

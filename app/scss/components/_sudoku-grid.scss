@@ -8,7 +8,7 @@
 
 
 .sudoku-outer-grid{
-
+  position: relative;
   margin: 0 auto;
   height: $sudoku-size-xl;
   width: $sudoku-size-xl;

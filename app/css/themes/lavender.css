@@ -322,6 +322,7 @@ h4, h5, h6 {
       padding-top: 30px; } }
 
 .sudoku-outer-grid {
+  position: relative;
   margin: 0 auto;
   height: 550px;
   width: 550px;
@@ -456,13 +457,13 @@ h4, h5, h6 {
   color: #746E72; }
 
 .numbers__outer {
-  width: auto;
-  height: auto;
+  width: 200px;
+  height: 200px;
   margin: 0 auto;
   display: none;
-  position: fixed;
-  left: 0;
+  position: absolute;
   top: 0;
+  left: 0;
   background-color: #B3A6DD;
   color: #fff;
   border: 3px solid #a394d6; }
@@ -477,8 +478,8 @@ h4, h5, h6 {
 .numbers__row__nums {
   text-align: center;
   float: left;
-  width: 60px;
-  height: 60px;
+  width: 33.33333%;
+  height: 100%;
   line-height: 60px;
   font-size: 30px;
   background-color: #B3A6DD;
@@ -782,7 +783,11 @@ h4, h5, h6 {
 #color-picker__icon {
   background-color: transparent;
   color: white;
-  font-size: 40px;
+  font-size: 50px;
   line-height: 50px;
   text-align: center;
-  border: none; }
+  border: none;
+  padding-top: 5px; }
+  @media (max-width: 1023px) {
+    #color-picker__icon {
+      font-size: 40px; } }

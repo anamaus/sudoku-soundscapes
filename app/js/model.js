@@ -56,7 +56,9 @@ function Game(solution){
 
         }
         if (win) {
-
+            for (var k = 0; k < 81; k++) {
+                this.fields[k] = this.solution.fields[k];
+            }
             modalGameWon.style.display = "block";
     }
     };

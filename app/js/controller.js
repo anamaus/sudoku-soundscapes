@@ -86,18 +86,33 @@ $('.sudoku-outer-grid')
         y = event.clientY;
 
 //if it's an empty field, show number options div for players to choose value from
-        if ($(this).hasClass('sudoku-emptyField') ) {
+        if ($(this).hasClass('sudoku-emptyField')) {
             clickedField = $(this);
 
 //set position of number options div based on mouse click position
-            $numsOuter.css({
-                'display': 'inline-block',
-                'left': (x - 92) + 'px',
-                'top': (y -92) + 'px'
-            });
+            if(screen.width>767) {
+                $numsOuter.css({
+                    'position': 'fixed',
+                    'display': 'inline-block',
+                    'left': (x -97) + 'px',
+                    'top': (y -97) + 'px'
+
+                });
+            }
+            else{
+                $numsOuter.css({
+
+
+                    'display': 'inline-block',
+                    'left': 50 + '%',
+                    'top': 50 + '%',
+                    'transform':'translate(-50%, -50%)'
+                });
+            }
 // set it as active field, until clicked on next one
             // clickedField.addClass('active').siblings().removeClass('active').parent().siblings().children().removeClass('active');
         }
+
         // else {
         //     clearNumbers();
         // }
