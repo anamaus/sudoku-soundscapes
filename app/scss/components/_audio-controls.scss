@@ -7,9 +7,10 @@
   height: 4px;
   opacity: 0;
   margin: 0 auto;
-  margin-top:-10px;
+  margin-top:5px;
   @include media("(max-width:768px)") {
-    margin-top:0;
+    margin-top:10px;
+    width: 120px;
   }
 }
 
@@ -28,6 +29,9 @@
 
 .soundPlayer .col-6{
    margin-bottom: 20px;
+  @include media("(max-width:768px)") {
+    margin-bottom: 40px;
+  }
 }
 
 .soundPlayer {
@@ -36,7 +40,6 @@
   left: 0;
   width: 100%;
   min-height:100vh;
-  //bottom:0;
   background-color: $color-background-dark;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19);
   padding-bottom:100px;
@@ -45,12 +48,15 @@
     font-size: 100px;
     cursor: pointer;
     color: #fff;
+    @include media("(max-width:768px)") {
+      font-size: 80px;    }
     &:hover {
       color: $color-background-lighter;
     }
   }
   @include media("(max-width:768px)") {
     box-shadow:none;
+    margin-bottom: 30px;
   }
 }
 
