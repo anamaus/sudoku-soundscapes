@@ -63,9 +63,9 @@
 
 .col-6 {
   @extend %col-x;
-  @include media("(min-width: 400px)") {
+ // @include media("(min-width: 400px)") {
     width: 50%
-  }
+ // }
 }
 .col-6-wide {
   @extend %col-x;

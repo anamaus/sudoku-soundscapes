@@ -48,10 +48,13 @@
     font-size: 100px;
     cursor: pointer;
     color: #fff;
-    @include media("(max-width:768px)") {
+    @include media("(max-width:767px)") {
       font-size: 80px;    }
     &:hover {
       color: $color-background-lighter;
+    }
+    @include media("(min-width:1024px) and (max-width:1600px)" ) {
+      font-size: 80px;
     }
   }
   @include media("(max-width:768px)") {

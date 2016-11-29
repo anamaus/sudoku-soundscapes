@@ -16,11 +16,11 @@
   background-color:$color-background-dark;
   border:1px solid $color-background-darker;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2),0 6px 20px 0 rgba(43, 43, 43, 0.19);
-  @include media("(max-width:1500px)") {
+  @include media("(max-width:1800px)") {
     height: $sudoku-size-l;
     width:$sudoku-size-l;
   }
-  @include media("(max-width:1280px)") {
+  @include media("(max-width:1440px)") {
     height: $sudoku-size-m;
     width:$sudoku-size-m;
   }
@@ -72,7 +72,8 @@
 .sudoku-col-1-9{
   @extend %col-x;
   width:percentage(1/9);
-  font-size: 2em;
+  font-size: 1.8em;
+  //line-height:2em;
   text-align: center;
 
   border-right: 1px solid $color-background-darker;
@@ -88,6 +89,14 @@
   @include media("(max-width:460px)") {
     font-size:1.5em;
     line-height:1.6em;
+  }
+  @include media("(min-width:1024px) and (max-width:1601px)") {
+    font-size:1.4em;
+    line-height:2em;
+  }
+  @include media("(min-width:1920px)") {
+
+    line-height:2em;
   }
 }
 
@@ -138,22 +147,20 @@
 
  }
 
- //.sectionHeading {
- //  padding-top: 30px;
- //  p {
- //   // padding: 100px;
- //    padding: 30px 50px 70px 50px;
- //    @include media("(min-width:600px)") {
- //      padding: 30px 0 70px 0;
- //    }
- //  }
 
- //}
 .sectionHeadingSudoku {
   p {
-    padding: 60px 50px 70px 50px;
+    padding: 50px 50px 70px 50px;
     @include media("(min-width:768px) and (max-width:1500px)") {
-      padding: 60px 0 70px 0;
+      padding: 50px 0 50px 0;
+    }
+
+    @include media("(min-width:1600px)") {
+      padding-bottom:50px;
+    }
+    @include media("(min-width:1920px)") {
+      padding-top:70px;
+      padding-bottom:70px;
     }
   }
 
@@ -164,6 +171,7 @@
   @include media("(min-width:768px)") {
     margin-left: 25%;
   }
+
 }
 
 
@@ -172,16 +180,24 @@
  .sectionHeadingPlayer{
    p {
 
-     padding: 60px 50px 70px 50px;
-     @include media("(min-width:750px)") {
-       padding: 60px 0 70px 0;
+     padding: 50px 50px 70px 50px;
+    @include media("(min-width:1024px)") {
+       padding: 50px 0 40px 0;
      }
      @include media("(min-width:800px) and (max-width:1023px)" ) {
-       padding: 60px 250px 70px 250px;
+       padding: 50px 250px 70px 250px;
      } @include media("(min-width:650px) and (max-width:799px)" ) {
-       padding: 60px 200px 70px 200px;
+       padding: 50px 200px 70px 200px;
      } @include media("(min-width:600px) and (max-width:659px)" ) {
-       padding: 60px 150px 70px 150px;
+       padding: 50px 150px 70px 150px;
+     }
+
+     //@include media("(min-width:1550px)") {
+     //  padding-bottom: 40px;
+     //}
+     @include media("(min-width:1920px)") {
+       padding-top:70px;
+      // padding-bottom:40px;
      }
    }
    margin-left:16.666666666666664%;

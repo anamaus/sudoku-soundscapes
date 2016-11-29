@@ -1,16 +1,23 @@
 
 .footer{
+z-index: 3000;
    position: fixed;
    bottom:0;
    left: 0;
    right: 0;
-   // margin-top:80px;
+  padding:5px 0;
    text-align: center;
    font-size:0.8em;
    background-color: $color-background-dark;
+  @include media("(max-width:768px)") {
+    position: relative;
+  }
 
   p{
-    padding:10px 0;
+
+    display: inline-block;
+    margin-left: 10px;
+    padding-top:10px;
   }
    a{
      @extend %transitions;
@@ -20,3 +27,32 @@
      }
    }
  }
+
+.donation {
+  display: inline-block;
+
+  button{
+    height: 30px;
+    margin-left:5px;
+    background-color: darken($color-background-darker,1%);
+    border: none;
+
+  }
+  .social-button__icon{
+    height: 30px;
+    width:30px;
+    line-height:30px;
+  }
+  .social-button__text {
+
+    padding: 10px;
+    line-height:30px;
+    font-size:1.2em;
+
+  }
+
+p:first-of-type{
+  @include media("(max-width:400px)") {
+display: none  }
+}
+}

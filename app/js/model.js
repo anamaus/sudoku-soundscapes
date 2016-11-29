@@ -24,7 +24,7 @@ function SudokuField(x,y, isPartOfSolution) {
 function Game(solution){
     this.fields = [];
     this.solution= solution;
-    this.difficulty = 0.1;
+    this.difficulty = 0.4;
 
     this.generateGame = function(){
        this.fields = [];
@@ -78,7 +78,7 @@ function Game(solution){
 
     this.setValue = function(index, value){
        this.fields[index].value = value;
-        //TODO promeniti logiku da ne iscrtava resene odmah po unosenju, vec kad popuni ceo sudoku
+
         // if (value === this.solution.fields[index].value) {
         //     this.fields[index] = this.solution.fields[index];
         // }

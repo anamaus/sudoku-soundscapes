@@ -10,6 +10,8 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 var responsive = require('gulp-responsive-images');
+var minifyInline = require('gulp-minify-inline');
+var sassThemes = require('gulp-sass-themes');
 
 
 gulp.task('sass', function(){
@@ -40,17 +42,20 @@ gulp.task('browserSync', function() {
 });
 
 
-//minify js or css
+//minify and concatenate js or css
 gulp.task('useref', function(){
     return gulp.src('app/*.html')
         .pipe(useref())
         .pipe(gulpIf('*.js', uglify()))
-        .pipe(gulpIf('*.css', cssnano()))
         .pipe(gulp.dest('dist'))
 });
 
 
-
+gulp.task('images', function(){
+    return gulp.src('app/images/**/*.+(png|jpg|gif|svg|ico)')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images'))
+});
 //font transfer to dist
 
 gulp.task('font', function() {
@@ -66,7 +71,7 @@ gulp.task('clean:dist', function() {
 //build task 1 and then task/tasks 2, then task3
 gulp.task('build', function (callback) {
     runSequence('clean:dist',
-        ['sass', 'useref', 'images', 'font'],
+        ['sass', 'useref','cssnano', 'images', 'font','sounds'],
         callback
     )
 });
@@ -84,7 +89,11 @@ gulp.task('default', function (callback) {
 });
 
 
-
+gulp.task('minify-inline', function() {
+    gulp.src('app/*.html')
+        .pipe(minifyInline())
+        .pipe(gulp.dest('dist/'))
+});
 
 //IMAGE RESIZING
 
@@ -105,4 +114,32 @@ gulp.task('resize', function () {
             // }]
         }))
         .pipe(gulp.dest('app/images/resized'));
+});
+
+gulp.task('sounds', function(){
+    return gulp.src('app/sounds/**/*')
+
+        .pipe(gulp.dest('dist/sounds/'))
+});
+
+
+// gulp.task('styles',gulp.src('app/scss/themes/*.scss')
+//     .pipe(sassThemes('./scss/themes/_*.scss'))
+//     .pipe(sass()).on('error', sass.logError)
+//     .pipe(gulp.dest('dist/styles'))
+// );
+// gulp.task('styles', function(){
+//     return gulp.src('app/scss/themes/*.scss')
+//
+//         .pipe(sassThemes('./scss/themes/_*.scss'))
+//         .pipe(sass()).on('error', sass.logError)
+//         .pipe(cssnano())
+//         .pipe(gulp.dest('dist/css/themes'))
+// });
+gulp.task('cssnano', function(){
+    return gulp.src('app/css/**/*.css')
+
+
+        .pipe(cssnano())
+        .pipe(gulp.dest('dist/css'))
 });

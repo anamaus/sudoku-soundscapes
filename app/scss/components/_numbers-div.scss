@@ -12,8 +12,7 @@
   background-color: $color-background-light;
   color: $color-white;
   border: 3px solid $color-background-darker;
-
-}
+  z-index:3000;}
 .numbers{
   position: relative;
 }

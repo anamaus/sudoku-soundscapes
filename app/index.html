@@ -3,49 +3,24 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zen Sudoku</title>
+    <title>Sudoku Soundscapes - Sudoku Game and Ambient Sound Generator</title>
+    <meta name="description" content="Play Sudoku and Enjoy Your Perfect Soundscape to Unwind and Relax">
+    <meta property="og:title" content="Sudoku Soundscapes">
+    <meta property="og:description" content="Play Sudoku and Enjoy Your Perfect Soundscape to Unwind and Relax">
+    <meta property="og:image" content="http://sudokusoundscapes.com/images/sudokusoc.jpg">
+    <meta property="og:url" content="http://sudokusoundscapes.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="images/favicon.ico" >
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet">
+
     <link  rel="stylesheet" href="css/fontello.css">
     <link id="mainStylesheet"  rel="stylesheet" href="css/style.css">
 
-    <script>
-        window.twttr = (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-                    t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
 
-            t._e = [];
-            t.ready = function(f) {
-                t._e.push(f);
-            };
-
-            return t;
-        }(document, "script", "twitter-wjs"));
-    </script>
 </head>
 <body>
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '1604179943217880',
-            xfbml      : true,
-            version    : 'v2.8'
-        });
-    };
 
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-<div class="logo"><h1>Sudoku</h1></div>
+<div class="logo"><h1>Sudoku Soundscapes</h1></div>
 <div class="container-wide">
     <div class="row">
         <div class="col-8 sudokuGrid">
@@ -54,7 +29,7 @@
                     <!--<h2> Sudoku</h2>-->
                     <p>
                         Relax and unwind in a fun and easy way.
-                        Take a break from everyday life, put aside all stressful thoughts and enjoy Sudoku. </p>
+                        Take a break from everyday life, put aside all stressful thoughts and enjoy Sudoku Soundscapes. </p>
                 </div>
             </div>
             <div class="row">
@@ -472,9 +447,8 @@
                 <div class="row sectionHeading">
                     <div class="col-8 sectionHeadingPlayer">
                         <!--<h2>Ambient sounds</h2>-->
-                        <p>Enjoy relaxing sounds of nature. Click on one or
-                            more icons to create your perfect ambient
-                            mix.
+                        <p>Enjoy relaxing ambient sounds. Click on one or
+                            more icons to create your perfect soundscape.
                         </p>
                     </div>
                 </div>
@@ -564,9 +538,19 @@
 
 </div>
 
-<div class="footer"><p>2016 Ⓒ
-    <!--Designed & Developed by-->
-    <a href="http://www.mauswebdesign.com/" target="_blank">Maus Design</a></p>
+<div class="footer">
+    <p>2016 Ⓒ <a href="http://www.mauswebdesign.com/" target="_blank">Maus Design</a></p>
+    <div class="donation">
+        <p>|</p>
+        <p>Support me in making awesome apps</p>
+
+        <button class="btn" id="donate">
+             <span class="social-button__text">Donate</span>
+
+        </button>
+
+    </div>
+
 </div>
 
 <!--colors palette-->
@@ -586,27 +570,29 @@
 
 <!--social buttons-->
 <div class="social-buttons">
-    <button class="btn">
+
         <a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"
-           href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button&via=twitterdev&related=twitterapi%2Ctwitter&hashtags=example%2Cdemo&text=cool%20sudoku">
+           href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsudokusoundscapes.com&related=twitterapi%2Ctwitter&hashtags=%20sudoku,relax,zen&text=check%20out%20this%20cool%20sudoku%20and%20ambient%20sound%20generator%20for%20relaxation%20~">
+            <button class="btn">
             <span class="icon-twitter social-button__icon"></span>
 
             <span class="social-button__text"> Tweet</span>
+            </button>
         </a>
-    </button>
+
     <button class="btn" id="shareBtn">
         <span class="icon-facebook social-button__icon"></span> <span class="social-button__text"> Share</span>
     </button>
-    <button class="btn">
-        <a href="mailto:anamil2112@google.com">  <span class="icon-mail social-button__icon"></span> <span class="social-button__text"> Contact me </span></a>
 
-    </button>
+        <a href="mailto:anamil2112@google.com"> <button class="btn"> <span class="icon-mail social-button__icon"></span> <span class="social-button__text"> Contact me </span>  </button></a>
+
+
 
 </div>
 <div class="social-buttons__small">
     <button class="">
         <a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"
-           href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button&via=twitterdev&related=twitterapi%2Ctwitter&hashtags=example%2Cdemo&text=cool%20sudoku">
+           href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsudokusoundscapes.com&related=twitterapi%2Ctwitter&hashtags=%20sudoku,relax,zen&text=check%20out%20this%20cool%20sudoku%20and%20ambient%20sound%20generator%20for%20relaxation%20~">
             <span class="icon-twitter social-button__icon"></span>
 
 
@@ -620,31 +606,12 @@
             <span class="icon-mail social-button__icon"></span>
         </a>
     </button>
+    <button class="" id="">
+        <span class="icon-gift social-button__icon"></span>
+
+    </button>
 
 </div>
-
-
-
-<!--number pick div-->
-<!--<div id="numbers" class="numbers__outer">-->
-    <!--<div class="numbers">-->
-        <!--<div class="numbers__row">-->
-            <!--<div class="numbers__row__nums">1</div>-->
-            <!--<div class="numbers__row__nums">2</div>-->
-            <!--<div class="numbers__row__nums">3</div>-->
-        <!--</div>-->
-        <!--<div class="numbers__row">-->
-            <!--<div class="numbers__row__nums">4</div>-->
-            <!--<div class="numbers__row__nums">5</div>-->
-            <!--<div class="numbers__row__nums">6</div>-->
-        <!--</div>-->
-        <!--<div class="numbers__row">-->
-            <!--<div class="numbers__row__nums">7</div>-->
-            <!--<div class="numbers__row__nums">8</div>-->
-            <!--<div class="numbers__row__nums">9</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
 
 
 <!--  Modals -->
@@ -710,50 +677,73 @@
 </div>
 
 
-<!--preloader-->
-<!--<div class="Preloader-page" id="preloader">-->
-    <!--<div class="innerPreloader">-->
-    <!--<div class="circle">-->
-        <!--<div class="outer-circle">-->
-            <!--<div class="inner-circle"></div>-->
-
-        <!--</div>-->
-    <!--</div>&lt;!&ndash;end of circle&ndash;&gt;-->
-<!--</div>-->
-<!--</div>-->
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.1/howler.core.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!--build:js js/main.min.js -->
 <script src="js/jquery-ui.js"></script>
 <script src="js/sudokuGenerator.js"></script>
 <script src="js/model.js"></script>
 <script src="js/view.js" ></script>
 <script src="js/controller.js"></script>
 <script src="js/audioController.js"></script>
+<!-- endbuild -->
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1604179943217880',
+            xfbml      : true,
+            version    : 'v2.8'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 <script>
     document.getElementById('shareBtn').onclick = function() {
         FB.ui({
             method: 'share',
             display: 'popup',
-            href: 'https://developers.facebook.com/docs/',
-            link: "The link you want to share",
-            name: "zen sudoku",
-            description: "The description who will be displayed"
+            href: 'http://sudokusoundscapes.com/',
+            link: "http://sudokusoundscapes.com/",
+            name: "Sudoku Soundscapes",
+            description: "Play Sudoku and Enjoy Your Perfect Soundscape to Unwind and Relax"
         }, function(response){});
     };
     document.getElementById('shareBtn2').onclick = function() {
         FB.ui({
             method: 'share',
             display: 'popup',
-            href: 'https://developers.facebook.com/docs/',
-            link: "The link you want to share",
-            name: "zen sudoku",
-            description: "The description who will be displayed"
+            href: 'http://sudokusoundscapes.com/',
+            link: "http://sudokusoundscapes.com/",
+            name: "Sudoku Soundscapes",
+            description: "Play Sudoku and Enjoy Your Perfect Soundscape to Unwind and Relax"
         }, function(response){});
     }
 </script>
+<script>
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
 
+        t._e = [];
+        t.ready = function(f) {
+            t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));
+</script>
 
 </body>
 </html>

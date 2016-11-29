@@ -3,7 +3,7 @@ function newGame() {
     game.generateGame();
     drawAllFields();
     clearNumbers();
-    debugging();
+   // debugging();
 
 }
 
@@ -45,13 +45,13 @@ $("#btnNewGame").click(function () {
 $(".setDifficultyLevel").on("click", '.btn', function (event) {
     event.preventDefault();
     if (this.id === 'btnEasy') {
-        game.setDifficulty(0.3);
+        game.setDifficulty(0.2);
     }
     else if (this.id === 'btnNormal') {
-        game.setDifficulty(0.5);
+        game.setDifficulty(0.4);
     }
     else if (this.id === 'btnHard') {
-        game.setDifficulty(0.6);
+        game.setDifficulty(0.5);
     }
     makeDifficultyButtonActive(this);
     newGame();

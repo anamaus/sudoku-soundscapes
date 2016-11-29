@@ -3,7 +3,7 @@ html, body{
 }
 $rwd-typography: (
         default: (
-                base-font-size: 13px,
+                base-font-size: 14px,
                 vertical-rhythm: 1.414,
                 type-scale: 1.2,
                 min-width: null
@@ -15,16 +15,22 @@ $rwd-typography: (
                 min-width: 480px
         ),
         large: (
+                base-font-size: 14px,
+                vertical-rhythm: 1.618,
+                type-scale: 1.5,
+                min-width: 1000px
+        ),
+        nextlarge: (
                 base-font-size: 16px,
                 vertical-rhythm: 1.618,
                 type-scale: 1.5,
-                min-width: 1025px
+                min-width: 1601px
         ),
         xlarge: (
                 base-font-size: 17px,
                 vertical-rhythm: 1.618,
                 type-scale: 1.618,
-                min-width: 1300px
+                min-width: 1921px
         )
 );
 
@@ -84,9 +90,9 @@ h2 {
 h1 {
   @extend %h;
 }
-.header__title {
-  @extend %hero;
-}
+//.header__title {
+//  @extend %hero;
+//}
 
 @include headings {
  margin: 20px 0 10px 0;

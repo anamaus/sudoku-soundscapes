@@ -220,7 +220,7 @@ $(window).scroll(function(event) {
     var scroll = $(this).scrollTop();
     var docHeight = $(document).height();
     var windowHeight = $(window).height();
-    var footerHeight = $('.footer').height();
+    var footerHeight = $('.footer').outerHeight();
 
     if(docHeight - (windowHeight + scroll) <= footerHeight) {
         $('.social-buttons__small').css({
