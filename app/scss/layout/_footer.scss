@@ -52,7 +52,7 @@ z-index: 3000;
   }
 
 p:first-of-type{
-  @include media("(max-width:400px)") {
+  @include media("(max-width:419px)") {
 display: none  }
 }
 }

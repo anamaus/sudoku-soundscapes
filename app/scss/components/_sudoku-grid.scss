@@ -73,6 +73,7 @@
   @extend %col-x;
   width:percentage(1/9);
   font-size: 1.8em;
+  line-height:2em;
   //line-height:2em;
   text-align: center;
 
@@ -90,7 +91,7 @@
     font-size:1.5em;
     line-height:1.6em;
   }
-  @include media("(min-width:1024px) and (max-width:1601px)") {
+  @include media("(min-width:1024px) and (max-width:1501px)") {
     font-size:1.4em;
     line-height:2em;
   }

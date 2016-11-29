@@ -177,7 +177,7 @@ a, a:hover {
     padding: 10px;
     line-height: 30px;
     font-size: 1.2em; }
-  @media (max-width: 400px) {
+  @media (max-width: 419px) {
     .donation p:first-of-type {
       display: none; } }
 
@@ -395,6 +395,7 @@ h4, h5, h6 {
 .sudoku-col-1-9 {
   width: 11.11111%;
   font-size: 1.8em;
+  line-height: 2em;
   text-align: center;
   border-right: 1px solid #29a1ac; }
   .sudoku-col-1-9:nth-of-type(3) {
@@ -407,7 +408,7 @@ h4, h5, h6 {
     .sudoku-col-1-9 {
       font-size: 1.5em;
       line-height: 1.6em; } }
-  @media (min-width: 1024px) and (max-width: 1601px) {
+  @media (min-width: 1024px) and (max-width: 1501px) {
     .sudoku-col-1-9 {
       font-size: 1.4em;
       line-height: 2em; } }
