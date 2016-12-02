@@ -181,6 +181,13 @@ a, a:hover {
     .donation p:first-of-type {
       display: none; } }
 
+form {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px; }
+  form #paypalimage {
+    width: 80px; }
+
 body {
   position: relative;
   height: 100%;
@@ -769,12 +776,12 @@ h4, h5, h6 {
   right: 0;
   text-align: center;
   margin: 0 auto; }
-  .social-buttons__small button {
+  .social-buttons__small .fixedbtnsmall {
     width: 25%;
     float: left;
     height: 40px;
     border-right: 1px solid white; }
-    .social-buttons__small button:last-of-type {
+    .social-buttons__small .fixedbtnsmall:last-of-type {
       border-right: none; }
   .social-buttons__small .social-button__icon {
     height: 100%;
@@ -785,6 +792,14 @@ h4, h5, h6 {
   @media (min-width: 768px) {
     .social-buttons__small {
       display: none; } }
+
+#donateBtnSmall {
+  text-align: center;
+  border-left: 1px solid white; }
+
+form {
+  vertical-align: middle;
+  margin-left: 0; }
 
 .color-picker {
   display: inline-block;
