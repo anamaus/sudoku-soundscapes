@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     newGame();
     setFieldsId();
-    makeDifficultyButtonActive('#btnNormal')
+    makeDifficultyButtonActive('#js-btnNormal')
 });
 
 //$body.append("<img class='bgimg' src='images/zen.jpg' >");
@@ -36,21 +36,21 @@ $(document).ready(function () {
 
 
 //start new game on btn click
-$("#btnNewGame").click(function () {
+$("#js-btnNewGame").click(function () {
     newGame();
 });
 
 
 //set difficulty level by appropriate btn click
-$(".setDifficultyLevel").on("click", '.btn', function (event) {
+$(".difficultyLevel").on("click", '.btn', function (event) {
     event.preventDefault();
-    if (this.id === 'btnEasy') {
+    if (this.id === 'js-btnEasy') {
         game.setDifficulty(0.2);
     }
-    else if (this.id === 'btnNormal') {
+    else if (this.id === 'js-btnNormal') {
         game.setDifficulty(0.4);
     }
-    else if (this.id === 'btnHard') {
+    else if (this.id === 'js-btnHard') {
         game.setDifficulty(0.5);
     }
     makeDifficultyButtonActive(this);
@@ -59,7 +59,7 @@ $(".setDifficultyLevel").on("click", '.btn', function (event) {
 
 
 //hint button function
-$("#btnHint").click(function () {
+$("#js-btnHint").click(function () {
         game.hint();
         drawAllFields();
           clearNumbers();
@@ -79,7 +79,7 @@ var x;
 var y;
 //upon clicking to an empty field, number options div appears right where it was clicked.
 
-$('.sudoku-outer-grid')
+$('.sudoku')
     .on("click", '.sudoku-col-1-9', function (event) {
 
         x = event.pageX;

@@ -34,24 +34,13 @@ button {
 
 
 
-
-
-.setDifficultyLevel{
- //@extend %clearfix;
-  .btn{
-transform: scale(0.8);
-    }
-
-}
-
-
 .modalGameWon .modal-body button{
   margin-top: 50px;
   padding:0.5em 1.1em;
  // margin-right: 10px;
 }
 
-.btn.active{
+.active{
   background-color: darken($color-background-darker,5%);
   border-bottom: 3px solid white;
 }

@@ -29,22 +29,22 @@
 </head>
 <body>
 
-<div class="logo"><h1>Sudoku Soundscapes</h1></div>
+<div class="logo"><h1>Sudoku Soundscapes - Sudoku Online</h1></div>
+
 <div class="container-wide">
     <div class="row">
-        <div class="col-8 sudokuGrid">
+        <div class="col-8 sudokuColumn">
             <div class="row  text-center">
-                <div class="sectionHeading sectionHeadingSudoku col-6-wide">
-                    <!--<h2> Sudoku</h2>-->
+                <div class="sectionHeading--sudoku col-6--wide">
                     <p>
                         Relax and unwind in a fun and easy way.
                         Take a break from everyday life, put aside all stressful thoughts and enjoy Sudoku Soundscapes. </p>
                 </div>
             </div>
+
             <div class="row">
-
-                <div class="sudoku-outer-grid">
-                    <div class="row sudoku-grid__row">
+                <div class="sudoku">
+                    <div class="row sudoku__row">
 
                         <div class="sudoku-col-1-9">
                             1
@@ -82,47 +82,7 @@
 
 
                     </div>
-                    <div class="row sudoku-grid__row">
-
-                        <div class="sudoku-col-1-9">
-                            1
-                        </div>
-
-                        <div class="sudoku-col-1-9">
-                            2
-                        </div>
-
-                        <div class="sudoku-col-1-9">
-                            3
-                        </div>
-
-                        <div class="sudoku-col-1-9">
-                            4
-                        </div>
-
-                        <div class="sudoku-col-1-9">
-                            5
-                        </div>
-
-                        <div class="sudoku-col-1-9">
-                            6
-                        </div>
-
-                        <div class="sudoku-col-1-9">
-                            7
-                        </div>
-
-                        <div class="sudoku-col-1-9">
-                            8
-                        </div>
-
-                        <div class="sudoku-col-1-9">
-                            9
-                        </div>
-
-
-                    </div>
-                    <div class="row sudoku-grid__row">
+                    <div class="row sudoku__row">
 
                         <div class="sudoku-col-1-9">
                             1
@@ -162,7 +122,7 @@
 
 
                     </div>
-                    <div class="row sudoku-grid__row">
+                    <div class="row sudoku__row">
 
                         <div class="sudoku-col-1-9">
                             1
@@ -202,7 +162,7 @@
 
 
                     </div>
-                    <div class="row sudoku-grid__row">
+                    <div class="row sudoku__row">
 
                         <div class="sudoku-col-1-9">
                             1
@@ -242,7 +202,7 @@
 
 
                     </div>
-                    <div class="row sudoku-grid__row">
+                    <div class="row sudoku__row">
 
                         <div class="sudoku-col-1-9">
                             1
@@ -282,7 +242,7 @@
 
 
                     </div>
-                    <div class="row sudoku-grid__row">
+                    <div class="row sudoku__row">
 
                         <div class="sudoku-col-1-9">
                             1
@@ -322,7 +282,7 @@
 
 
                     </div>
-                    <div class="row sudoku-grid__row">
+                    <div class="row sudoku__row">
 
                         <div class="sudoku-col-1-9">
                             1
@@ -362,7 +322,47 @@
 
 
                     </div>
-                    <div class="row sudoku-grid__row">
+                    <div class="row sudoku__row">
+
+                        <div class="sudoku-col-1-9">
+                            1
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            2
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            3
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            4
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            5
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            6
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            7
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            8
+                        </div>
+
+                        <div class="sudoku-col-1-9">
+                            9
+                        </div>
+
+
+                    </div>
+                    <div class="row sudoku__row">
 
                         <div class="sudoku-col-1-9">
                             1
@@ -422,40 +422,33 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
             <div class="row">
-                <div class="gameOptionsOuter">
-                    <div class="gameOptions">
-
-                        <button class="btn" id="btnNewGame">New Game</button>
-                        <button class="btn" id="btnHint">Hint</button>
-                        <button class="btn" id="instructionsBtn">How to play</button>
+                <div class="gameOptions">
+                    <div>
+                        <button class="btn" id="js-btnNewGame">New Game</button>
+                        <button class="btn" id="js-btnHint">Hint</button>
+                        <button class="btn" id="js-btnInstructions">How to play</button>
                     </div>
-                    <div class="setDifficultyLevel">
 
-                        <button class="btn" id="btnEasy">Easy</button>
-                        <button class="btn" id="btnNormal">Normal</button>
-                        <button class="btn" id="btnHard">Hard</button>
+                    <div class="difficultyLevel">
+                        <button class="btn" id="js-btnEasy">Easy</button>
+                        <button class="btn" id="js-btnNormal">Normal</button>
+                        <button class="btn" id="js-btnHard">Hard</button>
                     </div>
-                    <!--<button class="btn" id="btnStopImages">stop images</button>-->
-                    <!--<button class="btn" id="btnResumeImages">resume images</button>-->
 
                 </div>
             </div>
 
-
         </div>
-
         <div class="col-4 text-center">
             <div class="soundPlayer">
-                <button id="btnPlayer" class="btnPlayer">❯</button>
-                <button id="btnMuteAll" class="btnMuteAll "><span class="icon-music"></span></button>
+                <button id="js-btnPlayer" class="btnPlayer">❯</button>
+                <button id="js-btnMuteAll" class="btnMuteAll "><span class="icon-music"></span></button>
 
-                <div class="row sectionHeading">
-                    <div class="col-8 sectionHeadingPlayer">
-                        <!--<h2>Ambient sounds</h2>-->
+                <div class="row">
+                    <div class="col-8 sectionHeading--player">
                         <p>Enjoy relaxing ambient sounds. Click on one or
                             more icons to create your perfect soundscape.
                         </p>
@@ -465,13 +458,9 @@
                 <div class="row ">
                     <div class="col-6">
                         <div class="icon-rainc" id="btnPlay1"></div>
-                        <!--<img src="images/playerImg/rain.png" id="btnPlay1" alt="">-->
                         <div class="slider" id="slider1"></div>
-
-                        <!--<span class="volume"></span>-->
                     </div>
                     <div class="col-6">
-                        <!--<img src="images/playerImg/thunder.png" id="btnPlay2" alt="">-->
                         <div class="icon-thunderc" id="btnPlay2"></div>
                         <div class="slider" id="slider2"></div>
                     </div>
@@ -480,12 +469,10 @@
 
                 <div class="row ">
                     <div class="col-6">
-                        <!--<img src="images/playerImg/birds.png" id="btnPlay3" alt="">-->
                         <div class="icon-birds3" id="btnPlay3"></div>
                         <div class="slider" id="slider3"></div>
                     </div>
                     <div class="col-6">
-                        <!--<img src="images/playerImg/river.png" id="btnPlay4" alt="">-->
                         <div class="icon-riverc-1" id="btnPlay4"></div>
                         <div class="slider" id="slider4"></div>
                     </div>
@@ -494,13 +481,11 @@
 
                 <div class="row ">
                     <div class="col-6">
-                        <!--<img src="images/playerImg/beach.png" id="btnPlay5" alt="">-->
                         <div class="icon-beachc" id="btnPlay5"></div>
                         <div class="slider" id="slider5"></div>
                     </div>
 
                     <div class="col-6">
-                        <!--<img src="images/playerImg/moon.png" id="btnPlay7" alt="">-->
                         <div class="icon-moonc2-1" id="btnPlay7"></div>
                         <div class="slider" id="slider7"></div>
                     </div>
@@ -510,12 +495,10 @@
                 <div class="row ">
 
                     <div class="col-6">
-                        <!--<img src="images/playerImg/fire.png" id="btnPlay6" alt="">-->
                         <div class="icon-firec2-1" id="btnPlay6"></div>
                         <div class="slider" id="slider6"></div>
                     </div>
                     <div class="col-6">
-                        <!--<img src="images/playerImg/chimes.png" id="btnPlay10" alt="">-->
                         <div class="icon-chimesc" id="btnPlay10"></div>
                         <div class="slider" id="slider10"></div>
                     </div>
@@ -525,13 +508,11 @@
                 <div class="row ">
 
                     <div class="col-6">
-                        <!--<img src="images/playerImg/train.png" id="btnPlay9" alt="">-->
                         <div class="icon-railsc" id="btnPlay9"></div>
                         <div class="slider" id="slider9"></div>
                     </div>
 
                     <div class="col-6">
-                        <!--<img src="images/playerImg/white.png" id="btnPlay8" alt="">-->
                         <div class="icon-whitec" id="btnPlay8"></div>
                         <div class="slider" id="slider8"></div>
                     </div>
@@ -541,8 +522,6 @@
 
             </div>
         </div>
-
-
     </div>
 
 </div>
@@ -564,70 +543,61 @@
         <!--</button>-->
 
     </div>
-
 </div>
 
 <!--colors palette-->
-<div class="color-picker">
-    <div id="color-picker__color__blue" class="colors"></div>
-    <div id="color-picker__color__purple" class="colors"></div>
-    <div id="color-picker__color__turquoise" class="colors"></div>
-    <div id="color-picker__color__lavender" class="colors"></div>
-    <div id="color-picker__color__green" class="colors"></div>
-    <div id="color-picker__color__red" class="colors"></div>
-    <div id="color-picker__color__peach" class="colors"></div>
-    <div id="color-picker__color__dust-rose" class="colors"></div>
-    <div id="color-picker__color__grey" class="colors"></div>
-    <div id="color-picker__icon" class="colors"><span class="icon-paleta"></span></div>
+<div class="colorPicker">
+    <div id="color-picker__color__blue" class="colorPicker__color"></div>
+    <div id="color-picker__color__purple" class="colorPicker__color"></div>
+    <div id="color-picker__color__turquoise" class="colorPicker__color"></div>
+    <div id="color-picker__color__lavender" class="colorPicker__color"></div>
+    <div id="color-picker__color__green" class="colorPicker__color"></div>
+    <div id="color-picker__color__red" class="colorPicker__color"></div>
+    <div id="color-picker__color__peach" class="colorPicker__color"></div>
+    <div id="color-picker__color__dust-rose" class="colorPicker__color"></div>
+    <div id="color-picker__color__grey" class="colorPicker__color"></div>
+    <div id="color-picker__icon" class="colorPicker__color"><span class="icon-paleta"></span></div>
 </div>
-
 
 <!--social buttons-->
-<div class="social-buttons">
-
-        <a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"
+<div class="socialButtons">
+    <a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"
            href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsudokusoundscapes.com&related=twitterapi%2Ctwitter&hashtags=%20sudoku,relax,zen&text=check%20out%20this%20cool%20sudoku%20and%20ambient%20sound%20generator%20for%20relaxation%20~">
             <button class="btn">
-            <span class="icon-twitter social-button__icon"></span>
+            <span class="icon-twitter socialButton__icon"></span>
 
-            <span class="social-button__text"> Tweet</span>
+            <span class="socialButton__text"> Tweet</span>
             </button>
         </a>
-
     <button class="btn" id="shareBtn">
-        <span class="icon-facebook social-button__icon"></span> <span class="social-button__text"> Share</span>
+        <span class="icon-facebook socialButton__icon"></span> <span class="socialButton__text"> Share</span>
     </button>
-
-        <a href="mailto:anamil2112@google.com">
-            <button class="btn"> <span class="icon-mail social-button__icon"></span> <span class="social-button__text"> Contact me </span>  </button>
-
-
-        </a>
-
-
-
+    <a href="mailto:anamil2112@google.com">
+            <button class="btn"> <span class="icon-mail socialButton__icon"></span> <span class="socialButton__text"> Contact me </span>  </button>
+    </a>
 </div>
-<div class="social-buttons__small">
-    <button class="fixedbtnsmall">
+
+<div class="socialButtons--small">
+    <button class="socialBtn--small">
         <a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"
            href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsudokusoundscapes.com&related=twitterapi%2Ctwitter&hashtags=%20sudoku,relax,zen&text=check%20out%20this%20cool%20sudoku%20and%20ambient%20sound%20generator%20for%20relaxation%20~">
-            <span class="icon-twitter social-button__icon"></span>
+            <span class="icon-twitter socialButton__icon"></span>
 
 
         </a>
     </button>
-    <button class="fixedbtnsmall" id="shareBtn2">
-        <span class="icon-facebook social-button__icon"></span>
+    <button class="socialBtn--small" id="shareBtn2">
+        <span class="icon-facebook socialButton__icon"></span>
     </button>
-    <button class="fixedbtnsmall">
+    <button class="socialBtn--small">
         <a href="mailto:anamil2112@google.com">
-            <span class="icon-mail social-button__icon"></span>
+            <span class="icon-mail socialButton__icon"></span>
         </a>
     </button>
-    <div class="fixedbtnsmall" >
+    <div class="socialBtn--small" >
 
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input  type="image" class="icon-gift social-button__icon" border="0"  alt="PayPal - The safer, easier way to pay online!" name="submit" id="donateBtnSmall">
+            <input type="image" class="icon-gift socialButton__icon" border="0" alt="PayPal - The safer, easier way to pay online!" name="submit" id="donateBtnSmall">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="922FZYU3XHC86">
             <!--<input type="image" src="http://i68.tinypic.com/34ot1uc.png" border="0"  alt="PayPal - The safer, easier way to pay online!" id="paypalimagesmall">-->
@@ -639,15 +609,12 @@
 
 </div>
 
-
 <!--  Modals -->
 <div id="howToPlayModal" class="modal">
-
     <!-- Modal content -->
     <div class="modal-content">
-        <span  id="close1" class="close"><span class="icon-closec"></span></span>
+        <span  id="js-close1" class="close"><span class="icon-closec"></span></span>
         <div class="modal-header">
-
             <h3>How to play Sudoku?</h3>
         </div>
         <div class="modal-body">
@@ -669,35 +636,22 @@
             <p>Have fun and enjoy!</p>
 
         </div>
-
-
-            <!--<button class="btn " >Close</button>-->
-
-
     </div>
 
 </div>
 
 <div id="modalGameWon" class="modal modalGameWon">
-
     <!-- Modal content -->
     <div class="modal-content">
-        <span class="close" id="close2"><span class="icon-closec"></span></span>
+        <span class="close" id="js-close2"><span class="icon-closec"></span></span>
         <div class="modal-header">
-
             <h3>Sudoku Solved Successfully</h3>
         </div>
         <div class="modal-body">
-
             <p>What Would You Like To Do Next?</p>
-            <button class="btn" id="modalPlayNewGame">Play New Sudoku</button>
-            <button class="btn" id="modalShowPlayer" >Enjoy Ambient Sounds</button>
+            <button class="btn" id="js-modalPlayNewGame">Play New Sudoku</button>
+            <button class="btn" id="js-modalShowPlayer" >Enjoy Ambient Sounds</button>
         </div>
-
-
-            <!--<button class="btn " >Close</button>-->
-
-
     </div>
 
 </div>

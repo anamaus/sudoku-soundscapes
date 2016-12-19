@@ -67,7 +67,7 @@
     width: 50%
  // }
 }
-.col-6-wide {
+.col-6--wide {
   @extend %col-x;
   @include media("(min-width: 768px)") {
     width: 50%

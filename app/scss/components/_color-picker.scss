@@ -1,13 +1,12 @@
-.color-picker{
+.colorPicker {
   @extend %transitions;
-  display: inline-block;
   height:50px;
   position: fixed;
   top: 0;
   left: -450px;
   z-index:3001;
 
-  .colors {
+  .colorPicker__color {
     float: left;
     width:50px;
     height: 50px;
@@ -18,11 +17,11 @@
 
 }
 @include media("(min-width:1024px)") {
-  .color-picker:hover{
+  .colorPicker:hover{
     left: 0;
   }
 }
-.color-picker--isOpen{
+.colorPicker--isOpen {
   left: 0;
 }
 #color-picker__color__blue{
@@ -60,7 +59,4 @@
   text-align: center;
   border: none;
   padding-top:5px;
-  @include media("(max-width:1023px)") {
-    font-size:40px;
-  }
  }

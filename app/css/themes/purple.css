@@ -47,7 +47,7 @@ a, a:hover {
   .container:after, .container-wide:after, .row:after, .numbers__row:after {
     clear: both; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-6-wide, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .sudoku-col-1-9 {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-6--wide, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .sudoku-col-1-9 {
   position: relative;
   width: 100%;
   display: inline-block;
@@ -55,7 +55,7 @@ a, a:hover {
   vertical-align: top;
   height: 100%; }
 
-.footer a, .btn, .sudoku-emptyField, .numbers__outer, .numbers__row__nums, .slider, .soundPlayer .row [class^="icon-"], .btnPlayer, .btnMuteAll, .close, .social-buttons button, .color-picker {
+.footer a, .btn, .sudoku-emptyField, .numbers__outer, .numbers__row__nums, .slider, .soundPlayer .row [class^="icon-"], .btnPlayer, .btnMuteAll, .close, .socialButtons button, .colorPicker {
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   -ms-transition: all .5s;
@@ -106,7 +106,7 @@ a, a:hover {
   width: 50%; }
 
 @media (min-width: 768px) {
-  .col-6-wide {
+  .col-6--wide {
     width: 50%; } }
 
 @media (min-width: 768px) {
@@ -225,14 +225,11 @@ button {
   overflow: hidden;
   outline: none; }
 
-.setDifficultyLevel .btn {
-  transform: scale(0.8); }
-
 .modalGameWon .modal-body button {
   margin-top: 50px;
   padding: 0.5em 1.1em; }
 
-.btn.active {
+.active {
   background-color: #565aff;
   border-bottom: 3px solid white; }
 
@@ -347,13 +344,15 @@ h4, h5, h6 {
     h4, h5, h6 {
       margin-bottom: 20px; } }
 
-.sudokuGrid {
-  padding-bottom: 20px; }
+.sudokuColumn {
+  padding-bottom: 20px;
+  right: 0;
+  transition: right 0.8s; }
   @media (max-width: 768px) {
-    .sudokuGrid {
+    .sudokuColumn {
       padding-top: 30px; } }
 
-.sudoku-outer-grid {
+.sudoku {
   position: relative;
   margin: 0 auto;
   height: 520px;
@@ -363,40 +362,39 @@ h4, h5, h6 {
   border: 1px solid #7073ff;
   box-shadow: 0 4px 8px 0 rgba(28, 28, 28, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.19); }
   @media (max-width: 1800px) {
-    .sudoku-outer-grid {
+    .sudoku {
       height: 450px;
       width: 450px; } }
   @media (max-width: 1440px) {
-    .sudoku-outer-grid {
+    .sudoku {
       height: 400px;
       width: 400px; } }
   @media (max-width: 1023px) {
-    .sudoku-outer-grid {
+    .sudoku {
       height: 450px;
       width: 450px;
       box-shadow: none; } }
   @media (max-width: 550px) {
-    .sudoku-outer-grid {
+    .sudoku {
       height: 400px;
       width: 400px; } }
   @media (max-width: 460px) {
-    .sudoku-outer-grid {
+    .sudoku {
       height: 350px;
       width: 350px; } }
   @media (max-width: 380px) {
-    .sudoku-outer-grid {
+    .sudoku {
       height: 300px;
       width: 300px; } }
 
-.sudoku-grid__row {
+.sudoku__row {
   height: 11.11111%;
-  position: relative;
   border-bottom: 1px solid #7073ff; }
-  .sudoku-grid__row:nth-of-type(3) {
+  .sudoku__row:nth-of-type(3) {
     border-bottom: 5px solid #7073ff; }
-  .sudoku-grid__row:nth-of-type(6) {
+  .sudoku__row:nth-of-type(6) {
     border-bottom: 5px solid #7073ff; }
-  .sudoku-grid__row:last-of-type {
+  .sudoku__row:last-of-type {
     border-bottom: none; }
 
 .sudoku-col-1-9 {
@@ -431,76 +429,35 @@ h4, h5, h6 {
     background-color: #565aff;
     color: #fff; }
 
-.gameOptionsOuter {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  width: 300px; }
-  @media (min-width: 768px) {
-    .gameOptionsOuter {
-      width: 600px; } }
-
 .gameOptions {
-  margin-top: 30px;
-  display: block; }
+  margin: 0 auto;
+  text-align: center; }
+  .gameOptions > * {
+    margin-top: 30px; }
 
-.setDifficultyLevel {
-  display: block;
-  margin-top: 30px; }
-  @media (min-width: 768px) {
-    .setDifficultyLevel {
-      display: inline-block; } }
-
-.sudokuGrid {
-  right: 0;
-  transition: right 0.8s; }
-
-.sudokuGrid-toRight {
+.sudokuColumn--toRight {
   right: -16.666666666666664%; }
 
-.sectionHeadingSudoku p {
+.sectionHeading--sudoku p {
   padding: 50px 50px 70px 50px; }
   @media (min-width: 768px) and (max-width: 1500px) {
-    .sectionHeadingSudoku p {
+    .sectionHeading--sudoku p {
       padding: 50px 0 50px 0; } }
   @media (min-width: 1600px) {
-    .sectionHeadingSudoku p {
+    .sectionHeading--sudoku p {
       padding-bottom: 50px; } }
   @media (min-width: 1920px) {
-    .sectionHeadingSudoku p {
+    .sectionHeading--sudoku p {
       padding-top: 70px;
       padding-bottom: 70px; } }
 
 @media (min-width: 600px) and (max-width: 767px) {
-  .sectionHeadingSudoku {
+  .sectionHeading--sudoku {
     padding: 20px 90px 20px 90px; } }
 
 @media (min-width: 768px) {
-  .sectionHeadingSudoku {
+  .sectionHeading--sudoku {
     margin-left: 25%; } }
-
-.sectionHeadingPlayer {
-  margin-left: 16.666666666666664%; }
-  .sectionHeadingPlayer p {
-    padding: 50px 50px 70px 50px; }
-    @media (min-width: 1024px) {
-      .sectionHeadingPlayer p {
-        padding: 50px 0 40px 0; } }
-    @media (min-width: 800px) and (max-width: 1023px) {
-      .sectionHeadingPlayer p {
-        padding: 50px 250px 70px 250px; } }
-    @media (min-width: 650px) and (max-width: 799px) {
-      .sectionHeadingPlayer p {
-        padding: 50px 200px 70px 200px; } }
-    @media (min-width: 600px) and (max-width: 659px) {
-      .sectionHeadingPlayer p {
-        padding: 50px 150px 70px 150px; } }
-    @media (min-width: 1920px) {
-      .sectionHeadingPlayer p {
-        padding-top: 70px; } }
-  @media (max-width: 1023px) {
-    .sectionHeadingPlayer {
-      margin-left: 0; } }
 
 .edited-field {
   background-color: white;
@@ -544,8 +501,7 @@ h4, h5, h6 {
   position: relative;
   height: 4px;
   opacity: 0;
-  margin: 0 auto;
-  margin-top: 5px; }
+  margin: 5px auto 0; }
   @media (max-width: 768px) {
     .slider {
       margin-top: 10px;
@@ -594,7 +550,7 @@ h4, h5, h6 {
       box-shadow: none;
       margin-bottom: 30px; } }
 
-.soundPlayer-closed {
+.soundPlayer--closed {
   left: 100%; }
 
 .btnPlayer {
@@ -616,7 +572,7 @@ h4, h5, h6 {
     .btnPlayer {
       display: none; } }
 
-.btnPlayerClosed {
+.btnPlayer--closed {
   left: -50px; }
 
 .btnMuteAll {
@@ -640,8 +596,31 @@ h4, h5, h6 {
       top: 0;
       right: 0; } }
 
-.btnMuteAllClosed {
+.btnMuteAll--closed {
   left: -50px; }
+
+.sectionHeading--player {
+  margin-left: 16.666666666666664%; }
+  .sectionHeading--player p {
+    padding: 50px 50px 70px 50px; }
+    @media (min-width: 1024px) {
+      .sectionHeading--player p {
+        padding: 50px 0 40px 0; } }
+    @media (min-width: 800px) and (max-width: 1023px) {
+      .sectionHeading--player p {
+        padding: 50px 250px 70px 250px; } }
+    @media (min-width: 650px) and (max-width: 799px) {
+      .sectionHeading--player p {
+        padding: 50px 200px 70px 200px; } }
+    @media (min-width: 600px) and (max-width: 659px) {
+      .sectionHeading--player p {
+        padding: 50px 150px 70px 150px; } }
+    @media (min-width: 1920px) {
+      .sectionHeading--player p {
+        padding-top: 70px; } }
+  @media (max-width: 1023px) {
+    .sectionHeading--player {
+      margin-left: 0; } }
 
 /* The Modal (background) */
 .modal {
@@ -732,31 +711,27 @@ h4, h5, h6 {
 .modal-body {
   padding: 50px 16px; }
 
-.social-buttons {
+.socialButtons {
   position: fixed;
-  display: block;
   top: 50vh;
   transform: translateY(-50%); }
   @media (max-width: 767px) {
-    .social-buttons {
+    .socialButtons {
       display: none; } }
 
-.social-buttons button {
-  display: block;
+.socialButtons button {
   float: left;
   clear: both;
   margin-bottom: 10px;
-  min-height: 100%;
   border-bottom: none;
   width: 150px;
-  height: 50px;
   border-top: none;
   left: -100px; }
-  .social-buttons button:hover {
+  .socialButtons button:hover {
     left: 0;
     background-color: #7073ff; }
 
-.social-button__icon {
+.socialButton__icon {
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -766,32 +741,31 @@ h4, h5, h6 {
   font-size: 20px;
   line-height: 50px; }
 
-.social-button__text {
+.socialButton__text {
   line-height: 50px; }
 
-.social-buttons__small {
+.socialButtons--small {
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
-  text-align: center;
-  margin: 0 auto; }
-  .social-buttons__small .fixedbtnsmall {
-    width: 25%;
-    float: left;
-    height: 40px;
-    border-right: 1px solid white; }
-    .social-buttons__small .fixedbtnsmall:last-of-type {
-      border-right: none; }
-  .social-buttons__small .social-button__icon {
+  right: 0; }
+  @media (min-width: 768px) {
+    .socialButtons--small {
+      display: none; } }
+
+.socialBtn--small {
+  width: 25%;
+  float: left;
+  height: 40px;
+  border-right: 1px solid white; }
+  .socialBtn--small:last-of-type {
+    border-right: none; }
+  .socialBtn--small .socialButton__icon {
     height: 100%;
     width: 100%;
     color: white;
     font-size: 20px;
     line-height: 40px; }
-  @media (min-width: 768px) {
-    .social-buttons__small {
-      display: none; } }
 
 #donateBtnSmall {
   text-align: center;
@@ -801,14 +775,13 @@ form {
   vertical-align: middle;
   margin-left: 0; }
 
-.color-picker {
-  display: inline-block;
+.colorPicker {
   height: 50px;
   position: fixed;
   top: 0;
   left: -450px;
   z-index: 3001; }
-  .color-picker .colors {
+  .colorPicker .colorPicker__color {
     float: left;
     width: 50px;
     height: 50px;
@@ -817,10 +790,10 @@ form {
     cursor: pointer; }
 
 @media (min-width: 1024px) {
-  .color-picker:hover {
+  .colorPicker:hover {
     left: 0; } }
 
-.color-picker--isOpen {
+.colorPicker--isOpen {
   left: 0; }
 
 #color-picker__color__blue {
@@ -858,6 +831,3 @@ form {
   text-align: center;
   border: none;
   padding-top: 5px; }
-  @media (max-width: 1023px) {
-    #color-picker__icon {
-      font-size: 40px; } }

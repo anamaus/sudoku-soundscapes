@@ -58,16 +58,16 @@ $('body  *').on("click", function (event) {
 //CLOSE PLAYER ON CLICK
 
 var $player = $('.soundPlayer');
-var $btnPlayer = $('#btnPlayer');
-var $sudokuGrid =  $('.sudokuGrid');
-var $muteBtn =  $('.btnMuteAll');
+var $btnPlayer = $('#js-btnPlayer');
+var $sudokuGrid =  $('.sudokuColumn');
+var $muteBtn =  $('#js-btnMuteAll');
 
 $btnPlayer.click(function(){
-    $sudokuGrid.toggleClass('sudokuGrid-toRight');
-    $player.toggleClass('soundPlayer-closed');
-    $btnPlayer.toggleClass('btnPlayerClosed');
+    $sudokuGrid.toggleClass('sudokuColumn--toRight');
+    $player.toggleClass('soundPlayer--closed');
+    $btnPlayer.toggleClass('btnPlayer--closed');
     $btnPlayer.text() === ("❯") ? $btnPlayer.text("❮") : $btnPlayer.text("❯");
-    $muteBtn.toggleClass('btnMuteAllClosed');
+    $muteBtn.toggleClass('btnMuteAll--closed');
     return false;
 });
 
@@ -100,7 +100,7 @@ var button = {
     }
 };
 
-$('#btnMuteAll').click(function () {
+$muteBtn.click(function () {
 
     button.onClick();
 })
@@ -113,10 +113,10 @@ $('#btnMuteAll').click(function () {
 var modalHowToPlay = document.getElementById('howToPlayModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("instructionsBtn");
+var btn = document.getElementById("js-btnInstructions");
 
 // Get the <span> element that closes the modal
-var span0 = document.getElementById("close1");
+var span0 = document.getElementById("js-close1");
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -134,7 +134,7 @@ span0.onclick = function() {
 var modalGameWon = document.getElementById('modalGameWon');
 
 // Get the <span> element that closes the modal
-var span1 = document.getElementById("close2");
+var span1 = document.getElementById("js-close2");
 
 
 // When the user clicks on <span> (x), close the modal
@@ -151,32 +151,32 @@ window.onclick = function(event) {
 };
 
 //when clicked, modal closes and new game starts
-$('#modalPlayNewGame').click(function(){
+$('#js-modalPlayNewGame').click(function(){
     modalGameWon.style.display = "none";
     newGame();
 });
 
 //when clicked on modal button close modal and show player
-$('#modalShowPlayer').click(function(){
+$('#js-modalShowPlayer').click(function(){
     modalGameWon.style.display = "none";
-    $sudokuGrid.removeClass('sudokuGrid-toRight');
-    $player.removeClass('soundPlayer-closed');
-    $btnPlayer.removeClass('btnPlayerClosed');
+    $sudokuGrid.removeClass('sudokuColumn--toRight');
+    $player.removeClass('soundPlayer--closed');
+    $btnPlayer.removeClass('btnPlayer--closed');
     $btnPlayer.text("❯");
 });
 
 
 //Handles color picker
 
-var $colorPicker = $('.color-picker');
+var $colorPicker = $('.colorPicker');
 
 function changeCss(css){
     var newCss = $('#mainStylesheet');
     newCss.attr('href',css);
-    $colorPicker.removeClass('color-picker--isOpen');
+    $colorPicker.removeClass('colorPicker--isOpen');
 }
 
-$colorPicker.on("click", '.colors', function (event) {
+$colorPicker.on("click", '.colorPicker__color', function (event) {
     event.preventDefault();
     if (this.id === 'color-picker__color__blue') {
         changeCss('css/style.css');
@@ -206,7 +206,7 @@ $colorPicker.on("click", '.colors', function (event) {
         changeCss('css/themes/turquoise.css')
     }
     else if (this.id === 'color-picker__icon') {
-        $colorPicker.toggleClass('color-picker--isOpen');
+        $colorPicker.toggleClass('colorPicker--isOpen');
     }
 
 });
@@ -223,11 +223,11 @@ $(window).scroll(function(event) {
     var footerHeight = $('.footer').outerHeight();
 
     if(docHeight - (windowHeight + scroll) <= footerHeight) {
-        $('.social-buttons__small').css({
+        $('.socialButtons--small').css({
             bottom: footerHeight - (docHeight - (windowHeight + scroll))
         });
     } else {
-        $('.social-buttons__small').css({
+        $('.socialButtons--small').css({
             bottom: 0
         });
     }
