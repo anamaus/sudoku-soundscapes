@@ -544,7 +544,6 @@
 
     </div>
 </div>
-
 <!--colors palette-->
 <div class="colorPicker">
     <div id="color-picker__color__blue" class="colorPicker__color"></div>
@@ -562,18 +561,26 @@
 <!--social buttons-->
 <div class="socialButtons">
     <a data-name="twitter" aria-label="Share on Twitter" data-action="tweet"
-           href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsudokusoundscapes.com&related=twitterapi%2Ctwitter&hashtags=%20sudoku,relax,zen&text=check%20out%20this%20cool%20sudoku%20and%20ambient%20sound%20generator%20for%20relaxation%20~">
-            <button class="btn">
+       href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsudokusoundscapes.com&related=twitterapi%2Ctwitter&hashtags=%20sudoku,relax,zen&text=check%20out%20this%20cool%20sudoku%20and%20ambient%20sound%20generator%20for%20relaxation%20~">
+        <button class="btn">
             <span class="icon-twitter socialButton__icon"></span>
 
             <span class="socialButton__text"> Tweet</span>
-            </button>
-        </a>
-    <button class="btn" id="shareBtn">
-        <span class="icon-facebook socialButton__icon"></span> <span class="socialButton__text"> Share</span>
-    </button>
+        </button>
+    </a>
+
+    <a href="https://www.facebook.com/sharer/sharer.php?u=sudokusoundscapes.com" target="_blank">
+        <button class="btn" id="shareBtn">
+            <span class="icon-facebook socialButton__icon"></span> <span class="socialButton__text">Share</span>
+        </button>
+    </a>
+
     <a href="mailto:anamil2112@google.com">
-            <button class="btn"> <span class="icon-mail socialButton__icon"></span> <span class="socialButton__text"> Contact me </span>  </button>
+        <button class="btn">
+
+            <span class="icon-mail socialButton__icon"></span> <span class="socialButton__text"> Contact me </span>
+
+        </button>
     </a>
 </div>
 
@@ -586,8 +593,8 @@
 
         </a>
     </button>
-    <button class="socialBtn--small" id="shareBtn2">
-        <span class="icon-facebook socialButton__icon"></span>
+    <button class="socialBtn--small">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=sudokusoundscapes.com" target="_blank" class="icon-facebook socialButton__icon"></a>
     </button>
     <button class="socialBtn--small">
         <a href="mailto:anamil2112@google.com">
@@ -667,45 +674,7 @@
 <script src="js/controller.js"></script>
 <script src="js/audioController.js"></script>
 <!-- endbuild -->
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '1604179943217880',
-            xfbml      : true,
-            version    : 'v2.8'
-        });
-    };
 
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-<script>
-    document.getElementById('shareBtn').onclick = function() {
-        FB.ui({
-            method: 'share',
-            display: 'popup',
-            href: 'http://sudokusoundscapes.com/',
-            link: "http://sudokusoundscapes.com/",
-            name: "Sudoku Soundscapes",
-            description: "Play Sudoku and Enjoy Your Perfect Soundscape to Unwind and Relax"
-        }, function(response){});
-    };
-    document.getElementById('shareBtn2').onclick = function() {
-        FB.ui({
-            method: 'share',
-            display: 'popup',
-            href: 'http://sudokusoundscapes.com/',
-            link: "http://sudokusoundscapes.com/",
-            name: "Sudoku Soundscapes",
-            description: "Play Sudoku and Enjoy Your Perfect Soundscape to Unwind and Relax"
-        }, function(response){});
-    }
-</script>
 <script>
     window.twttr = (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
